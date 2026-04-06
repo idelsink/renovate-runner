@@ -184,16 +184,25 @@ jobs:
             const { PassThrough } = require('stream');
             const e = process.env;
 
-            fs.mkdirSync(`${e.RUNNER_TEMP}/renovate-cache/renovate/repository`, { recursive: true });
+            // Create cache dir and make every entry world-writable so the renovate container
+            // user can write to it. Restored cache entries retain their original file mode,
+            // so a recursive walk is needed to cover the full tree, not just the top-level dir.
+            core.info('Preparing cache directory...');
+            const cacheDir = `${e.RUNNER_TEMP}/renovate-cache/renovate/repository`;
+            fs.mkdirSync(cacheDir, { recursive: true });
+            fs.chmodSync(cacheDir, 0o777);
+            for (const p of fs.readdirSync(cacheDir, { recursive: true })) {
+              fs.chmodSync(`${cacheDir}/${p}`, 0o777);
+            }
 
             // Suppress Actions log output and add timestamps to logs, avoiding leaking repo names
+            core.info('Starting Renovate...');
             const out = new PassThrough();
             require('readline').createInterface({ input: out })
               .on('line', l => fs.appendFileSync('/tmp/renovate.log', `[${new Date().toISOString()}] ${l}\n`));
 
             const code = await exec.exec('docker', [
               'run', '--rm',
-              '--user', `${process.getuid()}:${process.getgid()}`,
               '--volume', `${e.GITHUB_WORKSPACE}/config.js:/usr/src/app/config.js:ro`,
               '--volume', `${e.RUNNER_TEMP}/renovate-cache/renovate/repository:/tmp/renovate/cache/renovate/repository`,
               '--env', 'RENOVATE_RUNNER_REPO',
@@ -204,6 +213,7 @@ jobs:
               e.RENOVATE_IMAGE,
             ], { ignoreReturnCode: true, outStream: out, errStream: out });
 
+            core.info(`Renovate finished with exit code ${code}.`);
             core.setOutput('exit_code', String(code));
             if (code !== 0) core.setFailed(`Renovate exited with code ${code}`);
 
