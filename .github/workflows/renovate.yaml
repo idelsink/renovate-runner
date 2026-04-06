@@ -184,7 +184,9 @@ jobs:
             const { PassThrough } = require('stream');
             const e = process.env;
 
+            // Create cache dir as world-writable so the renovate container user can write to it.
             fs.mkdirSync(`${e.RUNNER_TEMP}/renovate-cache/renovate/repository`, { recursive: true });
+            fs.chmodSync(`${e.RUNNER_TEMP}/renovate-cache/renovate/repository`, 0o777);
 
             // Suppress Actions log output and add timestamps to logs, avoiding leaking repo names
             const out = new PassThrough();
@@ -193,7 +195,6 @@ jobs:
 
             const code = await exec.exec('docker', [
               'run', '--rm',
-              '--user', `${process.getuid()}:${process.getgid()}`,
               '--volume', `${e.GITHUB_WORKSPACE}/config.js:/usr/src/app/config.js:ro`,
               '--volume', `${e.RUNNER_TEMP}/renovate-cache/renovate/repository:/tmp/renovate/cache/renovate/repository`,
               '--env', 'RENOVATE_RUNNER_REPO',
