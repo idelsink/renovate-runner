@@ -1,0 +1,21 @@
+name = "renovate-webhook"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+[observability]
+enabled = true
+
+# Custom domain — set up in Cloudflare dashboard under Workers & Pages > your worker > Triggers
+# Routes to: renovate.iws.dels.ink
+[[routes]]
+pattern = "renovate.iws.dels.ink"
+custom_domain = true
+
+# Worker variables — configure in Cloudflare dashboard under Workers & Pages > your worker > Settings > Variables
+# RUNNER_REPO:        GitHub repo that owns the renovate workflow, e.g. "idelsink/renovate-runner"
+# RUNNER_REF:         Branch to dispatch against, e.g. "main" (defaults to "main" if unset)
+# RENOVATE_BOT_LOGIN: GitHub login of the Renovate bot, e.g. "renovate-iws[bot]"
+[vars]
+RUNNER_REPO = "idelsink/renovate-runner"
+RUNNER_REF = "main"
+RENOVATE_BOT_LOGIN = "renovate-iws[bot]"

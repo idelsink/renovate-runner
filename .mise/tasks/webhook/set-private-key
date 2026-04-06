@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#
+#MISE description="Convert a GitHub App PKCS#1 private key to PKCS#8 and upload to Cloudflare"
+#
+# Example:
+#   $ mise run webhook:set-private-key ~/Downloads/renovate-iws-runner-trigger.2026-04-03.private-key.pem
+#
+#USAGE arg "<key_file>" help="Path to the PKCS#1 .pem file downloaded from GitHub"
+
+set -euo pipefail
+
+KEY_FILE="${usage_key_file?}"
+
+if [[ ! -f "$KEY_FILE" ]]; then
+  echo "File not found: $KEY_FILE" >&2
+  exit 1
+fi
+
+openssl pkcs8 -topk8 -inform PEM -outform PEM -nocrypt -in "$KEY_FILE" \
+  | wrangler secret put GITHUB_APP_PRIVATE_KEY \
+    --config "${MISE_PROJECT_ROOT}/webhook/wrangler.toml"

@@ -1,0 +1,288 @@
+name: Renovate
+
+# Runs Renovate via docker run (not the github-action wrapper) so stdout/stderr
+# can be redirected away from the public Actions log and pushed to a branch in
+# the target repo instead.
+#
+# When repository_id is omitted (or when triggered by schedule), a discover job
+# lists every repo the GitHub App can access and fans out into a per-repo matrix.
+# Each matrix leg has its own concurrency group (renovate-{id}) so individual
+# triggers and "run all" jobs never queue behind unrelated repos.
+#
+# Repos are identified by numeric ID rather than name throughout the matrix and
+# job labels. Names are only resolved inside each renovate job leg and
+# immediately masked with core.setSecret() so they never appear in step logs or
+# the Actions UI.
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run mode (empty = normal run)"
+        type: choice
+        options:
+          - ""       # normal run
+          - extract  # scan dependencies only, no update checks
+          - lookup   # check for updates, no branch/PR changes
+          - full     # full dry run, no writes
+        default: ""
+      repository_id:
+        description: "Numeric GitHub repository ID to limit this run to (leave empty to run all)"
+        type: string
+        required: false
+      log_level:
+        description: "Renovate log level"
+        type: choice
+        options:
+          - debug
+          - info
+          - warn
+          - error
+        default: "debug"
+  schedule:
+    # Run every week on Wednesday at 00:00 UTC
+    - cron: "0 0 * * 3"
+
+permissions:
+  contents: read
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    outputs:
+      repos: ${{ steps.list.outputs.repos }}
+    steps:
+      - name: Get token (all repos)
+        uses: actions/create-github-app-token@f8d387b68d61c58ab83c6c016672934102569859 # v3.0.0
+        id: app_token
+        with:
+          app-id: ${{ vars.RENOVATE_APP_ID }}
+          private-key: ${{ secrets.RENOVATE_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          permission-metadata: read # list repos + resolve repo ID
+
+      - name: List repositories
+        id: list
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        env:
+          REPO_ID: ${{ inputs.repository_id }}
+        with:
+          github-token: ${{ steps.app_token.outputs.token }}
+          script: |
+            const repoId = process.env.REPO_ID;
+            if (repoId) {
+              core.setOutput('repos', JSON.stringify([{ id: repoId }]));
+              return;
+            }
+            const allRepos = await github.paginate(
+              github.rest.apps.listReposAccessibleToInstallation, {}
+            );
+            const repos = allRepos
+              .filter(r => !r.archived)
+              .map(r => ({ id: String(r.id) }));
+            core.setOutput('repos', JSON.stringify(repos));
+
+  renovate:
+    needs: discover
+    if: needs.discover.outputs.repos != '[]'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJson(needs.discover.outputs.repos) }}
+    concurrency:
+      # Per-repo group so matrix legs and individual triggers share the same slot.
+      group: renovate-${{ matrix.id }}
+      cancel-in-progress: false
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Get token (for all repos)
+        uses: actions/create-github-app-token@f8d387b68d61c58ab83c6c016672934102569859 # v3.0.0
+        id: app_token
+        with:
+          app-id: ${{ vars.RENOVATE_APP_ID }}
+          private-key: ${{ secrets.RENOVATE_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          permission-metadata: read # list repos + resolve repo ID
+
+      - name: Resolve repo id to target repository
+        id: target_repo
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        with:
+          github-token: ${{ steps.app_token.outputs.token }}
+          script: |
+            const { data } = await github.request('GET /repositories/{repository_id}', { repository_id: ${{ matrix.id }} });
+            core.setSecret(data.owner.login);
+            core.setOutput('owner', data.owner.login);
+            core.setSecret(data.name);
+            core.setOutput('name', data.name);
+            core.setSecret(data.full_name);
+            core.setOutput('repo', data.full_name);
+            core.exportVariable('RENOVATE_REPOSITORIES', JSON.stringify([data.full_name]));
+
+      - name: Get token (for target repo)
+        uses: actions/create-github-app-token@f8d387b68d61c58ab83c6c016672934102569859 # v3.0.0
+        id: target_token
+        with:
+          app-id: ${{ vars.RENOVATE_APP_ID }}
+          private-key: ${{ secrets.RENOVATE_APP_PRIVATE_KEY }}
+          owner: ${{ steps.target_repo.outputs.owner }}
+          repositories: ${{ steps.target_repo.outputs.name }}
+          permission-contents: write       # push log branch + Renovate dependency branches
+          permission-issues: write         # post/update Dependency Dashboard comment
+          permission-pull-requests: write  # Renovate creates and updates PRs
+          permission-workflows: write      # Renovate updates workflow files
+
+      - name: Post running status to dashboard
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        env:
+          TARGET_OWNER: ${{ steps.target_repo.outputs.owner }}
+          TARGET_REPO: ${{ steps.target_repo.outputs.name }}
+          APP_SLUG: ${{ steps.target_token.outputs.app-slug }}
+        with:
+          github-token: ${{ steps.target_token.outputs.token }}
+          script: |
+            const { postEntry } = require(`${process.env.GITHUB_WORKSPACE}/.github/scripts/dashboard-comment.js`);
+            await postEntry(github, context, {
+              owner: process.env.TARGET_OWNER,
+              repo: process.env.TARGET_REPO,
+              appSlug: process.env.APP_SLUG,
+              entry: { ts: new Date().toISOString(), status: 'running' },
+            });
+
+      - name: Set Renovate image
+        run: |
+          # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
+          RENOVATE_IMAGE="ghcr.io/renovatebot/renovate:43.104.4@sha256:54369958207b06c85398d8c4dffc70997c89f07546fa0a4703b3774f48f48dab"
+          echo "RENOVATE_IMAGE=${RENOVATE_IMAGE}" >> "$GITHUB_ENV"
+
+      - name: Restore Renovate repository cache
+        id: cache_restore
+        uses: actions/cache/restore@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
+        with:
+          path: ${{ runner.temp }}/renovate-cache/renovate/repository
+          key: renovate-repo-cache-${{ runner.os }}-${{ matrix.id }}-${{ github.run_id }}
+          restore-keys: renovate-repo-cache-${{ runner.os }}-${{ matrix.id }}-
+
+      - name: Run Renovate
+        id: renovate
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        env:
+          RENOVATE_TOKEN: ${{ steps.target_token.outputs.token }}
+          RENOVATE_DRY_RUN: ${{ inputs.dry_run }}
+          RENOVATE_RUNNER_REPO: ${{ github.repository }}
+          LOG_LEVEL: ${{ inputs.log_level }}
+        with:
+          script: |
+            const fs = require('fs');
+            const { PassThrough } = require('stream');
+            const e = process.env;
+
+            fs.mkdirSync(`${e.RUNNER_TEMP}/renovate-cache/renovate/repository`, { recursive: true });
+
+            // Suppress Actions log output and add timestamps to logs, avoiding leaking repo names
+            const out = new PassThrough();
+            require('readline').createInterface({ input: out })
+              .on('line', l => fs.appendFileSync('/tmp/renovate.log', `[${new Date().toISOString()}] ${l}\n`));
+
+            const code = await exec.exec('docker', [
+              'run', '--rm',
+              '--user', `${process.getuid()}:${process.getgid()}`,
+              '--volume', `${e.GITHUB_WORKSPACE}/config.js:/usr/src/app/config.js:ro`,
+              '--volume', `${e.RUNNER_TEMP}/renovate-cache/renovate/repository:/tmp/renovate/cache/renovate/repository`,
+              '--env', 'RENOVATE_RUNNER_REPO',
+              '--env', 'RENOVATE_TOKEN',
+              '--env', 'RENOVATE_REPOSITORIES',
+              '--env', 'LOG_LEVEL',
+              ...(e.RENOVATE_DRY_RUN ? ['--env', 'RENOVATE_DRY_RUN'] : []),
+              e.RENOVATE_IMAGE,
+            ], { ignoreReturnCode: true, outStream: out, errStream: out });
+
+            core.setOutput('exit_code', String(code));
+            if (code !== 0) core.setFailed(`Renovate exited with code ${code}`);
+
+      - name: Clone target repo
+        if: always() && steps.target_repo.outputs.repo != ''
+        env:
+          TOKEN: ${{ steps.target_token.outputs.token }}
+        run: |
+          git clone --quiet "https://x-access-token:${TOKEN}@github.com/${{ steps.target_repo.outputs.repo }}" target-repo 2>/dev/null
+
+      - name: Get app user ID
+        id: app_user_id
+        if: always()
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        with:
+          github-token: ${{ steps.target_token.outputs.token }}
+          script: |
+            const { data } = await github.rest.users.getByUsername({ username: '${{ steps.target_token.outputs.app-slug }}[bot]' });
+            core.setOutput('user-id', data.id);
+
+      - name: Prepare log
+        id: prepare_log
+        if: always()
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        with:
+          script: |
+            const fs = require('fs');
+            const ts   = new Date().toISOString();
+            const slug = ts.replace('T', '-').replace(/:/g, '').replace(/\.\d+Z$/, '');
+            const logBranch = `renovate-logs/${slug}-${context.runId}`;
+            const logFile   = `.github/logs/renovate-${slug}-${context.runId}.log`;
+            fs.mkdirSync('target-repo/.github/logs', { recursive: true });
+            fs.copyFileSync('/tmp/renovate.log', `target-repo/${logFile}`);
+            core.setOutput('log_date',   ts);
+            core.setOutput('log_file',   logFile);
+            core.setOutput('log_branch', logBranch);
+
+      - name: Push log to branch
+        id: push_log
+        if: always() && steps.prepare_log.outcome == 'success'
+        uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
+        with:
+          repository: target-repo
+          branch: ${{ steps.prepare_log.outputs.log_branch }}
+          create_branch: true
+          commit_message: "logs: renovate run ${{ github.run_id }}"
+          commit_author: ${{ steps.target_token.outputs.app-slug }}[bot] <${{ steps.app_user_id.outputs.user-id }}+${{ steps.target_token.outputs.app-slug }}[bot]@users.noreply.github.com>
+          commit_user_name: ${{ steps.target_token.outputs.app-slug }}[bot]
+          commit_user_email: ${{ steps.app_user_id.outputs.user-id }}+${{ steps.target_token.outputs.app-slug }}[bot]@users.noreply.github.com
+          file_pattern: ${{ steps.prepare_log.outputs.log_file }}
+
+      - name: Post final status to dashboard
+        if: always() && steps.target_repo.outputs.repo != ''
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        env:
+          TARGET_OWNER: ${{ steps.target_repo.outputs.owner }}
+          TARGET_REPO: ${{ steps.target_repo.outputs.name }}
+          APP_SLUG: ${{ steps.target_token.outputs.app-slug }}
+          LOG_DATE: ${{ steps.prepare_log.outputs.log_date }}
+          EXIT_CODE: ${{ steps.renovate.outputs.exit_code }}
+        with:
+          github-token: ${{ steps.target_token.outputs.token }}
+          script: |
+            const { postEntry } = require(`${process.env.GITHUB_WORKSPACE}/.github/scripts/dashboard-comment.js`);
+            await postEntry(github, context, {
+              owner: process.env.TARGET_OWNER,
+              repo: process.env.TARGET_REPO,
+              appSlug: process.env.APP_SLUG,
+              entry: {
+                ts:     process.env.LOG_DATE,
+                status: process.env.EXIT_CODE === '0' ? 'success' : 'failure',
+              },
+              deleteBranches: true,
+              retryOnMissing: true,
+            });
+
+      - name: Save Renovate repository cache
+        if: always()
+        uses: actions/cache/save@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
+        with:
+          path: ${{ runner.temp }}/renovate-cache/renovate/repository
+          key: renovate-repo-cache-${{ runner.os }}-${{ matrix.id }}-${{ github.run_id }}
