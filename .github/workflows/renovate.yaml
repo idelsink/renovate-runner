@@ -40,8 +40,8 @@ on:
           - error
         default: "debug"
   schedule:
-    # Run every week on Wednesday at 00:00 UTC
-    - cron: "0 0 * * 3"
+    # Run every day at 03:17 UTC (off-peak random time)
+    - cron: "17 3 * * *"
 
 permissions:
   contents: read
