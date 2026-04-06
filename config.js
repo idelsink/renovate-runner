@@ -7,4 +7,9 @@ module.exports = {
   repositoryCache: 'enabled',
 
   dependencyDashboardFooter: `- [ ] <!-- trigger-run --> Trigger a Renovate run - [workflow runs & logs ↗](https://github.com/${process.env.RENOVATE_RUNNER_REPO}/actions/workflows/renovate.yaml)`,
+
+  onboardingConfig: {
+    $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+    extends: ['github>idelsink/renovate-runner'],
+  },
 };

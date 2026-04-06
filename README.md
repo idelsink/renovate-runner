@@ -43,6 +43,33 @@ Repo details are kept out of the Actions UI and logs. See the workflow file for 
 
 </details>
 
+## Renovate annotations
+
+Any dependency in any file can be tracked by adding a `# renovate:` comment above it:
+
+```bash
+# renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
+RENOVATE_IMAGE="ghcr.io/renovatebot/renovate:39.0.0@sha256:abc123..."
+
+# renovate: datasource=github-releases depName=cli/cli
+CLI_VERSION="v2.45.0"
+```
+
+Renovate will keep the tag and digest up to date automatically. This works in any file type — shell scripts, Makefiles, YAML — anywhere the standard managers don't reach.
+
+## Managed repo config
+
+When Renovate first runs on a managed repo it opens an onboarding PR proposing a `renovate.json` that extends this runner's shared preset:
+
+```json
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["github>idelsink/renovate-runner"]
+}
+```
+
+This gives the repo `config:best-practices`, a weekly update schedule, and the `# renovate:` annotation support out of the box. The preset can be extended or overridden in the repo's own `renovate.json`.
+
 ## Setup
 
 ### Prerequisites

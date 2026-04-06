@@ -1,0 +1,37 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices"
+  ],
+  "schedule": ["before 6am on Monday"],
+  "prConcurrentLimit": 5,
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Track dependencies annotated with # renovate: datasource=... depName=... in any file.",
+      "managerFilePatterns": ["/./"],
+      "matchStrings": [
+        // Digest-pinned image references: captures the tag as currentValue and the sha256 as
+        // currentDigest so Renovate can update both atomically.
+        //
+        // Example:
+        //   # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
+        //   IMAGE="ghcr.io/renovatebot/renovate:39.0.0@sha256:abc123..."
+        "# renovate: datasource=(?<datasource>[a-zA-Z0-9-._]+?) depName=(?<depName>[^\\s]+?)(?: (?:packageName|lookupName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[^\\s]+?))?(?: extractVersion=(?<extractVersion>[^\\s]+?))?(?: registryUrl=(?<registryUrl>[^\\s]+?))?\\n\\s*\\w+=[\"']?[^:]+:(?<currentValue>[^\\s@\"']+)@(?<currentDigest>sha256:[a-f0-9]+)",
+
+        // Plain version strings: captures just the version. Ends with (?:["'\s]|$) so it does
+        // not also match digest-pinned lines (where the next char after the tag would be @).
+        // Supports optional packageName, versioning, extractVersion, and registryUrl fields.
+        //
+        // Examples:
+        //   # renovate: datasource=github-releases depName=cli/cli
+        //   CLI_VERSION="v2.45.0"
+        //
+        //   # renovate: datasource=npm depName=typescript versioning=npm
+        //   TYPESCRIPT_VERSION=5.4.2
+        "# renovate: datasource=(?<datasource>[a-zA-Z0-9-._]+?) depName=(?<depName>[^\\s]+?)(?: (?:packageName|lookupName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[^\\s]+?))?(?: extractVersion=(?<extractVersion>[^\\s]+?))?(?: registryUrl=(?<registryUrl>[^\\s]+?))?\\n\\s*\\w+=[\"']?(?<currentValue>[^\\s@\"'#]+)(?:[\"'\\s]|$)",
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}"
+    }
+  ]
+}
