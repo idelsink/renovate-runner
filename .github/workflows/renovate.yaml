@@ -185,6 +185,7 @@ jobs:
             const e = process.env;
 
             fs.mkdirSync(`${e.RUNNER_TEMP}/renovate-cache/renovate/repository`, { recursive: true });
+            fs.mkdirSync(`${e.RUNNER_TEMP}/renovate-cache/containerbase`, { recursive: true });
 
             // Suppress Actions log output and add timestamps to logs, avoiding leaking repo names
             const out = new PassThrough();
@@ -196,6 +197,8 @@ jobs:
               '--user', `${process.getuid()}:${process.getgid()}`,
               '--volume', `${e.GITHUB_WORKSPACE}/config.js:/usr/src/app/config.js:ro`,
               '--volume', `${e.RUNNER_TEMP}/renovate-cache/renovate/repository:/tmp/renovate/cache/renovate/repository`,
+              // Mount a runner-owned dir for containerbase so install-tool can write under --user
+              '--volume', `${e.RUNNER_TEMP}/renovate-cache/containerbase:/tmp/containerbase`,
               '--env', 'RENOVATE_RUNNER_REPO',
               '--env', 'RENOVATE_TOKEN',
               '--env', 'RENOVATE_REPOSITORIES',
