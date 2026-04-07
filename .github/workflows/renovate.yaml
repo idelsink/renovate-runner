@@ -251,21 +251,8 @@ jobs:
             core.setOutput('log_file',   logFile);
             core.setOutput('log_branch', logBranch);
 
-      - name: Push log to branch
-        id: push_log
-        if: always() && steps.prepare_log.outcome == 'success'
-        uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
-        with:
-          repository: target-repo
-          branch: ${{ steps.prepare_log.outputs.log_branch }}
-          create_branch: true
-          commit_message: "logs: renovate run ${{ github.run_id }}"
-          commit_author: ${{ steps.target_token.outputs.app-slug }}[bot] <${{ steps.app_user_id.outputs.user-id }}+${{ steps.target_token.outputs.app-slug }}[bot]@users.noreply.github.com>
-          commit_user_name: ${{ steps.target_token.outputs.app-slug }}[bot]
-          commit_user_email: ${{ steps.app_user_id.outputs.user-id }}+${{ steps.target_token.outputs.app-slug }}[bot]@users.noreply.github.com
-          file_pattern: ${{ steps.prepare_log.outputs.log_file }}
-
       - name: Post final status to dashboard
+        id: final_status
         if: always() && steps.target_repo.outputs.repo != ''
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
         env:
@@ -278,7 +265,7 @@ jobs:
           github-token: ${{ steps.target_token.outputs.token }}
           script: |
             const { postEntry } = require(`${process.env.GITHUB_WORKSPACE}/.github/scripts/dashboard-comment.js`);
-            await postEntry(github, context, {
+            const found = await postEntry(github, context, {
               owner: process.env.TARGET_OWNER,
               repo: process.env.TARGET_REPO,
               appSlug: process.env.APP_SLUG,
@@ -289,6 +276,21 @@ jobs:
               deleteBranches: true,
               retryOnMissing: true,
             });
+            core.setOutput('has_dashboard', String(found));
+
+      - name: Push log to branch
+        id: push_log
+        if: always() && steps.prepare_log.outcome == 'success' && steps.final_status.outputs.has_dashboard == 'true'
+        uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
+        with:
+          repository: target-repo
+          branch: ${{ steps.prepare_log.outputs.log_branch }}
+          create_branch: true
+          commit_message: "logs: renovate run ${{ github.run_id }}"
+          commit_author: ${{ steps.target_token.outputs.app-slug }}[bot] <${{ steps.app_user_id.outputs.user-id }}+${{ steps.target_token.outputs.app-slug }}[bot]@users.noreply.github.com>
+          commit_user_name: ${{ steps.target_token.outputs.app-slug }}[bot]
+          commit_user_email: ${{ steps.app_user_id.outputs.user-id }}+${{ steps.target_token.outputs.app-slug }}[bot]@users.noreply.github.com
+          file_pattern: ${{ steps.prepare_log.outputs.log_file }}
 
       - name: Save Renovate repository cache
         if: always()

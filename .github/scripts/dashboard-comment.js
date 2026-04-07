@@ -101,12 +101,13 @@ async function findDashboard(github, owner, repo, appSlug, retry = false) {
  * @param {{ ts: string, status: 'running'|'success'|'failure' }} options.entry
  * @param {boolean} [options.deleteBranches=false] - prune log branches outside the keep window
  * @param {boolean} [options.retryOnMissing=false] - retry finding the dashboard if not immediately found (for first run where Renovate just created it)
+ * @returns {Promise<boolean>} true if the dashboard was found and the comment was posted, false if the dashboard does not exist
  */
 async function postEntry(github, context, { owner, repo, appSlug, entry, deleteBranches = false, retryOnMissing = false }) {
   const runnerRepo = `${context.repo.owner}/${context.repo.repo}`;
 
   const dashboard = await findDashboard(github, owner, repo, appSlug, retryOnMissing);
-  if (!dashboard) return;
+  if (!dashboard) return false;
 
   const comments = await github.paginate(github.rest.issues.listComments, {
     owner, repo, issue_number: dashboard.number,
@@ -132,6 +133,7 @@ async function postEntry(github, context, { owner, repo, appSlug, entry, deleteB
   } else {
     await github.rest.issues.createComment({ owner, repo, issue_number: dashboard.number, body });
   }
+  return true;
 }
 
 module.exports = { postEntry };
