@@ -48,7 +48,7 @@ Repo details are kept out of the Actions UI and logs. See the workflow file for 
 Any dependency in any file can be tracked by adding a `# renovate:` comment above it:
 
 ```bash
-# renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
+# renovate: datasource=docker depName=ghcr.io/renovatebot/renovate versioning=semver
 RENOVATE_IMAGE="ghcr.io/renovatebot/renovate:43.104.7@sha256:435e6249fdb753fd7c1d88171316ed01921c1ff642e030bc81cd18fe77e4011b"
 
 # renovate: datasource=github-releases depName=cli/cli

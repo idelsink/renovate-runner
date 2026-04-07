@@ -15,7 +15,7 @@
         // currentDigest so Renovate can update both atomically.
         //
         // Example:
-        //   # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
+        //   # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate versioning=semver
         //   IMAGE="ghcr.io/renovatebot/renovate:39.0.0@sha256:abc123..."
         "# renovate: datasource=(?<datasource>[a-zA-Z0-9-._]+?) depName=(?<depName>[^\\s]+?)(?: (?:packageName|lookupName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[^\\s]+?))?(?: extractVersion=(?<extractVersion>[^\\s]+?))?(?: registryUrl=(?<registryUrl>[^\\s]+?))?\\n\\s*\\w+=[\"']?[^:]+:(?<currentValue>[^\\s@\"']+)@(?<currentDigest>sha256:[a-f0-9]+)",
 
