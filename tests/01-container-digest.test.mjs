@@ -121,7 +121,7 @@ describe('container-digest manager', () => {
   describe('optional annotation fields', () => {
     it('captures packageName when present', () => {
       const content = dedent(`
-        # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate packageName=renovatebot/renovate
+        # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate packageName=renovatebot/renovate registryUrl=https://ghcr.io
         RENOVATE_IMAGE="ghcr.io/renovatebot/renovate:43.113.0@sha256:9dd3f426078a6ce9461c87264e4bcd1853698dc5ebb594fe5fab1f0afd25ef9b"
       `);
       const [dep] = extractWith(MANAGER_CONTAINER_DIGEST, content, 'test.sh');
@@ -130,7 +130,7 @@ describe('container-digest manager', () => {
 
     it('captures lookupName when present', () => {
       const content = dedent(`
-        # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate lookupName=renovatebot/renovate
+        # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate lookupName=renovatebot/renovate registryUrl=https://ghcr.io
         RENOVATE_IMAGE="ghcr.io/renovatebot/renovate:43.113.0@sha256:9dd3f426078a6ce9461c87264e4bcd1853698dc5ebb594fe5fab1f0afd25ef9b"
       `);
       const [dep] = extractWith(MANAGER_CONTAINER_DIGEST, content, 'test.sh');

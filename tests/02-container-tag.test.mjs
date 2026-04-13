@@ -95,7 +95,7 @@ describe('container-tag manager', () => {
   describe('optional annotation fields', () => {
     it('captures packageName when present', () => {
       const content = dedent(`
-        # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate packageName=renovatebot/renovate
+        # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate packageName=renovatebot/renovate registryUrl=https://ghcr.io
         image: ghcr.io/renovatebot/renovate:43.113.0
       `);
       const [dep] = extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml');
