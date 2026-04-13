@@ -31,10 +31,7 @@
         //   image: ghcr.io/renovatebot/renovate:43.113.0
         "(?:#|//) renovate: datasource=(?<datasource>[a-zA-Z0-9-._]+?) depName=(?<depName>[^\\s]+?)(?: (?:packageName|lookupName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[^\\s]+?))?(?: extractVersion=(?<extractVersion>[^\\s]+?))?(?: registryUrl=(?<registryUrl>[^\\s]+?))?\\n\\s*\\w+:\\s+[^:]+:(?<currentValue>[^\\s@\"']+)(?:[\"'\\s]|$)",
       ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}",
-      // Digest pinning is intentionally disabled: this manager has no currentDigest capture group.
-      // Renovate's pin PR would fail trying to write back a digest with no capture target.
-      "pinDigests": false
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}"
     },
     {
       "customType": "regex",
@@ -49,10 +46,19 @@
         //   RENOVATE_NPM_VERSION=43.113.0
         "(?:#|//) renovate: datasource=(?<datasource>[a-zA-Z0-9-._]+?) depName=(?<depName>[^\\s]+?)(?: (?:packageName|lookupName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[^\\s]+?))?(?: extractVersion=(?<extractVersion>[^\\s]+?))?(?: registryUrl=(?<registryUrl>[^\\s]+?))?\\n(?:\\s*\\w+(?:\\s+\\w+)*\\s*=\\s*[\"']?|\\s*\\w+:\\s+[\"']?)(?<currentValue>[^\\s@\"'#:]+)(?:[\"'\\s]|$)",
       ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}",
-      // Digest pinning is intentionally disabled: this manager has no currentDigest capture group.
-      // Renovate's pin PR would fail trying to write back a digest with no capture target.
-      "pinDigests": false
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}"
+    }
+  ],
+  "packageRules": [
+    {
+      // The container-tag and version-string managers have no currentDigest capture group.
+      // Renovate cannot write back a digest for those deps, so disable pin/pinDigest updates.
+      // Digest pinning is handled by the container-digest manager, which captures currentDigest
+      // and produces 'digest' updates (not 'pin'/'pinDigest'), so it is unaffected by this rule.
+      "description": "Disable digest pinning for regex manager deps without a currentDigest capture group",
+      "matchManagers": ["regex"],
+      "matchUpdateTypes": ["pin", "pinDigest"],
+      "enabled": false
     }
   ]
 }
