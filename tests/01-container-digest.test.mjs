@@ -4,7 +4,9 @@ import { extractWith, MANAGER_CONTAINER_DIGEST } from './helpers.mjs';
 import dedent from 'dedent';
 
 // renovate: datasource=docker depName=ghcr.io/renovatebot/renovate versioning=semver
-const RENOVATE_IMAGE_TAG = '39.0.0@sha256:262d3c2d7e61da7a7eef61fdbdcf26d80cb0d13f65baaa99ace4163a4d56c0fa';
+const RENOVATE_IMAGE = 'ghcr.io/renovatebot/renovate:39.0.0@sha256:262d3c2d7e61da7a7eef61fdbdcf26d80cb0d13f65baaa99ace4163a4d56c0fa';
+// tag@digest, derived from RENOVATE_IMAGE for use in assertions
+const RENOVATE_IMAGE_TAG = RENOVATE_IMAGE.split(':').slice(1).join(':');
 
 describe('container-digest manager', () => {
   describe('# comment + assignment (KEY=)', () => {
