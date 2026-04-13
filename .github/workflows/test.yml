@@ -1,0 +1,45 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - default.json
+      - tests/**
+      - package.json
+      - package-lock.json
+      - mise.toml
+      - mise.lock
+      - .github/workflows/test.yml
+  pull_request:
+    paths:
+      - default.json
+      - tests/**
+      - package.json
+      - package-lock.json
+      - mise.toml
+      - mise.lock
+      - .github/workflows/test.yml
+
+concurrency:
+  group: test-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Install mise and tools
+        uses: jdx/mise-action@1648a7812b9aeae629881980618f079932869151 # v4.0.1
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
