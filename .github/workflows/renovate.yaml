@@ -137,6 +137,7 @@ jobs:
           permission-contents: write       # push log branch + Renovate dependency branches
           permission-issues: write         # post/update Dependency Dashboard comment
           permission-pull-requests: write  # Renovate creates and updates PRs
+          permission-statuses: write       # Renovate sets commit status checks (e.g. renovate/stability-days)
           permission-workflows: write      # Renovate updates workflow files
 
       - name: Post running status to dashboard
