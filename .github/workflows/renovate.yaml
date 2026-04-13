@@ -148,7 +148,7 @@ jobs:
         with:
           github-token: ${{ steps.target_token.outputs.token }}
           script: |
-            const { postEntry } = require(`${process.env.GITHUB_WORKSPACE}/.github/scripts/dashboard-comment.js`);
+            const { postEntry } = require(`${process.env.GITHUB_WORKSPACE}/.github/scripts/dashboard-comment.cjs`);
             await postEntry(github, context, {
               owner: process.env.TARGET_OWNER,
               repo: process.env.TARGET_REPO,
@@ -264,7 +264,7 @@ jobs:
         with:
           github-token: ${{ steps.target_token.outputs.token }}
           script: |
-            const { postEntry } = require(`${process.env.GITHUB_WORKSPACE}/.github/scripts/dashboard-comment.js`);
+            const { postEntry } = require(`${process.env.GITHUB_WORKSPACE}/.github/scripts/dashboard-comment.cjs`);
             const found = await postEntry(github, context, {
               owner: process.env.TARGET_OWNER,
               repo: process.env.TARGET_REPO,
