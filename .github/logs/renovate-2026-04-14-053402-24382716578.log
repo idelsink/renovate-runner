@@ -1,0 +1,95 @@
+[2026-04-14T05:32:33.827Z] [command]/usr/bin/docker run --rm --volume /home/runner/work/renovate-runner/renovate-runner/config.js:/usr/src/app/config.js:ro --volume /home/runner/work/_temp/renovate-cache/renovate/repository:/tmp/renovate/cache/renovate/repository --env RENOVATE_RUNNER_REPO --env RENOVATE_TOKEN --env RENOVATE_REPOSITORIES --env LOG_LEVEL ghcr.io/renovatebot/renovate:43.113.0@sha256:9dd3f426078a6ce9461c87264e4bcd1853698dc5ebb594fe5fab1f0afd25ef9b
+[2026-04-14T05:32:33.860Z] Unable to find image 'ghcr.io/renovatebot/renovate:43.113.0@sha256:9dd3f426078a6ce9461c87264e4bcd1853698dc5ebb594fe5fab1f0afd25ef9b' locally
+[2026-04-14T05:32:34.423Z] ghcr.io/renovatebot/renovate@sha256:9dd3f426078a6ce9461c87264e4bcd1853698dc5ebb594fe5fab1f0afd25ef9b: Pulling from renovatebot/renovate
+[2026-04-14T05:32:34.619Z] 689b91d88a0f: Pulling fs layer
+[2026-04-14T05:32:34.619Z] f36a88f627d8: Pulling fs layer
+[2026-04-14T05:32:34.619Z] 94ec73325bae: Pulling fs layer
+[2026-04-14T05:32:34.619Z] ea4da6e0f077: Pulling fs layer
+[2026-04-14T05:32:34.619Z] 38874e444d76: Pulling fs layer
+[2026-04-14T05:32:34.619Z] 07fe309d6b85: Pulling fs layer
+[2026-04-14T05:32:34.619Z] ca4f11252ad9: Pulling fs layer
+[2026-04-14T05:32:34.619Z] c903088a166f: Pulling fs layer
+[2026-04-14T05:32:34.619Z] 44a2c12ea55b: Pulling fs layer
+[2026-04-14T05:32:34.619Z] ae000c6aa21e: Pulling fs layer
+[2026-04-14T05:32:34.619Z] 4d2e221293e8: Pulling fs layer
+[2026-04-14T05:32:34.619Z] b5b65f86ab50: Pulling fs layer
+[2026-04-14T05:32:34.619Z] 4f4fb700ef54: Pulling fs layer
+[2026-04-14T05:32:34.619Z] ea4da6e0f077: Waiting
+[2026-04-14T05:32:34.619Z] 38874e444d76: Waiting
+[2026-04-14T05:32:34.619Z] 07fe309d6b85: Waiting
+[2026-04-14T05:32:34.619Z] ca4f11252ad9: Waiting
+[2026-04-14T05:32:34.619Z] c903088a166f: Waiting
+[2026-04-14T05:32:34.619Z] 44a2c12ea55b: Waiting
+[2026-04-14T05:32:34.619Z] ae000c6aa21e: Waiting
+[2026-04-14T05:32:34.620Z] 4d2e221293e8: Waiting
+[2026-04-14T05:32:34.620Z] b5b65f86ab50: Waiting
+[2026-04-14T05:32:34.829Z] f36a88f627d8: Verifying Checksum
+[2026-04-14T05:32:34.829Z] f36a88f627d8: Download complete
+[2026-04-14T05:32:35.039Z] 94ec73325bae: Verifying Checksum
+[2026-04-14T05:32:35.039Z] 94ec73325bae: Download complete
+[2026-04-14T05:32:35.044Z] 689b91d88a0f: Verifying Checksum
+[2026-04-14T05:32:35.045Z] 689b91d88a0f: Download complete
+[2026-04-14T05:32:35.234Z] ea4da6e0f077: Download complete
+[2026-04-14T05:32:35.431Z] 38874e444d76: Verifying Checksum
+[2026-04-14T05:32:35.431Z] 38874e444d76: Download complete
+[2026-04-14T05:32:35.607Z] ca4f11252ad9: Verifying Checksum
+[2026-04-14T05:32:35.607Z] ca4f11252ad9: Download complete
+[2026-04-14T05:32:35.667Z] c903088a166f: Verifying Checksum
+[2026-04-14T05:32:35.667Z] c903088a166f: Download complete
+[2026-04-14T05:32:35.822Z] 44a2c12ea55b: Verifying Checksum
+[2026-04-14T05:32:35.822Z] 44a2c12ea55b: Download complete
+[2026-04-14T05:32:35.949Z] 07fe309d6b85: Verifying Checksum
+[2026-04-14T05:32:35.949Z] 07fe309d6b85: Download complete
+[2026-04-14T05:32:36.030Z] 4d2e221293e8: Verifying Checksum
+[2026-04-14T05:32:36.030Z] 4d2e221293e8: Download complete
+[2026-04-14T05:32:36.176Z] b5b65f86ab50: Verifying Checksum
+[2026-04-14T05:32:36.177Z] b5b65f86ab50: Download complete
+[2026-04-14T05:32:36.248Z] 4f4fb700ef54: Verifying Checksum
+[2026-04-14T05:32:36.248Z] 4f4fb700ef54: Download complete
+[2026-04-14T05:32:36.258Z] ae000c6aa21e: Verifying Checksum
+[2026-04-14T05:32:36.258Z] ae000c6aa21e: Download complete
+[2026-04-14T05:32:36.287Z] 689b91d88a0f: Pull complete
+[2026-04-14T05:32:37.199Z] f36a88f627d8: Pull complete
+[2026-04-14T05:32:37.564Z] 94ec73325bae: Pull complete
+[2026-04-14T05:32:38.147Z] ea4da6e0f077: Pull complete
+[2026-04-14T05:32:38.956Z] 38874e444d76: Pull complete
+[2026-04-14T05:32:45.251Z] 07fe309d6b85: Pull complete
+[2026-04-14T05:32:45.453Z] ca4f11252ad9: Pull complete
+[2026-04-14T05:32:45.464Z] c903088a166f: Pull complete
+[2026-04-14T05:32:45.476Z] 44a2c12ea55b: Pull complete
+[2026-04-14T05:32:56.800Z] ae000c6aa21e: Pull complete
+[2026-04-14T05:32:56.814Z] 4d2e221293e8: Pull complete
+[2026-04-14T05:32:56.825Z] b5b65f86ab50: Pull complete
+[2026-04-14T05:32:56.834Z] 4f4fb700ef54: Pull complete
+[2026-04-14T05:32:56.838Z] Digest: sha256:9dd3f426078a6ce9461c87264e4bcd1853698dc5ebb594fe5fab1f0afd25ef9b
+[2026-04-14T05:32:56.839Z] Status: Downloaded newer image for ghcr.io/renovatebot/renovate@sha256:9dd3f426078a6ce9461c87264e4bcd1853698dc5ebb594fe5fab1f0afd25ef9b
+[2026-04-14T05:32:59.493Z]  INFO: Renovate started
+[2026-04-14T05:32:59.494Z]        "renovateVersion": "43.113.0"
+[2026-04-14T05:32:59.837Z]  INFO: Repository started (repository=idelsink/renovate-runner)
+[2026-04-14T05:32:59.837Z]        "renovateVersion": "43.113.0"
+[2026-04-14T05:33:02.364Z]  INFO: Dependency extraction complete (repository=idelsink/renovate-runner, baseBranch=main)
+[2026-04-14T05:33:02.364Z]        "stats": {
+[2026-04-14T05:33:02.364Z]          "managers": {
+[2026-04-14T05:33:02.364Z]            "github-actions": {"fileCount": 3, "depCount": 23},
+[2026-04-14T05:33:02.364Z]            "mise": {"fileCount": 1, "depCount": 3},
+[2026-04-14T05:33:02.364Z]            "npm": {"fileCount": 2, "depCount": 8},
+[2026-04-14T05:33:02.364Z]            "regex": {"fileCount": 9, "depCount": 65},
+[2026-04-14T05:33:02.364Z]            "renovate-config-presets": {"fileCount": 1, "depCount": 1}
+[2026-04-14T05:33:02.364Z]          },
+[2026-04-14T05:33:02.364Z]          "total": {"fileCount": 16, "depCount": 100}
+[2026-04-14T05:33:02.364Z]        }
+[2026-04-14T05:33:56.832Z]  INFO: Found no results from datasource that look like a version (repository=idelsink/renovate-runner, dependency=renovatebot/renovate)
+[2026-04-14T05:33:56.832Z]        "result": {
+[2026-04-14T05:33:56.832Z]          "sourceUrl": "https://github.com/renovatebot/renovate",
+[2026-04-14T05:33:56.832Z]          "releases": [],
+[2026-04-14T05:33:56.832Z]          "registryUrl": "https://github.com"
+[2026-04-14T05:33:56.832Z]        }
+[2026-04-14T05:33:58.684Z]  INFO: Branch updating is skipped because internalChecksFilter was not met (repository=idelsink/renovate-runner, branch=renovate/wrangler-4.x)
+[2026-04-14T05:34:00.354Z]  INFO: Repository finished (repository=idelsink/renovate-runner)
+[2026-04-14T05:34:00.354Z]        "cloned": false,
+[2026-04-14T05:34:00.354Z]        "durationMs": 60519,
+[2026-04-14T05:34:00.354Z]        "result": "done",
+[2026-04-14T05:34:00.354Z]        "status": "activated",
+[2026-04-14T05:34:00.354Z]        "enabled": true,
+[2026-04-14T05:34:00.354Z]        "onboarded": true
+[2026-04-14T05:34:00.400Z]  INFO: Renovate was run at log level "info". Set LOG_LEVEL=debug in environment variables to see extended debug logs.
