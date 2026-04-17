@@ -63,7 +63,7 @@ jobs:
 
       - name: List repositories
         id: list
-        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
           REPO_ID: ${{ inputs.repository_id }}
         with:
@@ -113,7 +113,7 @@ jobs:
 
       - name: Resolve repo id to target repository
         id: target_repo
-        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           github-token: ${{ steps.app_token.outputs.token }}
           script: |
@@ -141,7 +141,7 @@ jobs:
           permission-workflows: write      # Renovate updates workflow files
 
       - name: Post running status to dashboard
-        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
           TARGET_OWNER: ${{ steps.target_repo.outputs.owner }}
           TARGET_REPO: ${{ steps.target_repo.outputs.name }}
@@ -173,7 +173,7 @@ jobs:
 
       - name: Run Renovate
         id: renovate
-        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
           RENOVATE_TOKEN: ${{ steps.target_token.outputs.token }}
           RENOVATE_DRY_RUN: ${{ inputs.dry_run }}
@@ -228,7 +228,7 @@ jobs:
       - name: Get app user ID
         id: app_user_id
         if: always()
-        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           github-token: ${{ steps.target_token.outputs.token }}
           script: |
@@ -238,7 +238,7 @@ jobs:
       - name: Prepare log
         id: prepare_log
         if: always()
-        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           script: |
             const fs = require('fs');
@@ -255,7 +255,7 @@ jobs:
       - name: Post final status to dashboard
         id: final_status
         if: always() && steps.target_repo.outputs.repo != ''
-        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
           TARGET_OWNER: ${{ steps.target_repo.outputs.owner }}
           TARGET_REPO: ${{ steps.target_repo.outputs.name }}
