@@ -72,7 +72,7 @@ describe('container-tag manager', () => {
     it('does not match a plain version: line (no path separator)', () => {
       const content = dedent(`
         # renovate: datasource=github-releases depName=renovatebot/renovate
-        version: 43.113.0
+        version: 43.129.0
       `);
       assert.equal(extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml').length, 0);
     });
