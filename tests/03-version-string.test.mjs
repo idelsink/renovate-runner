@@ -58,7 +58,7 @@ describe('version-string manager', () => {
     it('does not match a digest-pinned image reference', () => {
       const content = dedent(`
         # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-        RENOVATE_IMAGE="ghcr.io/renovatebot/renovate:43.113.0@sha256:9dd3f426078a6ce9461c87264e4bcd1853698dc5ebb594fe5fab1f0afd25ef9b"
+        RENOVATE_IMAGE="ghcr.io/renovatebot/renovate:43.129@sha256:e4abd88d1d6326fe8a702b38c5ee76487d94b455ba4f305bd904521aba9f5a08"
       `);
       assert.equal(extractWith(MANAGER_VERSION_STRING, content, 'test.sh').length, 0);
     });
@@ -107,7 +107,7 @@ describe('version-string manager', () => {
     it('matches camelCase key (e.g. appVersion:)', () => {
       const content = dedent(`
         # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-        appVersion: 43.113.0
+        appVersion: 43.129
       `);
       const deps = extractWith(MANAGER_VERSION_STRING, content, 'test.yaml');
       assert.equal(deps.length, 1, 'expected exactly one match');
@@ -115,7 +115,7 @@ describe('version-string manager', () => {
       assert.equal(dep.datasource, 'docker');
       assert.equal(dep.depName, 'ghcr.io/renovatebot/renovate');
       // renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-      const expected = '43.113.0';
+      const expected = '43.129';
       assert.equal(dep.currentValue, expected);
     });
 
@@ -135,12 +135,12 @@ describe('version-string manager', () => {
       const content = dedent(`
         cluster:
           # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-          appVersion: 43.113.0
+          appVersion: 43.129
       `);
       const deps = extractWith(MANAGER_VERSION_STRING, content, 'test.yaml');
       assert.equal(deps.length, 1, 'expected exactly one match');
       // renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-      const expected = '43.113.0';
+      const expected = '43.129';
       assert.equal(deps[0].currentValue, expected);
     });
 
@@ -154,7 +154,7 @@ describe('version-string manager', () => {
     it('does not match an image-tag line', () => {
       const content = dedent(`
         # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-        image: ghcr.io/renovatebot/renovate:43.113.0
+        image: ghcr.io/renovatebot/renovate:43.129
       `);
       assert.equal(extractWith(MANAGER_VERSION_STRING, content, 'test.yaml').length, 0);
     });

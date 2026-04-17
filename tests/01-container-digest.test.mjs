@@ -8,7 +8,7 @@ describe('container-digest manager', () => {
     it('matches', () => {
       const content = dedent(`
         # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate versioning=semver
-        RENOVATE_IMAGE="ghcr.io/renovatebot/renovate:43.113.0@sha256:9dd3f426078a6ce9461c87264e4bcd1853698dc5ebb594fe5fab1f0afd25ef9b"
+        RENOVATE_IMAGE="ghcr.io/renovatebot/renovate:43.129.0@sha256:e4abd88d1d6326fe8a702b38c5ee76487d94b455ba4f305bd904521aba9f5a08"
       `);
       const deps = extractWith(MANAGER_CONTAINER_DIGEST, content, 'test.sh');
       assert.equal(deps.length, 1, 'expected exactly one match');
@@ -17,7 +17,7 @@ describe('container-digest manager', () => {
       assert.equal(dep.depName, 'ghcr.io/renovatebot/renovate');
       assert.equal(dep.versioning, 'semver');
       // renovate: datasource=docker depName=ghcr.io/renovatebot/renovate versioning=semver
-      const expected = 'ghcr.io/renovatebot/renovate:43.113.0@sha256:9dd3f426078a6ce9461c87264e4bcd1853698dc5ebb594fe5fab1f0afd25ef9b';
+      const expected = 'ghcr.io/renovatebot/renovate:43.129.0@sha256:e4abd88d1d6326fe8a702b38c5ee76487d94b455ba4f305bd904521aba9f5a08';
       assert.equal(`${dep.currentValue}@${dep.currentDigest}`, expected.split(':').slice(1).join(':'));
     });
 
@@ -45,7 +45,7 @@ describe('container-digest manager', () => {
     it('matches', () => {
       const content = dedent(`
         // renovate: datasource=docker depName=ghcr.io/renovatebot/renovate versioning=semver
-        const RENOVATE_IMAGE = 'ghcr.io/renovatebot/renovate:43.113.0@sha256:9dd3f426078a6ce9461c87264e4bcd1853698dc5ebb594fe5fab1f0afd25ef9b';
+        const RENOVATE_IMAGE = 'ghcr.io/renovatebot/renovate:43.129.0@sha256:e4abd88d1d6326fe8a702b38c5ee76487d94b455ba4f305bd904521aba9f5a08';
       `);
       const deps = extractWith(MANAGER_CONTAINER_DIGEST, content, 'test.mjs');
       assert.equal(deps.length, 1, 'expected exactly one match');
@@ -53,7 +53,7 @@ describe('container-digest manager', () => {
       assert.equal(dep.datasource, 'docker');
       assert.equal(dep.depName, 'ghcr.io/renovatebot/renovate');
       // renovate: datasource=docker depName=ghcr.io/renovatebot/renovate versioning=semver
-      const expected = 'ghcr.io/renovatebot/renovate:43.113.0@sha256:9dd3f426078a6ce9461c87264e4bcd1853698dc5ebb594fe5fab1f0afd25ef9b';
+      const expected = 'ghcr.io/renovatebot/renovate:43.129.0@sha256:e4abd88d1d6326fe8a702b38c5ee76487d94b455ba4f305bd904521aba9f5a08';
       assert.equal(`${dep.currentValue}@${dep.currentDigest}`, expected.split(':').slice(1).join(':'));
     });
 

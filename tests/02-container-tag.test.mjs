@@ -8,7 +8,7 @@ describe('container-tag manager', () => {
     it('matches registry/path:tag', () => {
       const content = dedent(`
         # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-        image: ghcr.io/renovatebot/renovate:43.113.0
+        image: ghcr.io/renovatebot/renovate:43.129
       `);
       const deps = extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml');
       assert.equal(deps.length, 1, 'expected exactly one match');
@@ -16,7 +16,7 @@ describe('container-tag manager', () => {
       assert.equal(dep.datasource, 'docker');
       assert.equal(dep.depName, 'ghcr.io/renovatebot/renovate');
       // renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-      const expected = '43.113.0';
+      const expected = '43.129';
       assert.equal(dep.currentValue, expected);
       assert.equal(dep.currentDigest, undefined);
     });
@@ -24,7 +24,7 @@ describe('container-tag manager', () => {
     it('matches when depName differs from the value URL (indirect image reference)', () => {
       const content = dedent(`
         # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-        image: ghcr.io/renovatebot/renovate:43.113.0
+        image: ghcr.io/renovatebot/renovate:43.129
       `);
       const deps = extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml');
       assert.equal(deps.length, 1, 'expected exactly one match');
@@ -32,7 +32,7 @@ describe('container-tag manager', () => {
       assert.equal(dep.datasource, 'docker');
       assert.equal(dep.depName, 'ghcr.io/renovatebot/renovate');
       // renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-      const expected = '43.113.0';
+      const expected = '43.129';
       assert.equal(dep.currentValue, expected);
     });
 
@@ -41,24 +41,24 @@ describe('container-tag manager', () => {
         spec:
           containers:
             # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-            image: ghcr.io/renovatebot/renovate:43.113.0
+            image: ghcr.io/renovatebot/renovate:43.129
       `);
       const deps = extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml');
       assert.equal(deps.length, 1, 'expected exactly one match');
       // renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-      const expected = '43.113.0';
+      const expected = '43.129';
       assert.equal(deps[0].currentValue, expected);
     });
 
     it('matches key:  value (extra space after colon)', () => {
       const content = dedent(`
         # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-        image:  ghcr.io/renovatebot/renovate:43.113.0
+        image:  ghcr.io/renovatebot/renovate:43.129
       `);
       const deps = extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml');
       assert.equal(deps.length, 1, 'expected exactly one match');
       // renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-      const expected = '43.113.0';
+      const expected = '43.129';
       assert.equal(deps[0].currentValue, expected);
     });
 
@@ -82,12 +82,12 @@ describe('container-tag manager', () => {
     it('matches', () => {
       const content = dedent(`
         // renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-        image: ghcr.io/renovatebot/renovate:43.113.0
+        image: ghcr.io/renovatebot/renovate:43.129
       `);
       const deps = extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml');
       assert.equal(deps.length, 1, 'expected exactly one match');
       // renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-      const expected = '43.113.0';
+      const expected = '43.129';
       assert.equal(deps[0].currentValue, expected);
     });
   });
@@ -96,7 +96,7 @@ describe('container-tag manager', () => {
     it('captures packageName when present', () => {
       const content = dedent(`
         # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate packageName=renovatebot/renovate registryUrl=https://ghcr.io
-        image: ghcr.io/renovatebot/renovate:43.113.0
+        image: ghcr.io/renovatebot/renovate:43.129
       `);
       const [dep] = extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml');
       assert.equal(dep.packageName, 'renovatebot/renovate');
@@ -105,7 +105,7 @@ describe('container-tag manager', () => {
     it('packageName is undefined when absent', () => {
       const content = dedent(`
         # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-        image: ghcr.io/renovatebot/renovate:43.113.0
+        image: ghcr.io/renovatebot/renovate:43.129
       `);
       const [dep] = extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml');
       assert.equal(dep.packageName, undefined);
@@ -123,7 +123,7 @@ describe('container-tag manager', () => {
     it('versioning defaults to semver-coerced when absent', () => {
       const content = dedent(`
         # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-        image: ghcr.io/renovatebot/renovate:43.113.0
+        image: ghcr.io/renovatebot/renovate:43.129
       `);
       const [dep] = extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml');
       // Renovate's regex manager defaults versioning to 'semver-coerced' when not specified
@@ -135,9 +135,9 @@ describe('container-tag manager', () => {
     it('produces two matches for two consecutive annotated lines', () => {
       const content = dedent(`
         # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-        imageA: ghcr.io/renovatebot/renovate:43.113.0
+        imageA: ghcr.io/renovatebot/renovate:43.129
         # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-        imageB: ghcr.io/renovatebot/renovate:43.113.0
+        imageB: ghcr.io/renovatebot/renovate:43.129
       `);
       const deps = extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml');
       assert.equal(deps.length, 2, 'expected two matches');
