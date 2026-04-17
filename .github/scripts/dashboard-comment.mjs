@@ -1,5 +1,3 @@
-'use strict';
-
 const MAX_ENTRIES = 10;
 
 /**
@@ -136,4 +134,9 @@ async function postEntry(github, context, { owner, repo, appSlug, entry, deleteB
   return true;
 }
 
-module.exports = { postEntry };
+export {
+  toSlug,
+  parseEntries,
+  buildBody,
+  postEntry,
+};
