@@ -23,7 +23,7 @@ describe('version-string manager', () => {
     it('matches KEY=version without quotes', () => {
       const content = dedent(`
         # renovate: datasource=npm depName=renovate versioning=npm
-        RENOVATE_VERSION=43.113.0
+        RENOVATE_VERSION=43.120.1
       `);
       const deps = extractWith(MANAGER_VERSION_STRING, content, 'test.sh');
       assert.equal(deps.length, 1, 'expected exactly one match');
@@ -32,7 +32,7 @@ describe('version-string manager', () => {
       assert.equal(dep.depName, 'renovate');
       assert.equal(dep.versioning, 'npm');
       // renovate: datasource=npm depName=renovate versioning=npm
-      const expected = '43.113.0';
+      const expected = '43.120.1';
       assert.equal(dep.currentValue, expected);
     });
 
@@ -205,7 +205,7 @@ describe('version-string manager', () => {
     it('captures registryUrl when present', () => {
       const content = dedent(`
         # renovate: datasource=npm depName=renovate registryUrl=https://registry.npmjs.org
-        RENOVATE_NPM_VERSION=43.113.0
+        RENOVATE_NPM_VERSION=43.120.1
       `);
       const [dep] = extractWith(MANAGER_VERSION_STRING, content, 'test.sh');
       // Renovate normalises registryUrl → registryUrls (array) and appends a trailing slash
@@ -219,7 +219,7 @@ describe('version-string manager', () => {
         # renovate: datasource=github-releases depName=renovatebot/renovate
         RENOVATE_VERSION="43.113.0"
         # renovate: datasource=npm depName=renovate versioning=npm
-        RENOVATE_NPM_VERSION=43.113.0
+        RENOVATE_NPM_VERSION=43.120.1
       `);
       const deps = extractWith(MANAGER_VERSION_STRING, content, 'test.sh');
       assert.equal(deps.length, 2, 'expected two matches');
