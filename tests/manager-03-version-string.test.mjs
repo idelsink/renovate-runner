@@ -7,58 +7,55 @@ describe('version-string manager', () => {
   describe('# comment + assignment (KEY=)', () => {
     it('matches KEY="vX.Y.Z"', () => {
       const content = dedent(`
-        # renovate: datasource=github-releases depName=renovatebot/renovate
-        RENOVATE_VERSION="43.113.0"
+        # renovate: datasource=github-releases depName=example/myapp
+        APP_VERSION="1.2.3"
       `);
       const deps = extractWith(MANAGER_VERSION_STRING, content, 'test.sh');
       assert.equal(deps.length, 1, 'expected exactly one match');
       const [dep] = deps;
       assert.equal(dep.datasource, 'github-releases');
-      assert.equal(dep.depName, 'renovatebot/renovate');
-      // renovate: datasource=github-releases depName=renovatebot/renovate
-      const expected = '43.113.0';
+      assert.equal(dep.depName, 'example/myapp');
+      const expected = '1.2.3';
       assert.equal(dep.currentValue, expected);
     });
 
     it('matches KEY=version without quotes', () => {
       const content = dedent(`
-        # renovate: datasource=npm depName=renovate versioning=npm
-        RENOVATE_VERSION=43.113.0
+        # renovate: datasource=npm depName=example-package versioning=npm
+        APP_VERSION=1.2.3
       `);
       const deps = extractWith(MANAGER_VERSION_STRING, content, 'test.sh');
       assert.equal(deps.length, 1, 'expected exactly one match');
       const [dep] = deps;
       assert.equal(dep.datasource, 'npm');
-      assert.equal(dep.depName, 'renovate');
+      assert.equal(dep.depName, 'example-package');
       assert.equal(dep.versioning, 'npm');
-      // renovate: datasource=npm depName=renovate versioning=npm
-      const expected = '43.113.0';
+      const expected = '1.2.3';
       assert.equal(dep.currentValue, expected);
     });
 
     it('matches KEY = "vX.Y.Z" (spaces around =)', () => {
       const content = dedent(`
-        # renovate: datasource=github-releases depName=renovatebot/renovate
-        RENOVATE_VERSION = "43.113.0"
+        # renovate: datasource=github-releases depName=example/myapp
+        APP_VERSION = "1.2.3"
       `);
       const deps = extractWith(MANAGER_VERSION_STRING, content, 'test.sh');
       assert.equal(deps.length, 1, 'expected exactly one match');
-      // renovate: datasource=github-releases depName=renovatebot/renovate
-      const expected = '43.113.0';
+      const expected = '1.2.3';
       assert.equal(deps[0].currentValue, expected);
     });
 
     it('does not match without annotation', () => {
       const content = dedent(`
-        RENOVATE_VERSION="43.113.0"
+        APP_VERSION="1.2.3"
       `);
       assert.equal(extractWith(MANAGER_VERSION_STRING, content, 'test.sh').length, 0);
     });
 
     it('does not match a digest-pinned image reference', () => {
       const content = dedent(`
-        # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-        RENOVATE_IMAGE="ghcr.io/renovatebot/renovate:43.113.0@sha256:9dd3f426078a6ce9461c87264e4bcd1853698dc5ebb594fe5fab1f0afd25ef9b"
+        # renovate: datasource=docker depName=registry.example.com/myapp
+        APP_IMAGE="registry.example.com/myapp:1.2.3@sha256:0000000000000000000000000000000000000000000000000000000000000000"
       `);
       assert.equal(extractWith(MANAGER_VERSION_STRING, content, 'test.sh').length, 0);
     });
@@ -67,22 +64,21 @@ describe('version-string manager', () => {
   describe('// comment + assignment (const KEY =)', () => {
     it('matches const KEY = "vX.Y.Z"', () => {
       const content = dedent(`
-        // renovate: datasource=github-releases depName=renovatebot/renovate
-        const RENOVATE_VERSION = '43.113.0';
+        // renovate: datasource=github-releases depName=example/myapp
+        const APP_VERSION = '1.2.3';
       `);
       const deps = extractWith(MANAGER_VERSION_STRING, content, 'test.mjs');
       assert.equal(deps.length, 1, 'expected exactly one match');
       const [dep] = deps;
       assert.equal(dep.datasource, 'github-releases');
-      assert.equal(dep.depName, 'renovatebot/renovate');
-      // renovate: datasource=github-releases depName=renovatebot/renovate
-      const expected = '43.113.0';
+      assert.equal(dep.depName, 'example/myapp');
+      const expected = '1.2.3';
       assert.equal(dep.currentValue, expected);
     });
 
     it('does not match without annotation', () => {
       const content = dedent(`
-        const RENOVATE_VERSION = '43.113.0';
+        const APP_VERSION = '1.2.3';
       `);
       assert.equal(extractWith(MANAGER_VERSION_STRING, content, 'test.mjs').length, 0);
     });
@@ -91,70 +87,66 @@ describe('version-string manager', () => {
   describe('# comment + key-value (key:)', () => {
     it('matches version: vX.Y.Z', () => {
       const content = dedent(`
-        # renovate: datasource=github-releases depName=renovatebot/renovate
-        version: 43.113.0
+        # renovate: datasource=github-releases depName=example/myapp
+        version: 1.2.3
       `);
       const deps = extractWith(MANAGER_VERSION_STRING, content, 'test.yaml');
       assert.equal(deps.length, 1, 'expected exactly one match');
       const [dep] = deps;
       assert.equal(dep.datasource, 'github-releases');
-      assert.equal(dep.depName, 'renovatebot/renovate');
-      // renovate: datasource=github-releases depName=renovatebot/renovate
-      const expected = '43.113.0';
+      assert.equal(dep.depName, 'example/myapp');
+      const expected = '1.2.3';
       assert.equal(dep.currentValue, expected);
     });
 
     it('matches camelCase key (e.g. appVersion:)', () => {
       const content = dedent(`
-        # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-        appVersion: 43.113.0
+        # renovate: datasource=docker depName=registry.example.com/myapp
+        appVersion: 1.2.3
       `);
       const deps = extractWith(MANAGER_VERSION_STRING, content, 'test.yaml');
       assert.equal(deps.length, 1, 'expected exactly one match');
       const [dep] = deps;
       assert.equal(dep.datasource, 'docker');
-      assert.equal(dep.depName, 'ghcr.io/renovatebot/renovate');
-      // renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-      const expected = '43.113.0';
+      assert.equal(dep.depName, 'registry.example.com/myapp');
+      const expected = '1.2.3';
       assert.equal(dep.currentValue, expected);
     });
 
     it('matches key:  value (extra space after colon)', () => {
       const content = dedent(`
-        # renovate: datasource=github-releases depName=renovatebot/renovate
-        version:  43.113.0
+        # renovate: datasource=github-releases depName=example/myapp
+        version:  1.2.3
       `);
       const deps = extractWith(MANAGER_VERSION_STRING, content, 'test.yaml');
       assert.equal(deps.length, 1, 'expected exactly one match');
-      // renovate: datasource=github-releases depName=renovatebot/renovate
-      const expected = '43.113.0';
+      const expected = '1.2.3';
       assert.equal(deps[0].currentValue, expected);
     });
 
     it('matches with extra indentation', () => {
       const content = dedent(`
         cluster:
-          # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-          appVersion: 43.113.0
+          # renovate: datasource=docker depName=registry.example.com/myapp
+          appVersion: 1.2.3
       `);
       const deps = extractWith(MANAGER_VERSION_STRING, content, 'test.yaml');
       assert.equal(deps.length, 1, 'expected exactly one match');
-      // renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-      const expected = '43.113.0';
+      const expected = '1.2.3';
       assert.equal(deps[0].currentValue, expected);
     });
 
     it('does not match without annotation', () => {
       const content = dedent(`
-        version: 43.113.0
+        version: 1.2.3
       `);
       assert.equal(extractWith(MANAGER_VERSION_STRING, content, 'test.yaml').length, 0);
     });
 
     it('does not match an image-tag line', () => {
       const content = dedent(`
-        # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-        image: ghcr.io/renovatebot/renovate:43.113.0
+        # renovate: datasource=docker depName=registry.example.com/myapp
+        image: registry.example.com/myapp:1.2.3
       `);
       assert.equal(extractWith(MANAGER_VERSION_STRING, content, 'test.yaml').length, 0);
     });
@@ -163,13 +155,12 @@ describe('version-string manager', () => {
   describe('// comment + key-value (key:)', () => {
     it('matches version: vX.Y.Z', () => {
       const content = dedent(`
-        // renovate: datasource=github-releases depName=renovatebot/renovate
-        version: 43.113.0
+        // renovate: datasource=github-releases depName=example/myapp
+        version: 1.2.3
       `);
       const deps = extractWith(MANAGER_VERSION_STRING, content, 'test.yaml');
       assert.equal(deps.length, 1, 'expected exactly one match');
-      // renovate: datasource=github-releases depName=renovatebot/renovate
-      const expected = '43.113.0';
+      const expected = '1.2.3';
       assert.equal(deps[0].currentValue, expected);
     });
   });
@@ -177,17 +168,17 @@ describe('version-string manager', () => {
   describe('optional annotation fields', () => {
     it('captures packageName when present', () => {
       const content = dedent(`
-        # renovate: datasource=github-releases depName=renovatebot/renovate packageName=renovatebot/renovate
-        RENOVATE_VERSION="43.113.0"
+        # renovate: datasource=github-releases depName=example/myapp packageName=example/myapp
+        APP_VERSION="1.2.3"
       `);
       const [dep] = extractWith(MANAGER_VERSION_STRING, content, 'test.sh');
-      assert.equal(dep.packageName, 'renovatebot/renovate');
+      assert.equal(dep.packageName, 'example/myapp');
     });
 
     it('packageName is undefined when absent', () => {
       const content = dedent(`
-        # renovate: datasource=github-releases depName=renovatebot/renovate
-        RENOVATE_VERSION="43.113.0"
+        # renovate: datasource=github-releases depName=example/myapp
+        APP_VERSION="1.2.3"
       `);
       const [dep] = extractWith(MANAGER_VERSION_STRING, content, 'test.sh');
       assert.equal(dep.packageName, undefined);
@@ -195,8 +186,8 @@ describe('version-string manager', () => {
 
     it('captures extractVersion when present', () => {
       const content = dedent(`
-        # renovate: datasource=github-releases depName=renovatebot/renovate extractVersion=^v(?<version>.+)$
-        RENOVATE_VERSION="43.113.0"
+        # renovate: datasource=github-releases depName=example/myapp extractVersion=^v(?<version>.+)$
+        APP_VERSION="1.2.3"
       `);
       const [dep] = extractWith(MANAGER_VERSION_STRING, content, 'test.sh');
       assert.equal(dep.extractVersion, '^v(?<version>.+)$');
@@ -205,7 +196,7 @@ describe('version-string manager', () => {
     it('captures registryUrl when present', () => {
       const content = dedent(`
         # renovate: datasource=npm depName=renovate registryUrl=https://registry.npmjs.org
-        RENOVATE_NPM_VERSION=43.113.0
+        APP_NPM_VERSION=1.2.3
       `);
       const [dep] = extractWith(MANAGER_VERSION_STRING, content, 'test.sh');
       // Renovate normalises registryUrl → registryUrls (array) and appends a trailing slash
@@ -216,23 +207,23 @@ describe('version-string manager', () => {
   describe('adjacent annotations', () => {
     it('produces two matches for two consecutive annotated lines', () => {
       const content = dedent(`
-        # renovate: datasource=github-releases depName=renovatebot/renovate
-        RENOVATE_VERSION="43.113.0"
-        # renovate: datasource=npm depName=renovate versioning=npm
-        RENOVATE_NPM_VERSION=43.113.0
+        # renovate: datasource=github-releases depName=example/myapp
+        APP_VERSION="1.2.3"
+        # renovate: datasource=npm depName=example-package versioning=npm
+        APP_NPM_VERSION=1.2.3
       `);
       const deps = extractWith(MANAGER_VERSION_STRING, content, 'test.sh');
       assert.equal(deps.length, 2, 'expected two matches');
-      assert.equal(deps[0].depName, 'renovatebot/renovate');
-      assert.equal(deps[1].depName, 'renovate');
+      assert.equal(deps[0].depName, 'example/myapp');
+      assert.equal(deps[1].depName, 'example-package');
     });
   });
 
   describe('annotation typos (should not match)', () => {
     it('does not match when annotation has space around = (datasource = github-releases)', () => {
       const content = dedent(`
-        # renovate: datasource = github-releases depName=renovatebot/renovate
-        RENOVATE_VERSION="43.113.0"
+        # renovate: datasource = github-releases depName=example/myapp
+        APP_VERSION="1.2.3"
       `);
       assert.equal(extractWith(MANAGER_VERSION_STRING, content, 'test.sh').length, 0);
     });

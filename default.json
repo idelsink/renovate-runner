@@ -6,18 +6,28 @@
   "schedule": ["before 6am on Monday"],
   "prConcurrentLimit": 5,
   "customManagers": [
+    // Custom regex `# renovate:` managers to capture all kind of packages
+    // Following: https://docs.renovatebot.com/modules/manager/regex/#required-capture-groups
     {
       "customType": "regex",
-      "description": "Container image references with digest pinning, annotated with # renovate: or // renovate:. Captures tag as currentValue and sha256 as currentDigest for atomic updates.",
+      "description": "Container image references with digest pinning (registry/image:1.2.3@shaabc123...), annotated with # renovate: or // renovate:. Captures tag as currentValue and sha256 as currentDigest for atomic updates.",
       "managerFilePatterns": ["/./"],
       "matchStrings": [
+        // Supported fields:
+        //   datasource=<value>              (required)
+        //   depName=<value>                 (required if no packageName)
+        //   packageName=<value>             (required if no depName)
+        //   versioning=<value>              (optional, default: semver-coerced)
+        //   extractVersion=<regex>          (optional)
+        //   registryUrl=<url>               (optional)
+        //
         // Example:
         //   # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
         //   IMAGE="ghcr.io/renovatebot/renovate:43.113.0@sha256:abc123..."
         //
         //   # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
         //   image: ghcr.io/renovatebot/renovate:43.113.0@sha256:abc123...
-        "(?:#|//) renovate: datasource=(?<datasource>[a-zA-Z0-9-._]+?) depName=(?<depName>[^\\s]+?)(?: (?:packageName|lookupName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[^\\s]+?))?(?: extractVersion=(?<extractVersion>[^\\s]+?))?(?: registryUrl=(?<registryUrl>[^\\s]+?))?\\n(?:\\s*\\w+(?:\\s+\\w+)*\\s*=\\s*[\"']?|\\s*\\w+:\\s+)[^:]+:(?<currentValue>[^\\s@\"']+)@(?<currentDigest>sha256:[a-f0-9]+)",
+        "(?:#|//) renovate: datasource=(?<datasource>.*?)(?: depName=(?<depName>.+?))?(?: packageName=(?<packageName>.+?))?(?: versioning=(?<versioning>.+?))?(?: extractVersion=(?<extractVersion>.+?))?(?: registryUrl=(?<registryUrl>.+?))?\\n\\s*[^=:\\n]+[=:]\\s*[\"']?[^:]+:(?<currentValue>[^\\s@\"']+)@(?<currentDigest>[^\\s\"']+)",
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}"
     },
@@ -26,10 +36,18 @@
       "description": "Container image references with tag only (no digest), annotated with # renovate: or // renovate:. Matches key-value lines where the value is a registry/path:tag.",
       "managerFilePatterns": ["/./"],
       "matchStrings": [
+        // Supported fields:
+        //   datasource=<value>              (required)
+        //   depName=<value>                 (required if no packageName)
+        //   packageName=<value>             (required if no depName)
+        //   versioning=<value>              (optional, default: semver-coerced)
+        //   extractVersion=<regex>          (optional)
+        //   registryUrl=<url>               (optional)
+        //
         // Example:
         //   # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
         //   image: ghcr.io/renovatebot/renovate:43.113.0
-        "(?:#|//) renovate: datasource=(?<datasource>[a-zA-Z0-9-._]+?) depName=(?<depName>[^\\s]+?)(?: (?:packageName|lookupName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[^\\s]+?))?(?: extractVersion=(?<extractVersion>[^\\s]+?))?(?: registryUrl=(?<registryUrl>[^\\s]+?))?\\n\\s*\\w+:\\s+[^:]+:(?<currentValue>[^\\s@\"']+)(?:[\"'\\s]|$)",
+        "(?:#|//) renovate: datasource=(?<datasource>.*?)(?: depName=(?<depName>.+?))?(?: packageName=(?<packageName>.+?))?(?: versioning=(?<versioning>.+?))?(?: extractVersion=(?<extractVersion>.+?))?(?: registryUrl=(?<registryUrl>.+?))?\\n\\s*[^=:\\n]+[=:]\\s*[\"']?[^:]+:(?<currentValue>[^\\s@\"']+)(?:[\"'\\s]|$)",
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}"
     },
@@ -38,13 +56,21 @@
       "description": "Plain version strings annotated with # renovate: or // renovate:. Handles both assignment (KEY=) and key-value (key:) styles for any datasource.",
       "managerFilePatterns": ["/./"],
       "matchStrings": [
+        // Supported fields:
+        //   datasource=<value>              (required)
+        //   depName=<value>                 (required if no packageName)
+        //   packageName=<value>             (required if no depName)
+        //   versioning=<value>              (optional, default: semver-coerced)
+        //   extractVersion=<regex>          (optional)
+        //   registryUrl=<url>               (optional)
+        //
         // Examples:
         //   # renovate: datasource=github-releases depName=renovatebot/renovate
         //   RENOVATE_VERSION="43.113.0"
         //
         //   # renovate: datasource=npm depName=renovate versioning=npm
         //   RENOVATE_NPM_VERSION=43.113.0
-        "(?:#|//) renovate: datasource=(?<datasource>[a-zA-Z0-9-._]+?) depName=(?<depName>[^\\s]+?)(?: (?:packageName|lookupName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[^\\s]+?))?(?: extractVersion=(?<extractVersion>[^\\s]+?))?(?: registryUrl=(?<registryUrl>[^\\s]+?))?\\n(?:\\s*\\w+(?:\\s+\\w+)*\\s*=\\s*[\"']?|\\s*\\w+:\\s+[\"']?)(?<currentValue>[^\\s@\"'#:]+)(?:[\"'\\s]|$)",
+        "(?:#|//) renovate: datasource=(?<datasource>.*?)(?: depName=(?<depName>.+?))?(?: packageName=(?<packageName>.+?))?(?: versioning=(?<versioning>.+?))?(?: extractVersion=(?<extractVersion>.+?))?(?: registryUrl=(?<registryUrl>.+?))?\\n\\s*[^=:\\n]+[=:]\\s*[\"']?(?<currentValue>[^\\s@\"'#:]+)(?:[\"'\\s]|$)",
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}"
     }

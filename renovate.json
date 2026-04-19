@@ -3,11 +3,6 @@
   "extends": [
     "github>idelsink/renovate-runner"
   ],
-  // config:best-practices includes :ignoreModulesAndTests which excludes **/tests/**.
-  // Override to only ignore node_modules so Renovate scans the tests/ directory.
-  // Source: https://github.com/renovatebot/renovate/discussions/23631
-  "ignorePresets": [":ignoreModulesAndTests"],
-  "ignorePaths": ["**/node_modules/**"],
   "packageRules": [
     {
       "description": "Group all Renovate version updates into a single PR",
