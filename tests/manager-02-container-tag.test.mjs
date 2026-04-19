@@ -3,151 +3,166 @@ import assert from 'node:assert/strict';
 import { extractWith, MANAGER_CONTAINER_TAG } from './helpers.mjs';
 import dedent from 'dedent';
 
-describe('container-tag manager', () => {
-  describe('# comment + key-value (key:)', () => {
-    it('matches registry/path:tag', () => {
-      const content = dedent(`
-        # renovate: datasource=docker depName=registry.example.com/myapp
-        image: registry.example.com/myapp:1.2.3
-      `);
-      const deps = extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml');
-      assert.equal(deps.length, 1, 'expected exactly one match');
-      const [dep] = deps;
-      assert.equal(dep.datasource, 'docker');
-      assert.equal(dep.depName, 'registry.example.com/myapp');
-      const expected = '1.2.3';
-      assert.equal(dep.currentValue, expected);
-      assert.equal(dep.currentDigest, undefined);
-    });
-
-    it('matches when depName differs from the value URL (indirect image reference)', () => {
-      const content = dedent(`
-        # renovate: datasource=docker depName=registry.example.com/myapp
-        image: registry.example.com/myapp:1.2.3
-      `);
-      const deps = extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml');
-      assert.equal(deps.length, 1, 'expected exactly one match');
-      const [dep] = deps;
-      assert.equal(dep.datasource, 'docker');
-      assert.equal(dep.depName, 'registry.example.com/myapp');
-      const expected = '1.2.3';
-      assert.equal(dep.currentValue, expected);
-    });
-
-    it('matches with extra indentation', () => {
-      const content = dedent(`
-        spec:
-          containers:
-            # renovate: datasource=docker depName=registry.example.com/myapp
-            image: registry.example.com/myapp:1.2.3
-      `);
-      const deps = extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml');
-      assert.equal(deps.length, 1, 'expected exactly one match');
-      const expected = '1.2.3';
-      assert.equal(deps[0].currentValue, expected);
-    });
-
-    it('matches key:  value (extra space after colon)', () => {
-      const content = dedent(`
-        # renovate: datasource=docker depName=registry.example.com/myapp
-        image:  registry.example.com/myapp:1.2.3
-      `);
-      const deps = extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml');
-      assert.equal(deps.length, 1, 'expected exactly one match');
-      const expected = '1.2.3';
-      assert.equal(deps[0].currentValue, expected);
-    });
-
-    it('does not match without annotation', () => {
-      const content = dedent(`
-        image: registry.example.com/myapp:1.2.3
-      `);
-      assert.equal(extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml').length, 0);
-    });
-
-    it('does not match a plain version: line (no path separator)', () => {
-      const content = dedent(`
-        # renovate: datasource=github-releases depName=example/myapp
-        version: 1.2.3
-      `);
-      assert.equal(extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml').length, 0);
-    });
-  });
-
-  describe('// comment + key-value (key:)', () => {
-    it('matches', () => {
-      const content = dedent(`
-        // renovate: datasource=docker depName=registry.example.com/myapp
-        image: registry.example.com/myapp:1.2.3
-      `);
-      const deps = extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml');
-      assert.equal(deps.length, 1, 'expected exactly one match');
-      const expected = '1.2.3';
-      assert.equal(deps[0].currentValue, expected);
-    });
-  });
-
-  describe('optional annotation fields', () => {
-    it('captures packageName when present', () => {
-      const content = dedent(`
-        # renovate: datasource=docker depName=registry.example.com/myapp packageName=example/myapp registryUrl=https://ghcr.io
-        image: registry.example.com/myapp:1.2.3
-      `);
-      const [dep] = extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml');
-      assert.equal(dep.packageName, 'example/myapp');
-    });
-
-    it('packageName is undefined when absent', () => {
-      const content = dedent(`
-        # renovate: datasource=docker depName=registry.example.com/myapp
-        image: registry.example.com/myapp:1.2.3
-      `);
-      const [dep] = extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml');
-      assert.equal(dep.packageName, undefined);
-    });
-
-    it('captures versioning when present', () => {
-      const content = dedent(`
-        # renovate: datasource=docker depName=registry.example.com/myapp versioning=semver
-        image: registry.example.com/myapp:1.2.3
-      `);
-      const [dep] = extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml');
-      assert.equal(dep.versioning, 'semver');
-    });
-
-    it('versioning defaults to semver-coerced when absent', () => {
-      const content = dedent(`
-        # renovate: datasource=docker depName=registry.example.com/myapp
-        image: registry.example.com/myapp:1.2.3
-      `);
-      const [dep] = extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml');
+const examples = [
+  // Matches
+  {
+    name: '# comment + image: registry/path:tag matches',
+    file: 'test.yaml',
+    content: dedent(`
+      # renovate: datasource=docker depName=registry.example.com/myapp
+      image: registry.example.com/myapp:1.2.3
+    `),
+    matches: [
+      { datasource: 'docker', depName: 'registry.example.com/myapp', currentValue: '1.2.3', currentDigest: undefined },
+    ],
+  },
+  {
+    name: 'indirect image reference (depName differs from value URL) matches',
+    file: 'test.yaml',
+    content: dedent(`
+      # renovate: datasource=docker depName=registry.example.com/myapp
+      image: registry.example.com/myapp:1.2.3
+    `),
+    matches: [
+      { datasource: 'docker', depName: 'registry.example.com/myapp', currentValue: '1.2.3' },
+    ],
+  },
+  {
+    name: '# comment + image: ... with extra indentation matches',
+    file: 'test.yaml',
+    content: dedent(`
+      spec:
+        containers:
+          # renovate: datasource=docker depName=registry.example.com/myapp
+          image: registry.example.com/myapp:1.2.3
+    `),
+    matches: [
+      { currentValue: '1.2.3' },
+    ],
+  },
+  {
+    name: '# comment + image:  value (extra space after colon) matches',
+    file: 'test.yaml',
+    content: dedent(`
+      # renovate: datasource=docker depName=registry.example.com/myapp
+      image:  registry.example.com/myapp:1.2.3
+    `),
+    matches: [
+      { currentValue: '1.2.3' },
+    ],
+  },
+  {
+    name: '// comment + image: registry/path:tag matches',
+    file: 'test.yaml',
+    content: dedent(`
+      // renovate: datasource=docker depName=registry.example.com/myapp
+      image: registry.example.com/myapp:1.2.3
+    `),
+    matches: [
+      { currentValue: '1.2.3' },
+    ],
+  },
+  // Should not match
+  {
+    name: '# comment + image: ... without annotation does not match',
+    file: 'test.yaml',
+    content: dedent(`
+      image: registry.example.com/myapp:1.2.3
+    `),
+    matches: [],
+  },
+  {
+    name: 'plain version: line (no path separator) does not match',
+    file: 'test.yaml',
+    content: dedent(`
+      # renovate: datasource=github-releases depName=example/myapp
+      version: 1.2.3
+    `),
+    matches: [],
+  },
+  // Optional fields
+  {
+    name: 'captures packageName when present',
+    file: 'test.yaml',
+    content: dedent(`
+      # renovate: datasource=docker depName=registry.example.com/myapp packageName=example/myapp registryUrl=https://ghcr.io
+      image: registry.example.com/myapp:1.2.3
+    `),
+    matches: [
+      { packageName: 'example/myapp' },
+    ],
+  },
+  {
+    name: 'packageName is undefined when absent',
+    file: 'test.yaml',
+    content: dedent(`
+      # renovate: datasource=docker depName=registry.example.com/myapp
+      image: registry.example.com/myapp:1.2.3
+    `),
+    matches: [
+      { packageName: undefined },
+    ],
+  },
+  {
+    name: 'captures versioning=semver when present',
+    file: 'test.yaml',
+    content: dedent(`
+      # renovate: datasource=docker depName=registry.example.com/myapp versioning=semver
+      image: registry.example.com/myapp:1.2.3
+    `),
+    matches: [
+      { versioning: 'semver' },
+    ],
+  },
+  {
+    name: 'versioning defaults to semver-coerced when absent',
+    file: 'test.yaml',
+    content: dedent(`
+      # renovate: datasource=docker depName=registry.example.com/myapp
+      image: registry.example.com/myapp:1.2.3
+    `),
+    matches: [
       // Renovate's regex manager defaults versioning to 'semver-coerced' when not specified
-      assert.equal(dep.versioning, 'semver-coerced');
-    });
-  });
+      { versioning: 'semver-coerced' },
+    ],
+  },
+  // Adjacent annotations
+  {
+    name: 'two adjacent annotated image lines produce two matches',
+    file: 'test.yaml',
+    content: dedent(`
+      # renovate: datasource=docker depName=registry.example.com/myapp
+      imageA: registry.example.com/myapp:1.2.3
+      # renovate: datasource=docker depName=registry.example.com/otherapp
+      imageB: registry.example.com/otherapp:1.2.3
+    `),
+    matches: [
+      { depName: 'registry.example.com/myapp' },
+      { depName: 'registry.example.com/otherapp' },
+    ],
+  },
+  // Annotation typos (should not match)
+  {
+    name: 'space around = in annotation (datasource = docker) does not match',
+    file: 'test.yaml',
+    content: dedent(`
+      # renovate: datasource = docker depName=registry.example.com/myapp
+      image: registry.example.com/myapp:1.2.3
+    `),
+    matches: [],
+  },
+];
 
-  describe('adjacent annotations', () => {
-    it('produces two matches for two consecutive annotated lines', () => {
-      const content = dedent(`
-        # renovate: datasource=docker depName=registry.example.com/myapp
-        imageA: registry.example.com/myapp:1.2.3
-        # renovate: datasource=docker depName=registry.example.com/myapp
-        imageB: registry.example.com/myapp:1.2.3
-      `);
-      const deps = extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml');
-      assert.equal(deps.length, 2, 'expected two matches');
-      assert.equal(deps[0].depName, 'registry.example.com/myapp');
-      assert.equal(deps[1].depName, 'registry.example.com/myapp');
+describe('container-tag manager', () => {
+  for (const example of examples) {
+    it(example.name, () => {
+      const deps = extractWith(MANAGER_CONTAINER_TAG, example.content, example.file ?? 'test.sh');
+      assert.equal(deps.length, example.matches.length);
+      for (const [i, expected] of example.matches.entries()) {
+        for (const [key, value] of Object.entries(expected)) {
+          assert.deepEqual(deps[i][key], value);
+        }
+      }
     });
-  });
-
-  describe('annotation typos (should not match)', () => {
-    it('does not match when annotation has space around = (datasource = docker)', () => {
-      const content = dedent(`
-        # renovate: datasource = docker depName=registry.example.com/myapp
-        image: registry.example.com/myapp:1.2.3
-      `);
-      assert.equal(extractWith(MANAGER_CONTAINER_TAG, content, 'test.yaml').length, 0);
-    });
-  });
+  }
 });
