@@ -1,0 +1,189 @@
+[2026-04-19T05:37:35.692Z] [command]/usr/bin/docker run --rm --volume /home/runner/work/renovate-runner/renovate-runner/config.js:/usr/src/app/config.js:ro --volume /home/runner/work/_temp/renovate-cache/renovate/repository:/tmp/renovate/cache/renovate/repository --env RENOVATE_RUNNER_REPO --env RENOVATE_TOKEN --env RENOVATE_REPOSITORIES --env LOG_LEVEL ghcr.io/renovatebot/renovate:43.113.0@sha256:9dd3f426078a6ce9461c87264e4bcd1853698dc5ebb594fe5fab1f0afd25ef9b
+[2026-04-19T05:37:36.057Z] Unable to find image 'ghcr.io/renovatebot/renovate:43.113.0@sha256:9dd3f426078a6ce9461c87264e4bcd1853698dc5ebb594fe5fab1f0afd25ef9b' locally
+[2026-04-19T05:37:36.425Z] ghcr.io/renovatebot/renovate@sha256:9dd3f426078a6ce9461c87264e4bcd1853698dc5ebb594fe5fab1f0afd25ef9b: Pulling from renovatebot/renovate
+[2026-04-19T05:37:36.547Z] 689b91d88a0f: Pulling fs layer
+[2026-04-19T05:37:36.547Z] f36a88f627d8: Pulling fs layer
+[2026-04-19T05:37:36.547Z] 94ec73325bae: Pulling fs layer
+[2026-04-19T05:37:36.547Z] ea4da6e0f077: Pulling fs layer
+[2026-04-19T05:37:36.547Z] 38874e444d76: Pulling fs layer
+[2026-04-19T05:37:36.547Z] 07fe309d6b85: Pulling fs layer
+[2026-04-19T05:37:36.547Z] ca4f11252ad9: Pulling fs layer
+[2026-04-19T05:37:36.547Z] c903088a166f: Pulling fs layer
+[2026-04-19T05:37:36.547Z] 44a2c12ea55b: Pulling fs layer
+[2026-04-19T05:37:36.547Z] ae000c6aa21e: Pulling fs layer
+[2026-04-19T05:37:36.547Z] 4d2e221293e8: Pulling fs layer
+[2026-04-19T05:37:36.547Z] b5b65f86ab50: Pulling fs layer
+[2026-04-19T05:37:36.547Z] ea4da6e0f077: Waiting
+[2026-04-19T05:37:36.547Z] 4f4fb700ef54: Pulling fs layer
+[2026-04-19T05:37:36.547Z] 38874e444d76: Waiting
+[2026-04-19T05:37:36.547Z] 07fe309d6b85: Waiting
+[2026-04-19T05:37:36.547Z] ca4f11252ad9: Waiting
+[2026-04-19T05:37:36.547Z] 4d2e221293e8: Waiting
+[2026-04-19T05:37:36.547Z] b5b65f86ab50: Waiting
+[2026-04-19T05:37:36.547Z] 4f4fb700ef54: Waiting
+[2026-04-19T05:37:36.547Z] c903088a166f: Waiting
+[2026-04-19T05:37:36.547Z] 44a2c12ea55b: Waiting
+[2026-04-19T05:37:36.547Z] ae000c6aa21e: Waiting
+[2026-04-19T05:37:36.703Z] f36a88f627d8: Download complete
+[2026-04-19T05:37:36.858Z] 94ec73325bae: Verifying Checksum
+[2026-04-19T05:37:36.858Z] 94ec73325bae: Download complete
+[2026-04-19T05:37:36.907Z] 689b91d88a0f: Verifying Checksum
+[2026-04-19T05:37:36.907Z] 689b91d88a0f: Download complete
+[2026-04-19T05:37:37.052Z] ea4da6e0f077: Verifying Checksum
+[2026-04-19T05:37:37.052Z] ea4da6e0f077: Download complete
+[2026-04-19T05:37:37.256Z] 38874e444d76: Verifying Checksum
+[2026-04-19T05:37:37.256Z] 38874e444d76: Download complete
+[2026-04-19T05:37:37.404Z] c903088a166f: Verifying Checksum
+[2026-04-19T05:37:37.404Z] c903088a166f: Download complete
+[2026-04-19T05:37:37.423Z] ca4f11252ad9: Verifying Checksum
+[2026-04-19T05:37:37.423Z] ca4f11252ad9: Download complete
+[2026-04-19T05:37:37.542Z] 44a2c12ea55b: Download complete
+[2026-04-19T05:37:37.694Z] 4d2e221293e8: Verifying Checksum
+[2026-04-19T05:37:37.694Z] 4d2e221293e8: Download complete
+[2026-04-19T05:37:37.779Z] 07fe309d6b85: Verifying Checksum
+[2026-04-19T05:37:37.779Z] 07fe309d6b85: Download complete
+[2026-04-19T05:37:37.829Z] b5b65f86ab50: Verifying Checksum
+[2026-04-19T05:37:37.829Z] b5b65f86ab50: Download complete
+[2026-04-19T05:37:37.924Z] 4f4fb700ef54: Verifying Checksum
+[2026-04-19T05:37:37.924Z] 4f4fb700ef54: Download complete
+[2026-04-19T05:37:37.993Z] ae000c6aa21e: Verifying Checksum
+[2026-04-19T05:37:37.993Z] ae000c6aa21e: Download complete
+[2026-04-19T05:37:38.035Z] 689b91d88a0f: Pull complete
+[2026-04-19T05:37:38.778Z] f36a88f627d8: Pull complete
+[2026-04-19T05:37:39.135Z] 94ec73325bae: Pull complete
+[2026-04-19T05:37:39.804Z] ea4da6e0f077: Pull complete
+[2026-04-19T05:37:40.575Z] 38874e444d76: Pull complete
+[2026-04-19T05:37:46.479Z] 07fe309d6b85: Pull complete
+[2026-04-19T05:37:46.675Z] ca4f11252ad9: Pull complete
+[2026-04-19T05:37:46.690Z] c903088a166f: Pull complete
+[2026-04-19T05:37:46.703Z] 44a2c12ea55b: Pull complete
+[2026-04-19T05:37:57.122Z] ae000c6aa21e: Pull complete
+[2026-04-19T05:37:57.130Z] 4d2e221293e8: Pull complete
+[2026-04-19T05:37:57.140Z] b5b65f86ab50: Pull complete
+[2026-04-19T05:37:57.149Z] 4f4fb700ef54: Pull complete
+[2026-04-19T05:37:57.157Z] Digest: sha256:9dd3f426078a6ce9461c87264e4bcd1853698dc5ebb594fe5fab1f0afd25ef9b
+[2026-04-19T05:37:57.158Z] Status: Downloaded newer image for ghcr.io/renovatebot/renovate@sha256:9dd3f426078a6ce9461c87264e4bcd1853698dc5ebb594fe5fab1f0afd25ef9b
+[2026-04-19T05:38:00.501Z]  INFO: Renovate started
+[2026-04-19T05:38:00.501Z]        "renovateVersion": "43.113.0"
+[2026-04-19T05:38:00.891Z]  INFO: Repository started (repository=idelsink/renovate-runner)
+[2026-04-19T05:38:00.891Z]        "renovateVersion": "43.113.0"
+[2026-04-19T05:38:03.408Z]  INFO: Dependency extraction complete (repository=idelsink/renovate-runner, baseBranch=main)
+[2026-04-19T05:38:03.408Z]        "stats": {
+[2026-04-19T05:38:03.408Z]          "managers": {
+[2026-04-19T05:38:03.408Z]            "github-actions": {"fileCount": 3, "depCount": 23},
+[2026-04-19T05:38:03.408Z]            "mise": {"fileCount": 1, "depCount": 3},
+[2026-04-19T05:38:03.408Z]            "npm": {"fileCount": 2, "depCount": 8},
+[2026-04-19T05:38:03.408Z]            "regex": {"fileCount": 9, "depCount": 65},
+[2026-04-19T05:38:03.408Z]            "renovate-config-presets": {"fileCount": 1, "depCount": 1}
+[2026-04-19T05:38:03.408Z]          },
+[2026-04-19T05:38:03.408Z]          "total": {"fileCount": 16, "depCount": 100}
+[2026-04-19T05:38:03.408Z]        }
+[2026-04-19T05:38:53.153Z]  INFO: Found no results from datasource that look like a version (repository=idelsink/renovate-runner, dependency=renovatebot/renovate)
+[2026-04-19T05:38:53.153Z]        "result": {
+[2026-04-19T05:38:53.153Z]          "sourceUrl": "https://github.com/renovatebot/renovate",
+[2026-04-19T05:38:53.153Z]          "releases": [],
+[2026-04-19T05:38:53.153Z]          "registryUrl": "https://github.com"
+[2026-04-19T05:38:53.153Z]        }
+[2026-04-19T05:38:56.904Z]  INFO: Ignoring upgrade collision (repository=idelsink/renovate-runner, packageFile=tests/01-container-digest.test.mjs, branch=renovate/renovate)
+[2026-04-19T05:38:56.904Z]        "manager": "regex",
+[2026-04-19T05:38:56.904Z]        "depName": "ghcr.io/renovatebot/renovate",
+[2026-04-19T05:38:56.904Z]        "currentValue": "43.113.0",
+[2026-04-19T05:38:56.904Z]        "previousNewValue": "43.129.0",
+[2026-04-19T05:38:56.904Z]        "thisNewValue": "43.129"
+[2026-04-19T05:38:56.904Z]  INFO: Ignoring upgrade collision (repository=idelsink/renovate-runner, packageFile=tests/01-container-digest.test.mjs, branch=renovate/renovate)
+[2026-04-19T05:38:56.904Z]        "manager": "regex",
+[2026-04-19T05:38:56.904Z]        "depName": "ghcr.io/renovatebot/renovate",
+[2026-04-19T05:38:56.904Z]        "currentValue": "43.113.0",
+[2026-04-19T05:38:56.904Z]        "previousNewValue": "43.129.0",
+[2026-04-19T05:38:56.904Z]        "thisNewValue": "43.129"
+[2026-04-19T05:38:56.904Z]  INFO: Ignoring upgrade collision (repository=idelsink/renovate-runner, packageFile=tests/01-container-digest.test.mjs, branch=renovate/renovate)
+[2026-04-19T05:38:56.905Z]        "manager": "regex",
+[2026-04-19T05:38:56.905Z]        "depName": "ghcr.io/renovatebot/renovate",
+[2026-04-19T05:38:56.905Z]        "currentValue": "43.113.0",
+[2026-04-19T05:38:56.905Z]        "previousNewValue": "43.129.0",
+[2026-04-19T05:38:56.905Z]        "thisNewValue": "43.129"
+[2026-04-19T05:38:56.905Z]  INFO: Ignoring upgrade collision (repository=idelsink/renovate-runner, packageFile=tests/01-container-digest.test.mjs, branch=renovate/renovate)
+[2026-04-19T05:38:56.905Z]        "manager": "regex",
+[2026-04-19T05:38:56.905Z]        "depName": "ghcr.io/renovatebot/renovate",
+[2026-04-19T05:38:56.905Z]        "currentValue": "43.113.0",
+[2026-04-19T05:38:56.905Z]        "previousNewValue": "43.129.0",
+[2026-04-19T05:38:56.905Z]        "thisNewValue": "43.129"
+[2026-04-19T05:38:56.905Z]  INFO: Ignoring upgrade collision (repository=idelsink/renovate-runner, packageFile=tests/01-container-digest.test.mjs, branch=renovate/renovate)
+[2026-04-19T05:38:56.905Z]        "manager": "regex",
+[2026-04-19T05:38:56.905Z]        "depName": "ghcr.io/renovatebot/renovate",
+[2026-04-19T05:38:56.905Z]        "currentValue": "43.113.0",
+[2026-04-19T05:38:56.905Z]        "previousNewValue": "43.129.0",
+[2026-04-19T05:38:56.905Z]        "thisNewValue": "43.129"
+[2026-04-19T05:38:56.905Z]  INFO: Ignoring upgrade collision (repository=idelsink/renovate-runner, packageFile=tests/01-container-digest.test.mjs, branch=renovate/renovate)
+[2026-04-19T05:38:56.905Z]        "manager": "regex",
+[2026-04-19T05:38:56.905Z]        "depName": "ghcr.io/renovatebot/renovate",
+[2026-04-19T05:38:56.905Z]        "currentValue": "43.113.0",
+[2026-04-19T05:38:56.905Z]        "previousNewValue": "43.129.0",
+[2026-04-19T05:38:56.905Z]        "thisNewValue": "43.129"
+[2026-04-19T05:38:56.905Z]  INFO: Ignoring upgrade collision (repository=idelsink/renovate-runner, packageFile=tests/01-container-digest.test.mjs, branch=renovate/renovate)
+[2026-04-19T05:38:56.905Z]        "manager": "regex",
+[2026-04-19T05:38:56.905Z]        "depName": "ghcr.io/renovatebot/renovate",
+[2026-04-19T05:38:56.905Z]        "currentValue": "43.113.0",
+[2026-04-19T05:38:56.905Z]        "previousNewValue": "43.129.0",
+[2026-04-19T05:38:56.905Z]        "thisNewValue": "43.129"
+[2026-04-19T05:38:56.905Z]  INFO: Ignoring upgrade collision (repository=idelsink/renovate-runner, packageFile=tests/01-container-digest.test.mjs, branch=renovate/renovate)
+[2026-04-19T05:38:56.905Z]        "manager": "regex",
+[2026-04-19T05:38:56.905Z]        "depName": "ghcr.io/renovatebot/renovate",
+[2026-04-19T05:38:56.906Z]        "currentValue": "43.113.0",
+[2026-04-19T05:38:56.906Z]        "previousNewValue": "43.129.0",
+[2026-04-19T05:38:56.906Z]        "thisNewValue": "43.129"
+[2026-04-19T05:38:56.906Z]  INFO: Ignoring upgrade collision (repository=idelsink/renovate-runner, packageFile=tests/01-container-digest.test.mjs, branch=renovate/renovate)
+[2026-04-19T05:38:56.906Z]        "manager": "regex",
+[2026-04-19T05:38:56.906Z]        "depName": "ghcr.io/renovatebot/renovate",
+[2026-04-19T05:38:56.906Z]        "currentValue": "43.113.0",
+[2026-04-19T05:38:56.906Z]        "previousNewValue": "43.129.0",
+[2026-04-19T05:38:56.906Z]        "thisNewValue": "43.129"
+[2026-04-19T05:38:56.906Z]  INFO: Ignoring upgrade collision (repository=idelsink/renovate-runner, packageFile=tests/01-container-digest.test.mjs, branch=renovate/renovate)
+[2026-04-19T05:38:56.906Z]        "manager": "regex",
+[2026-04-19T05:38:56.906Z]        "depName": "ghcr.io/renovatebot/renovate",
+[2026-04-19T05:38:56.906Z]        "currentValue": "43.113.0",
+[2026-04-19T05:38:56.906Z]        "previousNewValue": "43.129.0",
+[2026-04-19T05:38:56.906Z]        "thisNewValue": "43.129"
+[2026-04-19T05:38:56.906Z]  INFO: Ignoring upgrade collision (repository=idelsink/renovate-runner, packageFile=tests/01-container-digest.test.mjs, branch=renovate/renovate)
+[2026-04-19T05:38:56.906Z]        "manager": "regex",
+[2026-04-19T05:38:56.906Z]        "depName": "ghcr.io/renovatebot/renovate",
+[2026-04-19T05:38:56.906Z]        "currentValue": "43.113.0",
+[2026-04-19T05:38:56.906Z]        "previousNewValue": "43.129.0",
+[2026-04-19T05:38:56.906Z]        "thisNewValue": "43.129"
+[2026-04-19T05:38:56.906Z]  INFO: Ignoring upgrade collision (repository=idelsink/renovate-runner, packageFile=tests/01-container-digest.test.mjs, branch=renovate/renovate)
+[2026-04-19T05:38:56.906Z]        "manager": "regex",
+[2026-04-19T05:38:56.906Z]        "depName": "ghcr.io/renovatebot/renovate",
+[2026-04-19T05:38:56.906Z]        "currentValue": "43.113.0",
+[2026-04-19T05:38:56.906Z]        "previousNewValue": "43.129.0",
+[2026-04-19T05:38:56.906Z]        "thisNewValue": "43.129"
+[2026-04-19T05:38:56.906Z]  INFO: Ignoring upgrade collision (repository=idelsink/renovate-runner, packageFile=tests/01-container-digest.test.mjs, branch=renovate/renovate)
+[2026-04-19T05:38:56.906Z]        "manager": "regex",
+[2026-04-19T05:38:56.906Z]        "depName": "ghcr.io/renovatebot/renovate",
+[2026-04-19T05:38:56.906Z]        "currentValue": "43.113.0",
+[2026-04-19T05:38:56.906Z]        "previousNewValue": "43.129.0",
+[2026-04-19T05:38:56.906Z]        "thisNewValue": "43.129"
+[2026-04-19T05:38:56.906Z]  INFO: Ignoring upgrade collision (repository=idelsink/renovate-runner, packageFile=tests/01-container-digest.test.mjs, branch=renovate/renovate)
+[2026-04-19T05:38:56.906Z]        "manager": "regex",
+[2026-04-19T05:38:56.906Z]        "depName": "ghcr.io/renovatebot/renovate",
+[2026-04-19T05:38:56.906Z]        "currentValue": "43.113.0",
+[2026-04-19T05:38:56.906Z]        "previousNewValue": "43.129.0",
+[2026-04-19T05:38:56.906Z]        "thisNewValue": "43.129"
+[2026-04-19T05:38:56.906Z]  INFO: Ignoring upgrade collision (repository=idelsink/renovate-runner, packageFile=tests/02-container-tag.test.mjs, branch=renovate/renovate)
+[2026-04-19T05:38:56.906Z]        "manager": "regex",
+[2026-04-19T05:38:56.906Z]        "depName": "ghcr.io/renovatebot/renovate",
+[2026-04-19T05:38:56.906Z]        "currentValue": "43.113.0",
+[2026-04-19T05:38:56.906Z]        "previousNewValue": "43.129",
+[2026-04-19T05:38:56.906Z]        "thisNewValue": "43.129.0"
+[2026-04-19T05:39:09.409Z]  INFO: Branch updated (repository=idelsink/renovate-runner, branch=renovate/renovate)
+[2026-04-19T05:39:09.410Z]        "commitSha": "8149676471d6ff750b9487f5d14748b788f52517"
+[2026-04-19T05:43:10.232Z]  INFO: PR updated (repository=idelsink/renovate-runner, branch=renovate/renovate)
+[2026-04-19T05:43:10.232Z]        "pr": 27,
+[2026-04-19T05:43:10.232Z]        "prTitle": "chore(deps): update renovate"
+[2026-04-19T05:43:13.290Z]  INFO: Repository finished (repository=idelsink/renovate-runner)
+[2026-04-19T05:43:13.290Z]        "cloned": true,
+[2026-04-19T05:43:13.290Z]        "durationMs": 312400,
+[2026-04-19T05:43:13.290Z]        "result": "done",
+[2026-04-19T05:43:13.290Z]        "status": "activated",
+[2026-04-19T05:43:13.290Z]        "enabled": true,
+[2026-04-19T05:43:13.290Z]        "onboarded": true
+[2026-04-19T05:43:13.490Z]  INFO: Renovate was run at log level "info". Set LOG_LEVEL=debug in environment variables to see extended debug logs.
