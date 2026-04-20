@@ -85,6 +85,19 @@
       "matchManagers": ["regex"],
       "matchUpdateTypes": ["pin", "pinDigest"],
       "enabled": false
+    },
+    {
+      // The kustomize manager sets pinDigests: false on OCI helmCharts during extraction:
+      // https://github.com/renovatebot/renovate/blob/930cf6633ccf38f3578cb112c7ad42c7f99e1cdb/lib/modules/manager/kustomize/extract.ts#L173
+      // (see also: https://github.com/helm/helm/issues/10312, https://github.com/helm/helm/issues/10678)
+      // However, config:best-practices includes docker:pinDigests which matches all docker datasource
+      // deps and overrides that extractor-level setting. This rule restores the intended behaviour
+      // by explicitly disabling pin/pinDigest updates for kustomize HelmChart deps.
+      "description": "Disable digest pinning for kustomize OCI helmCharts",
+      "matchManagers": ["kustomize"],
+      "matchDepTypes": ["HelmChart"],
+      "matchUpdateTypes": ["pin", "pinDigest"],
+      "enabled": false
     }
   ]
 }
