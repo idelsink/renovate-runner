@@ -38,7 +38,6 @@ on:
           - info
           - warn
           - error
-        default: "debug"
   schedule:
     # Run every day at 03:17 UTC (off-peak random time)
     - cron: "17 3 * * *"
@@ -178,7 +177,7 @@ jobs:
           RENOVATE_TOKEN: ${{ steps.target_token.outputs.token }}
           RENOVATE_DRY_RUN: ${{ inputs.dry_run }}
           RENOVATE_RUNNER_REPO: ${{ github.repository }}
-          LOG_LEVEL: ${{ inputs.log_level }}
+          LOG_LEVEL: ${{ inputs.log_level || 'debug' }}
         with:
           script: |
             const fs = require('fs');
