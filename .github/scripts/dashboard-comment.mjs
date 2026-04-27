@@ -117,9 +117,19 @@ async function postEntry(github, context, { owner, repo, appSlug, entry, deleteB
   const allEntries = [entry, ...parseEntries(existingComment?.body).filter(e => e.workflow_id !== entry.workflow_id)];
 
   if (deleteBranches) {
-    for (const staleEntry of allEntries.slice(MAX_ENTRIES)) {
-      if (staleEntry.ts && staleEntry.workflow_id) {
-        try { await github.rest.git.deleteRef({ owner, repo, ref: `heads/renovate-logs/${toSlug(staleEntry.ts)}-${staleEntry.workflow_id}` }); } catch {}
+    const keepSlugs = new Set(
+      allEntries.slice(0, MAX_ENTRIES)
+        .filter(e => e.ts && e.workflow_id)
+        .map(e => `${toSlug(e.ts)}-${e.workflow_id}`)
+    );
+    const allLogRefs = await github.paginate(github.rest.git.listMatchingRefs, {
+      owner, repo, ref: 'heads/renovate-logs/',
+    });
+    for (const { ref } of allLogRefs) {
+      // ref = "refs/heads/renovate-logs/SLUG"
+      const slug = ref.split('/renovate-logs/')[1];
+      if (slug && !keepSlugs.has(slug)) {
+        try { await github.rest.git.deleteRef({ owner, repo, ref: `heads/renovate-logs/${slug}` }); } catch {}
       }
     }
   }
