@@ -159,7 +159,7 @@ jobs:
       - name: Set Renovate image
         run: |
           # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate versioning=semver
-          RENOVATE_IMAGE="ghcr.io/renovatebot/renovate:43.150.0@sha256:f2d4c467a8eb4b885630a8ca7d068173db69a5a1156ba41480c0a3a2e011d759"
+          RENOVATE_IMAGE="ghcr.io/renovatebot/renovate:43.159.3@sha256:c46d61883826496f0f07763d750878767fbf711a721e6dd9bb765ce7d68c2a1e"
           echo "RENOVATE_IMAGE=${RENOVATE_IMAGE}" >> "$GITHUB_ENV"
 
       - name: Restore Renovate repository cache
