@@ -77,6 +77,20 @@
   ],
   "packageRules": [
     {
+      // Ensures inline comments always show the full vX.Y.Z tag (e.g. '# v5.0.0') instead of
+      // the shortest matching tag (e.g. '# v5'). extractVersion strips floating tags from the
+      // candidate list; regex versioning (unlike versioning:semver) still accepts floating
+      // currentValues as valid, so no dep is skipped. Digest pinning is unaffected.
+      // Derived from helpers:pinGitHubActionDigestsToSemver (minus pinDigests:true, already
+      // handled by config:best-practices):
+      // https://docs.renovatebot.com/presets-helpers/#helperspingithubactiondigeststosemver
+      "description": "Ensure github-actions inline comments always use full vX.Y.Z semver tags",
+      "matchManagers": ["github-actions"],
+      "matchDepTypes": ["action"],
+      "extractVersion": "^(?<version>v?\\d+\\.\\d+\\.\\d+)$",
+      "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$"
+    },
+    {
       // The container-tag and version-string managers have no currentDigest capture group.
       // Renovate cannot write back a digest for those deps, so disable pin/pinDigest updates.
       // Digest pinning is handled by the container-digest manager, which captures currentDigest
