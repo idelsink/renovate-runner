@@ -63,13 +63,13 @@ function buildBody(entries, runnerRepo, targetOwner, targetRepo) {
           seconds: durationSecs % 60,
         })}`
       : label;
-    const runDate = new Date(e.started_at).toISOString().replace('T', ' ').replace('.000Z', ' UTC');
+    const runDate = new Date(e.started_at).toISOString().replace('T', ' ').replace(/\.\d+Z$/, '');
     const workflowUrl = `https://github.com/${runnerRepo}/actions/runs/${e.workflow_id}`;
     const slug = toSlug(e.started_at);
     const logUrl = e.status !== 'running'
       ? `https://github.com/${targetOwner}/${targetRepo}/blob/renovate-logs/${slug}-${e.workflow_id}/.github/logs/renovate-${slug}-${e.workflow_id}.log`
       : null;
-    return `| ${runDate} | ${result} | [${e.workflow_id}](${workflowUrl}) | ${logUrl ? `[renovate-${slug}-${e.workflow_id}.log](${logUrl})` : '-'} |`;
+    return `| ${runDate} | ${result} | [${e.workflow_id}](${workflowUrl}) | ${logUrl ? `[log](${logUrl})` : '-'} |`;
   }).join('\n');
 
   return [
@@ -80,8 +80,8 @@ function buildBody(entries, runnerRepo, targetOwner, targetRepo) {
     '',
     `Automatically posted by the [renovate-runner](https://github.com/${runnerRepo}) after each run on this repository.`,
     '',
-    '| Run date (UTC) | Result | Runner workflow | Renovate output |',
-    '| -------------- | ------ | --------------- | --------------- |',
+    '| Started (UTC) | Result | Workflow | Log |',
+    '| ------------- | ------ | -------- | --- |',
     rows,
   ].join('\n');
 }
