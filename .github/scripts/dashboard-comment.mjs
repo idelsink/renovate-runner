@@ -65,7 +65,9 @@ function buildBody(entries, runnerRepo, targetOwner, targetRepo) {
       : label;
     const runDate = new Date(e.started_at).toISOString().replace('T', ' ').replace(/\.\d+Z$/, '');
     const workflowUrl = `https://github.com/${runnerRepo}/actions/runs/${e.workflow_id}`;
-    const slug = toSlug(e.started_at);
+    // Log branch/file names are keyed on completed_at (= LOG_DATE). For entries migrated from the
+    // legacy `ts` field, completed_at is absent but started_at holds the old LOG_DATE value.
+    const slug = toSlug(e.completed_at ?? e.started_at);
     const logUrl = e.status !== 'running'
       ? `https://github.com/${targetOwner}/${targetRepo}/blob/renovate-logs/${slug}-${e.workflow_id}/.github/logs/renovate-${slug}-${e.workflow_id}.log`
       : null;
