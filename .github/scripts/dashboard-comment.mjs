@@ -57,7 +57,11 @@ function buildBody(entries, runnerRepo, targetOwner, targetRepo) {
       ? Math.round((new Date(e.completed_at) - new Date(e.started_at)) / 1000)
       : null;
     const result = durationSecs != null
-      ? `${label} in ${durationFmt.format({ seconds: durationSecs })}`
+      ? `${label} in ${durationFmt.format({
+          hours:   Math.floor(durationSecs / 3600),
+          minutes: Math.floor((durationSecs % 3600) / 60),
+          seconds: durationSecs % 60,
+        })}`
       : label;
     const runDate = new Date(e.started_at).toISOString().replace('T', ' ').replace('.000Z', ' UTC');
     const workflowUrl = `https://github.com/${runnerRepo}/actions/runs/${e.workflow_id}`;
