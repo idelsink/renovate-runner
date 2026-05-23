@@ -140,6 +140,7 @@ jobs:
           permission-workflows: write      # Renovate updates workflow files
 
       - name: Post running status to dashboard
+        id: post_running_status
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
           TARGET_OWNER: ${{ steps.target_repo.outputs.owner }}
@@ -149,11 +150,13 @@ jobs:
           github-token: ${{ steps.target_token.outputs.token }}
           script: |
             const { postEntry } = await import(`file://${process.env.GITHUB_WORKSPACE}/.github/scripts/dashboard-comment.mjs`);
+            const startedAt = new Date().toISOString();
+            core.setOutput('started_at', startedAt);
             await postEntry(github, context, {
               owner: process.env.TARGET_OWNER,
               repo: process.env.TARGET_REPO,
               appSlug: process.env.APP_SLUG,
-              entry: { ts: new Date().toISOString(), status: 'running' },
+              entry: { started_at: startedAt, status: 'running' },
             });
 
       - name: Set Renovate image
@@ -262,6 +265,7 @@ jobs:
           APP_SLUG: ${{ steps.target_token.outputs.app-slug }}
           LOG_DATE: ${{ steps.prepare_log.outputs.log_date }}
           EXIT_CODE: ${{ steps.renovate.outputs.exit_code }}
+          STARTED_AT: ${{ steps.post_running_status.outputs.started_at }}
         with:
           github-token: ${{ steps.target_token.outputs.token }}
           script: |
@@ -271,7 +275,8 @@ jobs:
               repo: process.env.TARGET_REPO,
               appSlug: process.env.APP_SLUG,
               entry: {
-                ts:     process.env.LOG_DATE,
+                started_at:   process.env.STARTED_AT || process.env.LOG_DATE,
+                completed_at: process.env.LOG_DATE,
                 status: process.env.EXIT_CODE === '0' ? 'success' : 'failure',
               },
               deleteBranches: true,

@@ -20,7 +20,17 @@ function parseEntries(commentBody) {
   if (!commentBody) return [];
   const match = commentBody.match(/<!-- renovate-logs-data: (.*) -->/);
   if (!match) return [];
-  try { return JSON.parse(match[1]); } catch { return []; }
+  try {
+    const entries = JSON.parse(match[1]);
+    // Migrate legacy entries that used `ts` instead of `started_at`.
+    return entries.map(e => {
+      if (e.ts && !e.started_at) {
+        const { ts, ...rest } = e;
+        return { started_at: ts, ...rest };
+      }
+      return e;
+    });
+  } catch { return []; }
 }
 
 /** @type {Record<string, string>} Human-readable label for each run status. */
@@ -39,11 +49,19 @@ const STATUS_LABEL = {
  * @returns {string}
  */
 function buildBody(entries, runnerRepo, targetOwner, targetRepo) {
+  const durationFmt = new Intl.DurationFormat('en', { style: 'narrow' });
+
   const rows = entries.map(e => {
-    const result = STATUS_LABEL[e.status] ?? `⚠️ Unknown (${e.status})`;
-    const runDate = new Date(e.ts).toISOString().replace('T', ' ').replace('.000Z', ' UTC');
+    const label = STATUS_LABEL[e.status] ?? `⚠️ Unknown (${e.status})`;
+    const durationSecs = e.started_at && e.completed_at
+      ? Math.round((new Date(e.completed_at) - new Date(e.started_at)) / 1000)
+      : null;
+    const result = durationSecs != null
+      ? `${label} in ${durationFmt.format({ seconds: durationSecs })}`
+      : label;
+    const runDate = new Date(e.started_at).toISOString().replace('T', ' ').replace('.000Z', ' UTC');
     const workflowUrl = `https://github.com/${runnerRepo}/actions/runs/${e.workflow_id}`;
-    const slug = toSlug(e.ts);
+    const slug = toSlug(e.started_at);
     const logUrl = e.status !== 'running'
       ? `https://github.com/${targetOwner}/${targetRepo}/blob/renovate-logs/${slug}-${e.workflow_id}/.github/logs/renovate-${slug}-${e.workflow_id}.log`
       : null;
@@ -96,7 +114,7 @@ async function findDashboard(github, owner, repo, appSlug, retry = false) {
  * @param {string} options.owner - target repo owner
  * @param {string} options.repo - target repo name
  * @param {string} options.appSlug - GitHub App slug used to find the dashboard issue
- * @param {{ ts: string, status: 'running'|'success'|'failure' }} options.entry
+ * @param {{ started_at: string, status: 'running'|'success'|'failure', completed_at?: string }} options.entry
  * @param {boolean} [options.deleteBranches=false] - prune log branches outside the keep window
  * @param {boolean} [options.retryOnMissing=false] - retry finding the dashboard if not immediately found (for first run where Renovate just created it)
  * @returns {Promise<boolean>} true if the dashboard was found and the comment was posted, false if the dashboard does not exist
@@ -119,8 +137,8 @@ async function postEntry(github, context, { owner, repo, appSlug, entry, deleteB
   if (deleteBranches) {
     const keepSlugs = new Set(
       allEntries.slice(0, MAX_ENTRIES)
-        .filter(e => e.ts && e.workflow_id)
-        .map(e => `${toSlug(e.ts)}-${e.workflow_id}`)
+        .filter(e => e.started_at && e.workflow_id)
+        .map(e => `${toSlug(e.started_at)}-${e.workflow_id}`)
     );
     const allLogRefs = await github.paginate(github.rest.git.listMatchingRefs, {
       owner, repo, ref: 'heads/renovate-logs/',
