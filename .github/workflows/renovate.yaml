@@ -209,6 +209,7 @@ jobs:
               '--env', 'RENOVATE_TOKEN',
               '--env', 'RENOVATE_REPOSITORIES',
               '--env', 'LOG_LEVEL',
+              '--env', 'CI',
               ...(e.RENOVATE_DRY_RUN ? ['--env', 'RENOVATE_DRY_RUN'] : []),
               e.RENOVATE_IMAGE,
             ], { ignoreReturnCode: true, outStream: out, errStream: out });
