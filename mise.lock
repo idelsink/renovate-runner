@@ -67,3 +67,10 @@ url = "https://nodejs.org/dist/v25.9.0/node-v25.9.0-win-x64.zip"
 [[tools.wrangler]]
 version = "4.92.0"
 backend = "npm:wrangler"
+
+[[tools.wrangler]]
+version = "4.92.0"
+backend = "npm:wrangler"
+
+[tools.wrangler.options]
+allow_builds = '["esbuild", "sharp", "workerd"]'
