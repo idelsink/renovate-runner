@@ -287,7 +287,7 @@ jobs:
       - name: Push log to branch
         id: push_log
         if: always() && steps.prepare_log.outcome == 'success' && steps.final_status.outputs.has_dashboard == 'true'
-        uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
+        uses: stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d # v7.2.0
         with:
           repository: target-repo
           branch: ${{ steps.prepare_log.outputs.log_branch }}
