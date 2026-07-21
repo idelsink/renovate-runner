@@ -141,10 +141,13 @@ async function postEntry(github, context, { owner, repo, appSlug, entry, deleteB
   const allEntries = [entry, ...parseEntries(existingComment?.body).filter(e => e.workflow_id !== entry.workflow_id)];
 
   if (deleteBranches) {
+    // Branch/log filenames are keyed on completed_at (= LOG_DATE, set after Renovate
+    // finishes), not started_at - mirror the same fallback buildBody() uses for logUrl
+    // so the keep-set actually matches the real branch names instead of pruning them all.
     const keepSlugs = new Set(
       allEntries.slice(0, MAX_ENTRIES)
-        .filter(e => e.started_at && e.workflow_id)
-        .map(e => `${toSlug(e.started_at)}-${e.workflow_id}`)
+        .filter(e => (e.completed_at ?? e.started_at) && e.workflow_id)
+        .map(e => `${toSlug(e.completed_at ?? e.started_at)}-${e.workflow_id}`)
     );
     const allLogRefs = await github.paginate(github.rest.git.listMatchingRefs, {
       owner, repo, ref: 'heads/renovate-logs/',
