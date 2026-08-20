@@ -23,10 +23,10 @@
         //
         // Example:
         //   # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-        //   IMAGE="ghcr.io/renovatebot/renovate:44.32.4@sha256:a70e3a4daa093c98c06d87195b6f931efbefacddc1b192feac75c1b96182c88d"
+        //   IMAGE="ghcr.io/renovatebot/renovate:44.35.4@sha256:e49d14979ef91b6ac7a968188cfd7a641f7bdf315957873f73fc4e9efba2c666"
         //
         //   # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-        //   image: ghcr.io/renovatebot/renovate:44.32.4@sha256:a70e3a4daa093c98c06d87195b6f931efbefacddc1b192feac75c1b96182c88d
+        //   image: ghcr.io/renovatebot/renovate:44.35.4@sha256:e49d14979ef91b6ac7a968188cfd7a641f7bdf315957873f73fc4e9efba2c666
         "(?:#|//) renovate: datasource=(?<datasource>.*?)(?: depName=(?<depName>.+?))?(?: packageName=(?<packageName>.+?))?(?: versioning=(?<versioning>.+?))?(?: extractVersion=(?<extractVersion>.+?))?(?: registryUrl=(?<registryUrl>.+?))?\\n\\s*[^=:\\n]+[=:]\\s*[\"']?[^:]+:(?<currentValue>[^\\s@\"']+)@(?<currentDigest>[^\\s\"']+)",
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}"
@@ -46,7 +46,7 @@
         //
         // Example:
         //   # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-        //   image: ghcr.io/renovatebot/renovate:44.32.4
+        //   image: ghcr.io/renovatebot/renovate:44.35.4
         "(?:#|//) renovate: datasource=(?<datasource>.*?)(?: depName=(?<depName>.+?))?(?: packageName=(?<packageName>.+?))?(?: versioning=(?<versioning>.+?))?(?: extractVersion=(?<extractVersion>.+?))?(?: registryUrl=(?<registryUrl>.+?))?\\n\\s*[^=:\\n]+[=:]\\s*[\"']?[^:]+:(?<currentValue>[^\\s@\"']+)(?:[\"'\\s]|$)",
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}"
@@ -66,10 +66,10 @@
         //
         // Examples:
         //   # renovate: datasource=github-releases depName=renovatebot/renovate
-        //   RENOVATE_VERSION="44.32.4"
+        //   RENOVATE_VERSION="44.35.4"
         //
         //   # renovate: datasource=npm depName=renovate versioning=npm
-        //   RENOVATE_NPM_VERSION=44.30.1
+        //   RENOVATE_NPM_VERSION=44.32.2
         "(?:#|//) renovate: datasource=(?<datasource>.*?)(?: depName=(?<depName>.+?))?(?: packageName=(?<packageName>.+?))?(?: versioning=(?<versioning>.+?))?(?: extractVersion=(?<extractVersion>.+?))?(?: registryUrl=(?<registryUrl>.+?))?\\n\\s*[^=:\\n]+[=:]\\s*[\"']?(?<currentValue>[^\\s@\"'#:]+)(?:[\"'\\s]|$)",
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}"
