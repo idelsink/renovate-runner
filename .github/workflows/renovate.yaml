@@ -138,6 +138,7 @@ jobs:
           permission-pull-requests: write  # Renovate creates and updates PRs
           permission-statuses: write       # Renovate sets commit status checks (e.g. renovate/stability-days)
           permission-workflows: write      # Renovate updates workflow files
+          permission-checks: read          # Renovate reads GitHub Check Runs to resolve branch status; without this it gets a 403 and treats every branch as pending
 
       - name: Post running status to dashboard
         id: post_running_status
