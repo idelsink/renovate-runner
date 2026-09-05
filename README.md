@@ -52,7 +52,7 @@ Any dependency in any file can be tracked by adding a `# renovate:` comment abov
 RENOVATE_IMAGE="ghcr.io/renovatebot/renovate:44.56.1@sha256:3caf4d49d3615319b44d92e88dbced243a262cdaa40e04370f1015b6db8183da"
 
 # renovate: datasource=github-releases depName=cli/cli
-CLI_VERSION="v2.98.0"
+CLI_VERSION="v2.100.0"
 ```
 
 Renovate will keep the tag and digest up to date automatically. This works in any file type — shell scripts, Makefiles, YAML — anywhere the standard managers don't reach.
