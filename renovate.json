@@ -3,6 +3,9 @@
   "extends": [
     "github>idelsink/renovate-runner"
   ],
+  "automerge": true,
+  "automergeType": "pr",
+  "platformAutomerge": true,
   "packageRules": [
     {
       "description": "Group all Renovate version updates into a single PR",
