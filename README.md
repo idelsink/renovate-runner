@@ -49,7 +49,7 @@ Any dependency in any file can be tracked by adding a `# renovate:` comment abov
 
 ```bash
 # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate versioning=semver
-RENOVATE_IMAGE="ghcr.io/renovatebot/renovate:44.69.8@sha256:c6425a77ef44129aa1d51dd2ed9133450a8e40a5d900407769909efeb156b83b"
+RENOVATE_IMAGE="ghcr.io/renovatebot/renovate:44.103.2@sha256:521370dab3401a6387541da4cb75a60350f497e2d2b2d27131e19f534bd0e871"
 
 # renovate: datasource=github-releases depName=cli/cli
 CLI_VERSION="v2.100.0"
