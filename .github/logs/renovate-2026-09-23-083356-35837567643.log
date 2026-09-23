@@ -1,0 +1,2413 @@
+[2026-09-23T08:32:31.793Z] [command]/usr/bin/docker run --rm --volume /home/runner/work/renovate-runner/renovate-runner/config.js:/usr/src/app/config.js:ro --volume /home/runner/work/_temp/renovate-cache/renovate/repository:/tmp/renovate/cache/renovate/repository --env RENOVATE_RUNNER_REPO --env RENOVATE_TOKEN --env RENOVATE_REPOSITORIES --env LOG_LEVEL --env CI ghcr.io/renovatebot/renovate:44.103.6@sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b
+[2026-09-23T08:32:31.895Z] Unable to find image 'ghcr.io/renovatebot/renovate:44.103.6@sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b' locally
+[2026-09-23T08:32:32.056Z] ghcr.io/renovatebot/renovate@sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b: Pulling from renovatebot/renovate
+[2026-09-23T08:32:32.176Z] e51aee9c82ec: Pulling fs layer
+[2026-09-23T08:32:32.176Z] 7dd448f0b06b: Pulling fs layer
+[2026-09-23T08:32:32.176Z] b95459142f52: Pulling fs layer
+[2026-09-23T08:32:32.176Z] 9e3f84e5293e: Pulling fs layer
+[2026-09-23T08:32:32.176Z] 6fa2db84ee77: Pulling fs layer
+[2026-09-23T08:32:32.176Z] 05979a1895bd: Pulling fs layer
+[2026-09-23T08:32:32.176Z] fc0bb24180b4: Pulling fs layer
+[2026-09-23T08:32:32.176Z] d1a183b04f63: Pulling fs layer
+[2026-09-23T08:32:32.176Z] be05cedb4db2: Pulling fs layer
+[2026-09-23T08:32:32.177Z] 79ca044df323: Pulling fs layer
+[2026-09-23T08:32:32.177Z] a9020ddc9df8: Pulling fs layer
+[2026-09-23T08:32:32.177Z] fdf0d13db543: Pulling fs layer
+[2026-09-23T08:32:32.177Z] 4f4fb700ef54: Pulling fs layer
+[2026-09-23T08:32:32.177Z] 9e3f84e5293e: Waiting
+[2026-09-23T08:32:32.177Z] 6fa2db84ee77: Waiting
+[2026-09-23T08:32:32.177Z] 05979a1895bd: Waiting
+[2026-09-23T08:32:32.177Z] fc0bb24180b4: Waiting
+[2026-09-23T08:32:32.177Z] d1a183b04f63: Waiting
+[2026-09-23T08:32:32.177Z] be05cedb4db2: Waiting
+[2026-09-23T08:32:32.177Z] 79ca044df323: Waiting
+[2026-09-23T08:32:32.177Z] 4f4fb700ef54: Waiting
+[2026-09-23T08:32:32.177Z] a9020ddc9df8: Waiting
+[2026-09-23T08:32:32.177Z] fdf0d13db543: Waiting
+[2026-09-23T08:32:32.233Z] 7dd448f0b06b: Verifying Checksum
+[2026-09-23T08:32:32.233Z] 7dd448f0b06b: Download complete
+[2026-09-23T08:32:32.348Z] e51aee9c82ec: Verifying Checksum
+[2026-09-23T08:32:32.348Z] e51aee9c82ec: Download complete
+[2026-09-23T08:32:32.391Z] b95459142f52: Verifying Checksum
+[2026-09-23T08:32:32.391Z] b95459142f52: Download complete
+[2026-09-23T08:32:32.458Z] 9e3f84e5293e: Verifying Checksum
+[2026-09-23T08:32:32.459Z] 9e3f84e5293e: Download complete
+[2026-09-23T08:32:32.534Z] 6fa2db84ee77: Verifying Checksum
+[2026-09-23T08:32:32.534Z] 6fa2db84ee77: Download complete
+[2026-09-23T08:32:32.593Z] d1a183b04f63: Verifying Checksum
+[2026-09-23T08:32:32.593Z] d1a183b04f63: Download complete
+[2026-09-23T08:32:32.618Z] fc0bb24180b4: Download complete
+[2026-09-23T08:32:32.640Z] be05cedb4db2: Verifying Checksum
+[2026-09-23T08:32:32.640Z] be05cedb4db2: Download complete
+[2026-09-23T08:32:32.692Z] a9020ddc9df8: Verifying Checksum
+[2026-09-23T08:32:32.692Z] a9020ddc9df8: Download complete
+[2026-09-23T08:32:32.749Z] fdf0d13db543: Verifying Checksum
+[2026-09-23T08:32:32.749Z] fdf0d13db543: Download complete
+[2026-09-23T08:32:32.798Z] 4f4fb700ef54: Verifying Checksum
+[2026-09-23T08:32:32.799Z] 4f4fb700ef54: Download complete
+[2026-09-23T08:32:33.040Z] 79ca044df323: Verifying Checksum
+[2026-09-23T08:32:33.040Z] 79ca044df323: Download complete
+[2026-09-23T08:32:33.184Z] 05979a1895bd: Verifying Checksum
+[2026-09-23T08:32:33.185Z] 05979a1895bd: Download complete
+[2026-09-23T08:32:33.779Z] e51aee9c82ec: Pull complete
+[2026-09-23T08:32:36.834Z] 7dd448f0b06b: Pull complete
+[2026-09-23T08:32:37.437Z] b95459142f52: Pull complete
+[2026-09-23T08:32:38.445Z] 9e3f84e5293e: Pull complete
+[2026-09-23T08:32:39.308Z] 6fa2db84ee77: Pull complete
+[2026-09-23T08:32:45.884Z] 05979a1895bd: Pull complete
+[2026-09-23T08:32:46.094Z] fc0bb24180b4: Pull complete
+[2026-09-23T08:32:46.104Z] d1a183b04f63: Pull complete
+[2026-09-23T08:32:46.117Z] be05cedb4db2: Pull complete
+[2026-09-23T08:32:59.166Z] 79ca044df323: Pull complete
+[2026-09-23T08:32:59.176Z] a9020ddc9df8: Pull complete
+[2026-09-23T08:32:59.187Z] fdf0d13db543: Pull complete
+[2026-09-23T08:32:59.196Z] 4f4fb700ef54: Pull complete
+[2026-09-23T08:32:59.200Z] Digest: sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b
+[2026-09-23T08:32:59.201Z] Status: Downloaded newer image for ghcr.io/renovatebot/renovate@sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b
+[2026-09-23T08:33:02.037Z]  INFO: Renovate started
+[2026-09-23T08:33:02.037Z]        "renovateVersion": "44.103.6"
+[2026-09-23T08:33:02.037Z] DEBUG: Using RE2 regex engine
+[2026-09-23T08:33:02.038Z] DEBUG: Parsing configs
+[2026-09-23T08:33:02.040Z] DEBUG: Checking for config file in config.js
+[2026-09-23T08:33:02.049Z] DEBUG: No additional config file found specified - skipping
+[2026-09-23T08:33:02.067Z] DEBUG: File config
+[2026-09-23T08:33:02.067Z]        "config": {
+[2026-09-23T08:33:02.067Z]          "platform": "github",
+[2026-09-23T08:33:02.067Z]          "repositoryCache": "enabled",
+[2026-09-23T08:33:02.067Z]          "allowedUnsafeExecutions": ["mise"],
+[2026-09-23T08:33:02.068Z]          "dependencyDashboardFooter": "- [ ] <!-- trigger-run --> Trigger a Renovate run - [workflow runs & logs ↗](https://github.com/idelsink/renovate-runner/actions/workflows/renovate.yaml)",
+[2026-09-23T08:33:02.068Z]          "onboardingConfig": {
+[2026-09-23T08:33:02.068Z]            "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+[2026-09-23T08:33:02.068Z]            "extends": ["github>idelsink/renovate-runner"]
+[2026-09-23T08:33:02.068Z]          }
+[2026-09-23T08:33:02.068Z]        }
+[2026-09-23T08:33:02.068Z] DEBUG: Additional file config
+[2026-09-23T08:33:02.068Z]        "config": {}
+[2026-09-23T08:33:02.068Z] DEBUG: CLI config
+[2026-09-23T08:33:02.068Z]        "config": {}
+[2026-09-23T08:33:02.068Z] DEBUG: Env config
+[2026-09-23T08:33:02.068Z]        "config": {
+[2026-09-23T08:33:02.068Z]          "hostRules": [],
+[2026-09-23T08:33:02.068Z]          "token": "***********",
+[2026-09-23T08:33:02.068Z]          "repositories": ["idelsink/renovate-runner"]
+[2026-09-23T08:33:02.069Z]        }
+[2026-09-23T08:33:02.069Z] DEBUG: Resolved global extends
+[2026-09-23T08:33:02.069Z]        "config": undefined
+[2026-09-23T08:33:02.069Z] DEBUG: Combined config
+[2026-09-23T08:33:02.069Z]        "config": {
+[2026-09-23T08:33:02.069Z]          "platform": "github",
+[2026-09-23T08:33:02.069Z]          "repositoryCache": "enabled",
+[2026-09-23T08:33:02.069Z]          "allowedUnsafeExecutions": ["mise"],
+[2026-09-23T08:33:02.069Z]          "dependencyDashboardFooter": "- [ ] <!-- trigger-run --> Trigger a Renovate run - [workflow runs & logs ↗](https://github.com/idelsink/renovate-runner/actions/workflows/renovate.yaml)",
+[2026-09-23T08:33:02.069Z]          "onboardingConfig": {
+[2026-09-23T08:33:02.069Z]            "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+[2026-09-23T08:33:02.069Z]            "extends": ["github>idelsink/renovate-runner"]
+[2026-09-23T08:33:02.069Z]          },
+[2026-09-23T08:33:02.069Z]          "hostRules": [],
+[2026-09-23T08:33:02.069Z]          "token": "***********",
+[2026-09-23T08:33:02.069Z]          "repositories": ["idelsink/renovate-runner"]
+[2026-09-23T08:33:02.069Z]        }
+[2026-09-23T08:33:02.070Z] DEBUG: Enabling forkProcessing while in non-autodiscover mode
+[2026-09-23T08:33:02.070Z] DEBUG: Enabling onboardingNoDeps while in non-autodiscover mode
+[2026-09-23T08:33:02.083Z] DEBUG: Found valid git version: 2.55.0
+[2026-09-23T08:33:02.083Z] DEBUG: Setting global hostRules
+[2026-09-23T08:33:02.088Z] DEBUG: Using default github endpoint: https://api.github.com/
+[2026-09-23T08:33:02.095Z] DEBUG: hostRules: authentication already set for api.github.com
+[2026-09-23T08:33:02.100Z] DEBUG: Using queue: host=api.github.com, concurrency=16
+[2026-09-23T08:33:02.279Z] DEBUG: Platform config
+[2026-09-23T08:33:02.279Z]        "platformConfig": {
+[2026-09-23T08:33:02.279Z]          "host": {"type": "github", "apiUrl": {}},
+[2026-09-23T08:33:02.279Z]          "isGHApp": true,
+[2026-09-23T08:33:02.279Z]          "userDetails": {
+[2026-09-23T08:33:02.279Z]            "username": "renovate-iws[bot]",
+[2026-09-23T08:33:02.279Z]            "name": "renovate-iws[bot]",
+[2026-09-23T08:33:02.279Z]            "id": 260228940,
+[2026-09-23T08:33:02.279Z]            "email": null
+[2026-09-23T08:33:02.279Z]          }
+[2026-09-23T08:33:02.279Z]        },
+[2026-09-23T08:33:02.279Z]        "renovateUsername": "renovate-iws[bot]"
+[2026-09-23T08:33:02.282Z] DEBUG: Using platform gitAuthor: renovate-iws[bot] <260228940+renovate-iws[bot]@users.noreply.github.com>
+[2026-09-23T08:33:02.284Z] DEBUG: Adding token authentication for api.github.com (hostType=github) to hostRules
+[2026-09-23T08:33:02.285Z] DEBUG: Using baseDir: /tmp/renovate
+[2026-09-23T08:33:02.285Z] DEBUG: Using cacheDir: /tmp/renovate/cache
+[2026-09-23T08:33:02.286Z] DEBUG: Using containerbaseDir: /tmp/renovate/cache/containerbase
+[2026-09-23T08:33:02.288Z] DEBUG: Initializing Renovate internal cache into /tmp/renovate/cache/renovate/renovate-cache-v1
+[2026-09-23T08:33:02.288Z] DEBUG: Commits limit = null
+[2026-09-23T08:33:02.288Z] DEBUG: Setting global hostRules
+[2026-09-23T08:33:02.291Z] DEBUG: Adding token authentication for api.github.com (hostType=github) to hostRules
+[2026-09-23T08:33:02.292Z] DEBUG: validatePresets()
+[2026-09-23T08:33:02.306Z] DEBUG: Reinitializing hostRules for repo
+[2026-09-23T08:33:02.306Z] DEBUG: Clearing hostRules
+[2026-09-23T08:33:02.306Z] DEBUG: Adding token authentication for api.github.com (hostType=github) to hostRules
+[2026-09-23T08:33:02.310Z]  INFO: Repository started (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:02.311Z]        "renovateVersion": "44.103.6"
+[2026-09-23T08:33:02.311Z] DEBUG: Using localDir: /tmp/renovate/repos/github/idelsink/renovate-runner (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:02.311Z] DEBUG: PackageFiles.clear() - Package files deleted (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:02.313Z] DEBUG: initRepo("idelsink/renovate-runner") (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:02.316Z] DEBUG: hostRules: authentication already set for api.github.com (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:02.316Z] DEBUG: Using queue: host=api.github.com, concurrency=16 (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:02.533Z] DEBUG: idelsink/renovate-runner default branch = main (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:02.534Z] DEBUG: Issues cache: Adding 1 issues to reconcile queue (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:02.534Z] DEBUG: Using app token for git init (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:02.536Z] DEBUG: fetchBranchCommits(): url=https://**redacted**@github.com/idelsink/renovate-runner.git (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:02.689Z] DEBUG: Repository cache is restored from revision 13 (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:02.689Z] DEBUG: Resetting npmrc (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:02.689Z] DEBUG: Resetting npmrc (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:02.690Z] DEBUG: checkOnboarding() (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:02.690Z] DEBUG: isOnboarded() (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:02.691Z] DEBUG: findPr(renovate/configure, Configure Renovate, !open) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:02.692Z] DEBUG: PR cache: sync fetch (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:03.027Z] DEBUG: http cache: saving https://api.github.com/repos/idelsink/renovate-runner/pulls?per_page=20&state=all&sort=updated&direction=desc&page=1 (etag=W/"dc9b262e21d515f6582a541caf784c481e9b5941e4f8a16c664a8c6aa38ed27d", lastModified=undefined) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:03.028Z] DEBUG: PR cache: Filtered 20 PRs to 17 (user=renovate-iws[bot]) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:03.052Z] DEBUG: PR cache: getPrList success (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:03.052Z]        "pullsTotal": 163,
+[2026-09-23T08:33:03.052Z]        "requestsTotal": 1,
+[2026-09-23T08:33:03.052Z]        "apiQuotaAffected": true,
+[2026-09-23T08:33:03.052Z]        "durationMs": 360
+[2026-09-23T08:33:03.052Z] DEBUG: findPr(renovate/configure, chore: Configure Renovate, !open) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:03.053Z] DEBUG: Checking cached config file name (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:03.151Z] DEBUG: http cache: Using cached response: https://api.github.com/repos/idelsink/renovate-runner/contents/renovate.json from 2026-09-22T08:30:40.529Z (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:03.154Z] DEBUG: Existing config file confirmed (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:03.154Z] DEBUG: Repository config (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:03.154Z]        "fileName": "renovate.json",
+[2026-09-23T08:33:03.154Z]        "config": {
+[2026-09-23T08:33:03.154Z]          "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+[2026-09-23T08:33:03.154Z]          "extends": ["github>idelsink/renovate-runner"],
+[2026-09-23T08:33:03.154Z]          "automerge": true,
+[2026-09-23T08:33:03.154Z]          "automergeType": "pr",
+[2026-09-23T08:33:03.154Z]          "platformAutomerge": true,
+[2026-09-23T08:33:03.154Z]          "packageRules": [
+[2026-09-23T08:33:03.155Z]            {
+[2026-09-23T08:33:03.155Z]              "description": "Group all Renovate version updates into a single PR",
+[2026-09-23T08:33:03.155Z]              "matchDepNames": [
+[2026-09-23T08:33:03.155Z]                "renovate",
+[2026-09-23T08:33:03.155Z]                "renovatebot/renovate",
+[2026-09-23T08:33:03.155Z]                "ghcr.io/renovatebot/renovate"
+[2026-09-23T08:33:03.155Z]              ],
+[2026-09-23T08:33:03.155Z]              "groupName": "renovate",
+[2026-09-23T08:33:03.155Z]              "group": {"commitMessageExtra": "to {{newVersion}}"}
+[2026-09-23T08:33:03.155Z]            }
+[2026-09-23T08:33:03.155Z]          ]
+[2026-09-23T08:33:03.155Z]        }
+[2026-09-23T08:33:03.155Z] DEBUG: Repo is onboarded (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:03.282Z] DEBUG: http cache: Using cached response: https://api.github.com/repos/idelsink/renovate-runner/contents/renovate.json from 2026-09-23T08:33:03.150Z (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:03.282Z] DEBUG: migrateAndValidate() (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:03.284Z] DEBUG: No config migration necessary (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:03.284Z] DEBUG: Post-massage config (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:03.285Z]        "config": {
+[2026-09-23T08:33:03.285Z]          "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+[2026-09-23T08:33:03.285Z]          "extends": ["github>idelsink/renovate-runner"],
+[2026-09-23T08:33:03.285Z]          "automerge": true,
+[2026-09-23T08:33:03.285Z]          "automergeType": "pr",
+[2026-09-23T08:33:03.285Z]          "platformAutomerge": true,
+[2026-09-23T08:33:03.285Z]          "packageRules": [
+[2026-09-23T08:33:03.285Z]            {
+[2026-09-23T08:33:03.285Z]              "description": ["Group all Renovate version updates into a single PR"],
+[2026-09-23T08:33:03.285Z]              "matchDepNames": [
+[2026-09-23T08:33:03.285Z]                "renovate",
+[2026-09-23T08:33:03.285Z]                "renovatebot/renovate",
+[2026-09-23T08:33:03.285Z]                "ghcr.io/renovatebot/renovate"
+[2026-09-23T08:33:03.285Z]              ],
+[2026-09-23T08:33:03.285Z]              "groupName": "renovate",
+[2026-09-23T08:33:03.285Z]              "group": {"commitMessageExtra": "to {{newVersion}}"}
+[2026-09-23T08:33:03.285Z]            }
+[2026-09-23T08:33:03.285Z]          ]
+[2026-09-23T08:33:03.285Z]        }
+[2026-09-23T08:33:03.381Z] DEBUG: http cache: Using cached response: https://api.github.com/repos/idelsink/renovate-runner/contents/default.json from 2026-09-22T08:29:47.861Z (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:03.390Z] DEBUG: Resolved shallow config, without merging internal presets (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:03.390Z]        "renovateVersion": "44.103.6",
+[2026-09-23T08:33:03.390Z]        "config": {
+[2026-09-23T08:33:03.390Z]          "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+[2026-09-23T08:33:03.390Z]          "schedule": ["before 6am on Monday"],
+[2026-09-23T08:33:03.390Z]          "prConcurrentLimit": 5,
+[2026-09-23T08:33:03.390Z]          "customManagers": [
+[2026-09-23T08:33:03.390Z]            {
+[2026-09-23T08:33:03.390Z]              "customType": "regex",
+[2026-09-23T08:33:03.390Z]              "description": [
+[2026-09-23T08:33:03.390Z]                "Container image references with digest pinning (registry/image:1.2.3@shaabc123...), annotated with # renovate: or // renovate:. Captures tag as currentValue and sha256 as currentDigest for atomic updates."
+[2026-09-23T08:33:03.390Z]              ],
+[2026-09-23T08:33:03.390Z]              "managerFilePatterns": ["/./"],
+[2026-09-23T08:33:03.390Z]              "matchStrings": [
+[2026-09-23T08:33:03.390Z]                "(?:#|//) renovate: datasource=(?<datasource>.*?)(?: depName=(?<depName>.+?))?(?: packageName=(?<packageName>.+?))?(?: versioning=(?<versioning>.+?))?(?: extractVersion=(?<extractVersion>.+?))?(?: registryUrl=(?<registryUrl>.+?))?\\n\\s*[^=:\\n]+[=:]\\s*[\"']?[^:]+:(?<currentValue>[^\\s@\"']+)@(?<currentDigest>[^\\s\"']+)"
+[2026-09-23T08:33:03.390Z]              ],
+[2026-09-23T08:33:03.390Z]              "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}"
+[2026-09-23T08:33:03.390Z]            },
+[2026-09-23T08:33:03.390Z]            {
+[2026-09-23T08:33:03.391Z]              "customType": "regex",
+[2026-09-23T08:33:03.391Z]              "description": [
+[2026-09-23T08:33:03.391Z]                "Container image references with tag only (no digest), annotated with # renovate: or // renovate:. Matches key-value lines where the value is a registry/path:tag."
+[2026-09-23T08:33:03.391Z]              ],
+[2026-09-23T08:33:03.391Z]              "managerFilePatterns": ["/./"],
+[2026-09-23T08:33:03.391Z]              "matchStrings": [
+[2026-09-23T08:33:03.391Z]                "(?:#|//) renovate: datasource=(?<datasource>.*?)(?: depName=(?<depName>.+?))?(?: packageName=(?<packageName>.+?))?(?: versioning=(?<versioning>.+?))?(?: extractVersion=(?<extractVersion>.+?))?(?: registryUrl=(?<registryUrl>.+?))?\\n\\s*[^=:\\n]+[=:]\\s*[\"']?[^:]+:(?<currentValue>[^\\s@\"']+)(?:[\"'\\s]|$)"
+[2026-09-23T08:33:03.391Z]              ],
+[2026-09-23T08:33:03.391Z]              "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}"
+[2026-09-23T08:33:03.391Z]            },
+[2026-09-23T08:33:03.391Z]            {
+[2026-09-23T08:33:03.391Z]              "customType": "regex",
+[2026-09-23T08:33:03.391Z]              "description": [
+[2026-09-23T08:33:03.391Z]                "Plain version strings annotated with # renovate: or // renovate:. Handles both assignment (KEY=) and key-value (key:) styles for any datasource."
+[2026-09-23T08:33:03.391Z]              ],
+[2026-09-23T08:33:03.391Z]              "managerFilePatterns": ["/./"],
+[2026-09-23T08:33:03.391Z]              "matchStrings": [
+[2026-09-23T08:33:03.391Z]                "(?:#|//) renovate: datasource=(?<datasource>.*?)(?: depName=(?<depName>.+?))?(?: packageName=(?<packageName>.+?))?(?: versioning=(?<versioning>.+?))?(?: extractVersion=(?<extractVersion>.+?))?(?: registryUrl=(?<registryUrl>.+?))?\\n\\s*[^=:\\n]+[=:]\\s*[\"']?(?<currentValue>[^\\s@\"'#:]+)(?:[\"'\\s]|$)"
+[2026-09-23T08:33:03.391Z]              ],
+[2026-09-23T08:33:03.391Z]              "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}"
+[2026-09-23T08:33:03.391Z]            }
+[2026-09-23T08:33:03.391Z]          ],
+[2026-09-23T08:33:03.391Z]          "packageRules": [
+[2026-09-23T08:33:03.391Z]            {
+[2026-09-23T08:33:03.391Z]              "description": [
+[2026-09-23T08:33:03.391Z]                "Ensure github-actions inline comments always use full vX.Y.Z semver tags"
+[2026-09-23T08:33:03.391Z]              ],
+[2026-09-23T08:33:03.391Z]              "matchManagers": ["github-actions"],
+[2026-09-23T08:33:03.391Z]              "matchDepTypes": ["action"],
+[2026-09-23T08:33:03.391Z]              "extractVersion": "^(?<version>v?\\d+\\.\\d+\\.\\d+)$",
+[2026-09-23T08:33:03.391Z]              "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$"
+[2026-09-23T08:33:03.391Z]            },
+[2026-09-23T08:33:03.391Z]            {
+[2026-09-23T08:33:03.391Z]              "description": [
+[2026-09-23T08:33:03.391Z]                "Disable digest pinning for regex manager deps without a currentDigest capture group"
+[2026-09-23T08:33:03.391Z]              ],
+[2026-09-23T08:33:03.391Z]              "matchManagers": ["custom.regex"],
+[2026-09-23T08:33:03.391Z]              "matchUpdateTypes": ["pin", "pinDigest"],
+[2026-09-23T08:33:03.391Z]              "enabled": false
+[2026-09-23T08:33:03.391Z]            },
+[2026-09-23T08:33:03.391Z]            {
+[2026-09-23T08:33:03.391Z]              "description": ["Disable digest pinning for kustomize OCI helmCharts"],
+[2026-09-23T08:33:03.391Z]              "matchManagers": ["kustomize"],
+[2026-09-23T08:33:03.391Z]              "matchDepTypes": ["HelmChart"],
+[2026-09-23T08:33:03.391Z]              "matchUpdateTypes": ["pin", "pinDigest"],
+[2026-09-23T08:33:03.391Z]              "enabled": false
+[2026-09-23T08:33:03.391Z]            },
+[2026-09-23T08:33:03.391Z]            {
+[2026-09-23T08:33:03.391Z]              "description": ["Group all Renovate version updates into a single PR"],
+[2026-09-23T08:33:03.391Z]              "matchDepNames": [
+[2026-09-23T08:33:03.391Z]                "renovate",
+[2026-09-23T08:33:03.391Z]                "renovatebot/renovate",
+[2026-09-23T08:33:03.391Z]                "ghcr.io/renovatebot/renovate"
+[2026-09-23T08:33:03.391Z]              ],
+[2026-09-23T08:33:03.391Z]              "groupName": "renovate",
+[2026-09-23T08:33:03.391Z]              "group": {"commitMessageExtra": "to {{newVersion}}"}
+[2026-09-23T08:33:03.391Z]            }
+[2026-09-23T08:33:03.391Z]          ],
+[2026-09-23T08:33:03.391Z]          "automerge": true,
+[2026-09-23T08:33:03.391Z]          "automergeType": "pr",
+[2026-09-23T08:33:03.391Z]          "platformAutomerge": true
+[2026-09-23T08:33:03.391Z]        },
+[2026-09-23T08:33:03.391Z]        "visitedPresets": {
+[2026-09-23T08:33:03.391Z]          "merged": ["github>idelsink/renovate-runner"],
+[2026-09-23T08:33:03.391Z]          "unmerged": ["config:best-practices"]
+[2026-09-23T08:33:03.391Z]        }
+[2026-09-23T08:33:04.496Z] DEBUG: Found repo ignorePaths (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:04.496Z]        "ignorePaths": [
+[2026-09-23T08:33:04.496Z]          "**/node_modules/**",
+[2026-09-23T08:33:04.496Z]          "**/bower_components/**",
+[2026-09-23T08:33:04.496Z]          "**/vendor/**",
+[2026-09-23T08:33:04.496Z]          "**/examples/**",
+[2026-09-23T08:33:04.496Z]          "**/__tests__/**",
+[2026-09-23T08:33:04.496Z]          "**/test/**",
+[2026-09-23T08:33:04.496Z]          "**/tests/**",
+[2026-09-23T08:33:04.496Z]          "**/__fixtures__/**"
+[2026-09-23T08:33:04.496Z]        ]
+[2026-09-23T08:33:04.517Z] DEBUG: No vulnerability alerts enabled for repo (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:04.517Z] DEBUG: No vulnerability alerts found (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:04.519Z] DEBUG: findIssue(Dependency Dashboard) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:04.520Z] DEBUG: Issues cache: Done reconciling by iterating over all items (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:04.520Z] DEBUG: Issues cache: synced (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:04.520Z] DEBUG: Found issue 2 (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:04.784Z] DEBUG: http cache: saving https://api.github.com/repos/idelsink/renovate-runner/issues/2 (etag=W/"8d35f37b5da9be6a376e088931f70cdac7d1fed8b413f787033c22787f645ecb", lastModified=Wed, 23 Sep 2026 08:32:30 GMT) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:04.785Z] DEBUG: Issues cache: Updating issue 2 in cache (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:04.786Z] DEBUG: No baseBranches (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:04.787Z] DEBUG: extract() (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:04.897Z] DEBUG: Cached extract for sha=0002aa8ecfc0e3c6698f5a3cee6f8613bacfeeb8 is valid and can be used (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:04.897Z] DEBUG: Deleted cached dep updates (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:04.898Z]  INFO: Dependency extraction complete (repository=idelsink/renovate-runner, baseBranch=main)
+[2026-09-23T08:33:04.898Z]        "stats": {
+[2026-09-23T08:33:04.898Z]          "managers": {
+[2026-09-23T08:33:04.898Z]            "github-actions": {"fileCount": 4, "depCount": 31},
+[2026-09-23T08:33:04.898Z]            "mise": {"fileCount": 1, "depCount": 3},
+[2026-09-23T08:33:04.898Z]            "npm": {"fileCount": 2, "depCount": 8},
+[2026-09-23T08:33:04.898Z]            "regex": {"fileCount": 6, "depCount": 9},
+[2026-09-23T08:33:04.898Z]            "renovate-config": {"fileCount": 1, "depCount": 1}
+[2026-09-23T08:33:04.898Z]          },
+[2026-09-23T08:33:04.898Z]          "total": {"fileCount": 14, "depCount": 52}
+[2026-09-23T08:33:04.898Z]        }
+[2026-09-23T08:33:05.122Z] DEBUG: Using queue: host=ghcr.io, concurrency=16 (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:05.129Z] DEBUG: hostRules: no authentication for registry.npmjs.org (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:05.155Z] DEBUG: Using queue: host=registry.npmjs.org, concurrency=999 (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:05.164Z] DEBUG: hostRules: no authentication for nodejs.org (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:05.164Z] DEBUG: Using queue: host=nodejs.org, concurrency=16 (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:05.226Z] DEBUG: http cache: saving https://ghcr.io/token?scope=repository%3Arenovatebot%2Frenovate%3Apull&service=ghcr.io (etag=undefined, lastModified=undefined) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:05.234Z] DEBUG: http cache: saving https://registry.npmjs.org/dedent (etag=W/"4cddce29d641f483c49ebba6af508744", lastModified=Sun, 01 Mar 2026 16:03:40 GMT) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:05.249Z] DEBUG: http cache: saving https://registry.npmjs.org/json5 (etag=W/"4542fa6a10029138c66fafc011093d93", lastModified=Sat, 04 Mar 2023 17:04:34 GMT) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:05.256Z] DEBUG: http cache: saving https://registry.npmjs.org/@octokit%2Fwebhooks-methods (etag=W/"281b0cb9797930a44b6df7628c198d43", lastModified=Fri, 24 Jul 2026 15:24:30 GMT) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:05.406Z] DEBUG: Package abandonment detected: @octokit/webhooks-methods (npm) - most recent release: 2025-05-20T15:41:37.592Z (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:05.426Z] DEBUG: Package abandonment detected: json5 (npm) - most recent release: 2022-12-31T17:11:32.047Z (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:05.449Z] DEBUG: http cache: saving https://registry.npmjs.org/@octokit%2Fcore (etag=W/"86d063b8ae7449fa651c489aa7311f47", lastModified=Sun, 30 Aug 2026 21:28:57 GMT) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:05.467Z] DEBUG: http cache: saving https://registry.npmjs.org/@octokit%2Fauth-app (etag=W/"e846219623a2d11fee9154b257dab262", lastModified=Tue, 01 Sep 2026 20:19:55 GMT) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:06.652Z] DEBUG: http cache: saving https://registry.npmjs.org/wrangler (etag=W/"c0aa23071b1d5254f02cc67ec2a89bbd", lastModified=Tue, 22 Sep 2026 16:36:20 GMT) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:08.747Z] DEBUG: getLabels(https://ghcr.io, renovatebot/renovate, latest) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:08.747Z] DEBUG: getManifestResponse(https://ghcr.io, renovatebot/renovate, latest, getText) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:08.794Z] DEBUG: http cache: saving https://ghcr.io/v2/renovatebot/renovate/manifests/latest (etag="sha256:9a02c0e89a1337fed22b40b01a0c9b212e947eff37e8a1bd0d3696bfe5a0b344", lastModified=undefined) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:08.797Z] DEBUG: getManifestResponse(https://ghcr.io, renovatebot/renovate, sha256:3b74ef3dff9ae19754b49bcccfa2af6e696fd0f5a94bef15bf5571e19cfcae17, getText) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:09.423Z] DEBUG: http cache: saving https://registry.npmjs.org/renovate (etag=W/"4315dc110d4b713a00a65478f56e2d39", lastModified=Wed, 23 Sep 2026 01:57:09 GMT) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:10.427Z] DEBUG: http cache: saving https://ghcr.io/v2/renovatebot/renovate/manifests/sha256:3b74ef3dff9ae19754b49bcccfa2af6e696fd0f5a94bef15bf5571e19cfcae17 (etag="sha256:3b74ef3dff9ae19754b49bcccfa2af6e696fd0f5a94bef15bf5571e19cfcae17", lastModified=undefined) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:10.514Z] DEBUG: found labels in manifest (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:10.514Z]        "labels": {
+[2026-09-23T08:33:10.514Z]          "maintainer": "Rhys Arkins <rhys@arkins.net>",
+[2026-09-23T08:33:10.514Z]          "name": "renovate",
+[2026-09-23T08:33:10.514Z]          "org.label-schema.version": "44.108.2",
+[2026-09-23T08:33:10.514Z]          "org.opencontainers.image.licenses": "AGPL-3.0-only",
+[2026-09-23T08:33:10.514Z]          "org.opencontainers.image.source": "https://github.com/renovatebot/renovate",
+[2026-09-23T08:33:10.514Z]          "org.opencontainers.image.url": "https://renovatebot.com",
+[2026-09-23T08:33:10.514Z]          "org.opencontainers.image.version": "44.108.2"
+[2026-09-23T08:33:10.514Z]        }
+[2026-09-23T08:33:12.594Z] DEBUG: Skipping ghcr.io/renovatebot/renovate@pr31917 because major increment 31873 exceeds maxMajorIncrement 500 (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:12.879Z] DEBUG: getDigest(https://ghcr.io, renovatebot/renovate, 44.108.2) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:12.880Z] DEBUG: getDigest(https://ghcr.io, renovatebot/renovate, 44.108.2) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:12.880Z] DEBUG: getManifestResponse(https://ghcr.io, renovatebot/renovate, 44.108.2, head) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:12.889Z] DEBUG: getManifestResponse(https://ghcr.io, renovatebot/renovate, sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b, head) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:12.929Z] DEBUG: http cache: saving https://ghcr.io/v2/renovatebot/renovate/manifests/44.108.2 (etag="sha256:9a02c0e89a1337fed22b40b01a0c9b212e947eff37e8a1bd0d3696bfe5a0b344", lastModified=undefined) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:12.930Z] DEBUG: Got docker digest sha256:9a02c0e89a1337fed22b40b01a0c9b212e947eff37e8a1bd0d3696bfe5a0b344 (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:12.934Z] DEBUG: getDigest(https://ghcr.io, renovatebot/renovate, 44.103.6) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:12.934Z] DEBUG: getManifestResponse(https://ghcr.io, renovatebot/renovate, 44.103.6, head) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:12.945Z] DEBUG: http cache: saving https://ghcr.io/v2/renovatebot/renovate/manifests/sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b (etag="sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b", lastModified=undefined) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:12.945Z] DEBUG: getManifestResponse(https://ghcr.io, renovatebot/renovate, 44.108.2, head) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:12.957Z] DEBUG: Got docker digest sha256:9a02c0e89a1337fed22b40b01a0c9b212e947eff37e8a1bd0d3696bfe5a0b344 (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:12.964Z] DEBUG: getDigest(https://ghcr.io, renovatebot/renovate, 44.103.6) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:12.964Z] DEBUG: getManifestResponse(https://ghcr.io, renovatebot/renovate, sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b, head) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:12.974Z] DEBUG: getManifestResponse(https://ghcr.io, renovatebot/renovate, 44.103.6, head) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:12.987Z] DEBUG: http cache: saving https://ghcr.io/v2/renovatebot/renovate/manifests/44.103.6 (etag="sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b", lastModified=undefined) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:12.987Z] DEBUG: Got docker digest sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:14.944Z] DEBUG: http cache: saving https://ghcr.io/v2/renovatebot/renovate/manifests/44.103.6 (etag="sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b", lastModified=undefined) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:14.944Z] DEBUG: Got docker digest sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:52.642Z] DEBUG: PackageFiles.add() - Package file saved for base branch (repository=idelsink/renovate-runner, baseBranch=main)
+[2026-09-23T08:33:52.642Z] DEBUG: Package releases lookups complete (repository=idelsink/renovate-runner, baseBranch=main)
+[2026-09-23T08:33:52.643Z] DEBUG: LibYears: no currentVersionTimestamp for ghcr.io/renovatebot/renovate (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:52.644Z] DEBUG: Repository libYears (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:52.645Z]        "libYears": {
+[2026-09-23T08:33:52.645Z]          "managers": {
+[2026-09-23T08:33:52.645Z]            "github-actions": 0.0628421803652968,
+[2026-09-23T08:33:52.645Z]            "mise": 0.04057349229452055,
+[2026-09-23T08:33:52.645Z]            "npm": 0.04814899381659057,
+[2026-09-23T08:33:52.645Z]            "regex": 0.04841168873668189,
+[2026-09-23T08:33:52.645Z]            "renovate-config": 0
+[2026-09-23T08:33:52.645Z]          },
+[2026-09-23T08:33:52.645Z]          "total": 0.15182736139649924
+[2026-09-23T08:33:52.645Z]        },
+[2026-09-23T08:33:52.645Z]        "dependencyStatus": {"outdated": 6, "total": 26}
+[2026-09-23T08:33:52.645Z] DEBUG: branchifyUpgrades (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:52.994Z] DEBUG: detectSemanticCommits() (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:52.994Z] DEBUG: semanticCommits: returning "enabled" from cache (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:52.997Z] DEBUG: Filtered out 1 disabled update(s). 15 update(s) remaining. (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:52.997Z] DEBUG: 15 flattened updates found: github/codeql-action, wrangler, renovate, wrangler, ghcr.io/renovatebot/renovate, ghcr.io/renovatebot/renovate, ghcr.io/renovatebot/renovate, ghcr.io/renovatebot/renovate, ghcr.io/renovatebot/renovate, cli/cli, renovatebot/renovate, renovate (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:52.999Z] DEBUG: Returning 5 branch(es) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.000Z] DEBUG: Branch is not pending, removing pending upgrades (repository=idelsink/renovate-runner, branch=renovate/github-codeql-action-4.x)
+[2026-09-23T08:33:53.007Z] DEBUG: Branch is not pending, removing pending upgrades (repository=idelsink/renovate-runner, branch=renovate/wrangler-4.x)
+[2026-09-23T08:33:53.013Z] DEBUG: Branch is not pending, removing pending upgrades (repository=idelsink/renovate-runner, branch=renovate/lock-file-maintenance)
+[2026-09-23T08:33:53.015Z] DEBUG: Branch is not pending, removing pending upgrades (repository=idelsink/renovate-runner, branch=renovate/renovate)
+[2026-09-23T08:33:53.027Z] DEBUG: Branch is not pending, removing pending upgrades (repository=idelsink/renovate-runner, branch=renovate/cli-cli-2.x)
+[2026-09-23T08:33:53.032Z] DEBUG: config.repoIsOnboarded=true (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.046Z] DEBUG: packageFiles with updates (repository=idelsink/renovate-runner, baseBranch=main)
+[2026-09-23T08:33:53.046Z]        "config": {
+[2026-09-23T08:33:53.046Z]          "github-actions": [
+[2026-09-23T08:33:53.046Z]            {
+[2026-09-23T08:33:53.046Z]              "deps": [
+[2026-09-23T08:33:53.046Z]                {
+[2026-09-23T08:33:53.046Z]                  "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+[2026-09-23T08:33:53.046Z]                  "commitMessageTopic": "{{{depName}}} action",
+[2026-09-23T08:33:53.046Z]                  "currentDigest": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+[2026-09-23T08:33:53.046Z]                  "currentValue": "v7.0.1",
+[2026-09-23T08:33:53.046Z]                  "currentVersion": "v7.0.1",
+[2026-09-23T08:33:53.046Z]                  "currentVersionAgeInDays": 64,
+[2026-09-23T08:33:53.046Z]                  "currentVersionTimestamp": "2026-07-20T15:10:05.000Z",
+[2026-09-23T08:33:53.046Z]                  "datasource": "github-tags",
+[2026-09-23T08:33:53.046Z]                  "depName": "actions/checkout",
+[2026-09-23T08:33:53.047Z]                  "depType": "action",
+[2026-09-23T08:33:53.047Z]                  "fixedVersion": "v7.0.1",
+[2026-09-23T08:33:53.047Z]                  "packageName": "actions/checkout",
+[2026-09-23T08:33:53.047Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.047Z]                  "replaceString": "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1",
+[2026-09-23T08:33:53.047Z]                  "sourceUrl": "https://github.com/actions/checkout",
+[2026-09-23T08:33:53.047Z]                  "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+[2026-09-23T08:33:53.047Z]                  "warnings": [],
+[2026-09-23T08:33:53.047Z]                  "updates": []
+[2026-09-23T08:33:53.047Z]                },
+[2026-09-23T08:33:53.047Z]                {
+[2026-09-23T08:33:53.047Z]                  "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+[2026-09-23T08:33:53.047Z]                  "commitMessageTopic": "{{{depName}}} action",
+[2026-09-23T08:33:53.047Z]                  "currentDigest": "c2a87611a18de5b3828c5652fe268e992400cb5c",
+[2026-09-23T08:33:53.047Z]                  "currentValue": "v4.3.0",
+[2026-09-23T08:33:53.047Z]                  "currentVersion": "v4.3.0",
+[2026-09-23T08:33:53.047Z]                  "currentVersionAgeInDays": 28,
+[2026-09-23T08:33:53.047Z]                  "currentVersionTimestamp": "2026-08-25T10:08:22.000Z",
+[2026-09-23T08:33:53.047Z]                  "datasource": "github-tags",
+[2026-09-23T08:33:53.047Z]                  "depName": "jdx/mise-action",
+[2026-09-23T08:33:53.047Z]                  "depType": "action",
+[2026-09-23T08:33:53.047Z]                  "fixedVersion": "v4.3.0",
+[2026-09-23T08:33:53.047Z]                  "isAbandoned": false,
+[2026-09-23T08:33:53.047Z]                  "mostRecentTimestamp": "2026-08-25T10:08:22.000Z",
+[2026-09-23T08:33:53.047Z]                  "packageName": "jdx/mise-action",
+[2026-09-23T08:33:53.047Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.047Z]                  "replaceString": "jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0",
+[2026-09-23T08:33:53.047Z]                  "sourceUrl": "https://github.com/jdx/mise-action",
+[2026-09-23T08:33:53.047Z]                  "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+[2026-09-23T08:33:53.047Z]                  "warnings": [],
+[2026-09-23T08:33:53.047Z]                  "updates": []
+[2026-09-23T08:33:53.047Z]                },
+[2026-09-23T08:33:53.047Z]                {
+[2026-09-23T08:33:53.047Z]                  "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+[2026-09-23T08:33:53.047Z]                  "commitMessageTopic": "{{{depName}}} action",
+[2026-09-23T08:33:53.047Z]                  "currentDigest": "4a55954c782fc1ea30b9056cd3e7a2b40ca8887d",
+[2026-09-23T08:33:53.047Z]                  "currentValue": "v7.2.0",
+[2026-09-23T08:33:53.047Z]                  "currentVersion": "v7.2.0",
+[2026-09-23T08:33:53.047Z]                  "currentVersionAgeInDays": 86,
+[2026-09-23T08:33:53.047Z]                  "currentVersionTimestamp": "2026-06-28T09:32:56.000Z",
+[2026-09-23T08:33:53.047Z]                  "datasource": "github-tags",
+[2026-09-23T08:33:53.047Z]                  "depName": "stefanzweifel/git-auto-commit-action",
+[2026-09-23T08:33:53.047Z]                  "depType": "action",
+[2026-09-23T08:33:53.047Z]                  "fixedVersion": "v7.2.0",
+[2026-09-23T08:33:53.047Z]                  "packageName": "stefanzweifel/git-auto-commit-action",
+[2026-09-23T08:33:53.047Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.047Z]                  "replaceString": "stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d # v7.2.0",
+[2026-09-23T08:33:53.047Z]                  "sourceUrl": "https://github.com/stefanzweifel/git-auto-commit-action",
+[2026-09-23T08:33:53.047Z]                  "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+[2026-09-23T08:33:53.047Z]                  "warnings": [],
+[2026-09-23T08:33:53.047Z]                  "updates": []
+[2026-09-23T08:33:53.047Z]                },
+[2026-09-23T08:33:53.047Z]                {
+[2026-09-23T08:33:53.047Z]                  "autoReplaceStringTemplate": "{{depName}}-{{newValue}}",
+[2026-09-23T08:33:53.047Z]                  "currentValue": "latest",
+[2026-09-23T08:33:53.047Z]                  "datasource": "github-runners",
+[2026-09-23T08:33:53.047Z]                  "depName": "ubuntu",
+[2026-09-23T08:33:53.047Z]                  "depType": "github-runner",
+[2026-09-23T08:33:53.047Z]                  "packageName": "ubuntu",
+[2026-09-23T08:33:53.047Z]                  "replaceString": "ubuntu-latest",
+[2026-09-23T08:33:53.047Z]                  "skipReason": "invalid-version",
+[2026-09-23T08:33:53.047Z]                  "updates": []
+[2026-09-23T08:33:53.047Z]                },
+[2026-09-23T08:33:53.048Z]                {
+[2026-09-23T08:33:53.048Z]                  "datasource": "github-release-attachments",
+[2026-09-23T08:33:53.048Z]                  "depName": "jdx/mise",
+[2026-09-23T08:33:53.048Z]                  "depType": "uses-with",
+[2026-09-23T08:33:53.048Z]                  "packageName": "jdx/mise",
+[2026-09-23T08:33:53.048Z]                  "skipReason": "unspecified-version",
+[2026-09-23T08:33:53.048Z]                  "skipStage": "extract",
+[2026-09-23T08:33:53.048Z]                  "updates": []
+[2026-09-23T08:33:53.048Z]                }
+[2026-09-23T08:33:53.048Z]              ],
+[2026-09-23T08:33:53.048Z]              "packageFile": ".github/workflows/mise-lockfile-sync.yml"
+[2026-09-23T08:33:53.048Z]            },
+[2026-09-23T08:33:53.048Z]            {
+[2026-09-23T08:33:53.048Z]              "deps": [
+[2026-09-23T08:33:53.048Z]                {
+[2026-09-23T08:33:53.048Z]                  "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+[2026-09-23T08:33:53.048Z]                  "commitMessageTopic": "{{{depName}}} action",
+[2026-09-23T08:33:53.048Z]                  "currentDigest": "bcd2ba49218906704ab6c1aa796996da409d3eb1",
+[2026-09-23T08:33:53.048Z]                  "currentValue": "v3.2.0",
+[2026-09-23T08:33:53.048Z]                  "currentVersion": "v3.2.0",
+[2026-09-23T08:33:53.048Z]                  "currentVersionAgeInDays": 133,
+[2026-09-23T08:33:53.048Z]                  "currentVersionTimestamp": "2026-05-12T23:31:37.000Z",
+[2026-09-23T08:33:53.048Z]                  "datasource": "github-tags",
+[2026-09-23T08:33:53.048Z]                  "depName": "actions/create-github-app-token",
+[2026-09-23T08:33:53.048Z]                  "depType": "action",
+[2026-09-23T08:33:53.048Z]                  "fixedVersion": "v3.2.0",
+[2026-09-23T08:33:53.048Z]                  "packageName": "actions/create-github-app-token",
+[2026-09-23T08:33:53.048Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.048Z]                  "replaceString": "actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0",
+[2026-09-23T08:33:53.048Z]                  "sourceUrl": "https://github.com/actions/create-github-app-token",
+[2026-09-23T08:33:53.048Z]                  "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+[2026-09-23T08:33:53.048Z]                  "warnings": [],
+[2026-09-23T08:33:53.048Z]                  "updates": []
+[2026-09-23T08:33:53.048Z]                },
+[2026-09-23T08:33:53.048Z]                {
+[2026-09-23T08:33:53.048Z]                  "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+[2026-09-23T08:33:53.048Z]                  "commitMessageTopic": "{{{depName}}} action",
+[2026-09-23T08:33:53.048Z]                  "currentDigest": "3a2844b7e9c422d3c10d287c895573f7108da1b3",
+[2026-09-23T08:33:53.048Z]                  "currentValue": "v9.0.0",
+[2026-09-23T08:33:53.048Z]                  "currentVersion": "v9.0.0",
+[2026-09-23T08:33:53.048Z]                  "currentVersionAgeInDays": 166,
+[2026-09-23T08:33:53.048Z]                  "currentVersionTimestamp": "2026-04-09T22:44:58.000Z",
+[2026-09-23T08:33:53.048Z]                  "datasource": "github-tags",
+[2026-09-23T08:33:53.048Z]                  "depName": "actions/github-script",
+[2026-09-23T08:33:53.048Z]                  "depType": "action",
+[2026-09-23T08:33:53.048Z]                  "fixedVersion": "v9.0.0",
+[2026-09-23T08:33:53.048Z]                  "packageName": "actions/github-script",
+[2026-09-23T08:33:53.048Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.048Z]                  "replaceString": "actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0",
+[2026-09-23T08:33:53.048Z]                  "sourceUrl": "https://github.com/actions/github-script",
+[2026-09-23T08:33:53.048Z]                  "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+[2026-09-23T08:33:53.048Z]                  "warnings": [],
+[2026-09-23T08:33:53.048Z]                  "updates": []
+[2026-09-23T08:33:53.048Z]                },
+[2026-09-23T08:33:53.048Z]                {
+[2026-09-23T08:33:53.048Z]                  "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+[2026-09-23T08:33:53.049Z]                  "commitMessageTopic": "{{{depName}}} action",
+[2026-09-23T08:33:53.049Z]                  "currentDigest": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+[2026-09-23T08:33:53.049Z]                  "currentValue": "v7.0.1",
+[2026-09-23T08:33:53.049Z]                  "currentVersion": "v7.0.1",
+[2026-09-23T08:33:53.049Z]                  "currentVersionAgeInDays": 64,
+[2026-09-23T08:33:53.049Z]                  "currentVersionTimestamp": "2026-07-20T15:10:05.000Z",
+[2026-09-23T08:33:53.049Z]                  "datasource": "github-tags",
+[2026-09-23T08:33:53.049Z]                  "depName": "actions/checkout",
+[2026-09-23T08:33:53.049Z]                  "depType": "action",
+[2026-09-23T08:33:53.049Z]                  "fixedVersion": "v7.0.1",
+[2026-09-23T08:33:53.049Z]                  "packageName": "actions/checkout",
+[2026-09-23T08:33:53.049Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.049Z]                  "replaceString": "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1",
+[2026-09-23T08:33:53.049Z]                  "sourceUrl": "https://github.com/actions/checkout",
+[2026-09-23T08:33:53.049Z]                  "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+[2026-09-23T08:33:53.049Z]                  "warnings": [],
+[2026-09-23T08:33:53.049Z]                  "updates": []
+[2026-09-23T08:33:53.049Z]                },
+[2026-09-23T08:33:53.049Z]                {
+[2026-09-23T08:33:53.049Z]                  "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+[2026-09-23T08:33:53.049Z]                  "commitMessageTopic": "{{{depName}}} action",
+[2026-09-23T08:33:53.049Z]                  "currentDigest": "bcd2ba49218906704ab6c1aa796996da409d3eb1",
+[2026-09-23T08:33:53.049Z]                  "currentValue": "v3.2.0",
+[2026-09-23T08:33:53.049Z]                  "currentVersion": "v3.2.0",
+[2026-09-23T08:33:53.049Z]                  "currentVersionAgeInDays": 133,
+[2026-09-23T08:33:53.049Z]                  "currentVersionTimestamp": "2026-05-12T23:31:37.000Z",
+[2026-09-23T08:33:53.049Z]                  "datasource": "github-tags",
+[2026-09-23T08:33:53.049Z]                  "depName": "actions/create-github-app-token",
+[2026-09-23T08:33:53.049Z]                  "depType": "action",
+[2026-09-23T08:33:53.049Z]                  "fixedVersion": "v3.2.0",
+[2026-09-23T08:33:53.049Z]                  "packageName": "actions/create-github-app-token",
+[2026-09-23T08:33:53.049Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.049Z]                  "replaceString": "actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0",
+[2026-09-23T08:33:53.049Z]                  "sourceUrl": "https://github.com/actions/create-github-app-token",
+[2026-09-23T08:33:53.049Z]                  "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+[2026-09-23T08:33:53.049Z]                  "warnings": [],
+[2026-09-23T08:33:53.049Z]                  "updates": []
+[2026-09-23T08:33:53.049Z]                },
+[2026-09-23T08:33:53.049Z]                {
+[2026-09-23T08:33:53.049Z]                  "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+[2026-09-23T08:33:53.049Z]                  "commitMessageTopic": "{{{depName}}} action",
+[2026-09-23T08:33:53.049Z]                  "currentDigest": "3a2844b7e9c422d3c10d287c895573f7108da1b3",
+[2026-09-23T08:33:53.049Z]                  "currentValue": "v9.0.0",
+[2026-09-23T08:33:53.049Z]                  "currentVersion": "v9.0.0",
+[2026-09-23T08:33:53.049Z]                  "currentVersionAgeInDays": 166,
+[2026-09-23T08:33:53.049Z]                  "currentVersionTimestamp": "2026-04-09T22:44:58.000Z",
+[2026-09-23T08:33:53.049Z]                  "datasource": "github-tags",
+[2026-09-23T08:33:53.049Z]                  "depName": "actions/github-script",
+[2026-09-23T08:33:53.049Z]                  "depType": "action",
+[2026-09-23T08:33:53.049Z]                  "fixedVersion": "v9.0.0",
+[2026-09-23T08:33:53.049Z]                  "packageName": "actions/github-script",
+[2026-09-23T08:33:53.049Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.049Z]                  "replaceString": "actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0",
+[2026-09-23T08:33:53.049Z]                  "sourceUrl": "https://github.com/actions/github-script",
+[2026-09-23T08:33:53.049Z]                  "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+[2026-09-23T08:33:53.049Z]                  "warnings": [],
+[2026-09-23T08:33:53.049Z]                  "updates": []
+[2026-09-23T08:33:53.049Z]                },
+[2026-09-23T08:33:53.049Z]                {
+[2026-09-23T08:33:53.049Z]                  "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+[2026-09-23T08:33:53.049Z]                  "commitMessageTopic": "{{{depName}}} action",
+[2026-09-23T08:33:53.049Z]                  "currentDigest": "bcd2ba49218906704ab6c1aa796996da409d3eb1",
+[2026-09-23T08:33:53.049Z]                  "currentValue": "v3.2.0",
+[2026-09-23T08:33:53.049Z]                  "currentVersion": "v3.2.0",
+[2026-09-23T08:33:53.049Z]                  "currentVersionAgeInDays": 133,
+[2026-09-23T08:33:53.049Z]                  "currentVersionTimestamp": "2026-05-12T23:31:37.000Z",
+[2026-09-23T08:33:53.049Z]                  "datasource": "github-tags",
+[2026-09-23T08:33:53.049Z]                  "depName": "actions/create-github-app-token",
+[2026-09-23T08:33:53.049Z]                  "depType": "action",
+[2026-09-23T08:33:53.049Z]                  "fixedVersion": "v3.2.0",
+[2026-09-23T08:33:53.050Z]                  "packageName": "actions/create-github-app-token",
+[2026-09-23T08:33:53.050Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.050Z]                  "replaceString": "actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0",
+[2026-09-23T08:33:53.050Z]                  "sourceUrl": "https://github.com/actions/create-github-app-token",
+[2026-09-23T08:33:53.050Z]                  "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+[2026-09-23T08:33:53.050Z]                  "warnings": [],
+[2026-09-23T08:33:53.050Z]                  "updates": []
+[2026-09-23T08:33:53.050Z]                },
+[2026-09-23T08:33:53.050Z]                {
+[2026-09-23T08:33:53.050Z]                  "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+[2026-09-23T08:33:53.050Z]                  "commitMessageTopic": "{{{depName}}} action",
+[2026-09-23T08:33:53.050Z]                  "currentDigest": "3a2844b7e9c422d3c10d287c895573f7108da1b3",
+[2026-09-23T08:33:53.050Z]                  "currentValue": "v9.0.0",
+[2026-09-23T08:33:53.050Z]                  "currentVersion": "v9.0.0",
+[2026-09-23T08:33:53.050Z]                  "currentVersionAgeInDays": 166,
+[2026-09-23T08:33:53.050Z]                  "currentVersionTimestamp": "2026-04-09T22:44:58.000Z",
+[2026-09-23T08:33:53.050Z]                  "datasource": "github-tags",
+[2026-09-23T08:33:53.050Z]                  "depName": "actions/github-script",
+[2026-09-23T08:33:53.050Z]                  "depType": "action",
+[2026-09-23T08:33:53.050Z]                  "fixedVersion": "v9.0.0",
+[2026-09-23T08:33:53.050Z]                  "packageName": "actions/github-script",
+[2026-09-23T08:33:53.050Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.050Z]                  "replaceString": "actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0",
+[2026-09-23T08:33:53.050Z]                  "sourceUrl": "https://github.com/actions/github-script",
+[2026-09-23T08:33:53.050Z]                  "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+[2026-09-23T08:33:53.050Z]                  "warnings": [],
+[2026-09-23T08:33:53.050Z]                  "updates": []
+[2026-09-23T08:33:53.050Z]                },
+[2026-09-23T08:33:53.050Z]                {
+[2026-09-23T08:33:53.050Z]                  "autoReplaceStringTemplate": "{{depName}}/restore@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+[2026-09-23T08:33:53.050Z]                  "commitMessageTopic": "{{{depName}}} action",
+[2026-09-23T08:33:53.050Z]                  "currentDigest": "55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
+[2026-09-23T08:33:53.050Z]                  "currentValue": "v6.1.0",
+[2026-09-23T08:33:53.050Z]                  "currentVersion": "v6.1.0",
+[2026-09-23T08:33:53.050Z]                  "currentVersionAgeInDays": 88,
+[2026-09-23T08:33:53.050Z]                  "currentVersionTimestamp": "2026-06-26T19:17:06.000Z",
+[2026-09-23T08:33:53.050Z]                  "datasource": "github-tags",
+[2026-09-23T08:33:53.050Z]                  "depName": "actions/cache",
+[2026-09-23T08:33:53.050Z]                  "depType": "action",
+[2026-09-23T08:33:53.050Z]                  "fixedVersion": "v6.1.0",
+[2026-09-23T08:33:53.050Z]                  "packageName": "actions/cache",
+[2026-09-23T08:33:53.050Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.050Z]                  "replaceString": "actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0",
+[2026-09-23T08:33:53.050Z]                  "sourceUrl": "https://github.com/actions/cache",
+[2026-09-23T08:33:53.050Z]                  "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+[2026-09-23T08:33:53.050Z]                  "warnings": [],
+[2026-09-23T08:33:53.050Z]                  "updates": []
+[2026-09-23T08:33:53.050Z]                },
+[2026-09-23T08:33:53.050Z]                {
+[2026-09-23T08:33:53.050Z]                  "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+[2026-09-23T08:33:53.050Z]                  "commitMessageTopic": "{{{depName}}} action",
+[2026-09-23T08:33:53.050Z]                  "currentDigest": "3a2844b7e9c422d3c10d287c895573f7108da1b3",
+[2026-09-23T08:33:53.050Z]                  "currentValue": "v9.0.0",
+[2026-09-23T08:33:53.050Z]                  "currentVersion": "v9.0.0",
+[2026-09-23T08:33:53.050Z]                  "currentVersionAgeInDays": 166,
+[2026-09-23T08:33:53.050Z]                  "currentVersionTimestamp": "2026-04-09T22:44:58.000Z",
+[2026-09-23T08:33:53.050Z]                  "datasource": "github-tags",
+[2026-09-23T08:33:53.050Z]                  "depName": "actions/github-script",
+[2026-09-23T08:33:53.050Z]                  "depType": "action",
+[2026-09-23T08:33:53.050Z]                  "fixedVersion": "v9.0.0",
+[2026-09-23T08:33:53.050Z]                  "packageName": "actions/github-script",
+[2026-09-23T08:33:53.050Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.050Z]                  "replaceString": "actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0",
+[2026-09-23T08:33:53.050Z]                  "sourceUrl": "https://github.com/actions/github-script",
+[2026-09-23T08:33:53.050Z]                  "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+[2026-09-23T08:33:53.050Z]                  "warnings": [],
+[2026-09-23T08:33:53.050Z]                  "updates": []
+[2026-09-23T08:33:53.050Z]                },
+[2026-09-23T08:33:53.050Z]                {
+[2026-09-23T08:33:53.050Z]                  "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+[2026-09-23T08:33:53.050Z]                  "commitMessageTopic": "{{{depName}}} action",
+[2026-09-23T08:33:53.050Z]                  "currentDigest": "3a2844b7e9c422d3c10d287c895573f7108da1b3",
+[2026-09-23T08:33:53.051Z]                  "currentValue": "v9.0.0",
+[2026-09-23T08:33:53.051Z]                  "currentVersion": "v9.0.0",
+[2026-09-23T08:33:53.051Z]                  "currentVersionAgeInDays": 166,
+[2026-09-23T08:33:53.051Z]                  "currentVersionTimestamp": "2026-04-09T22:44:58.000Z",
+[2026-09-23T08:33:53.051Z]                  "datasource": "github-tags",
+[2026-09-23T08:33:53.051Z]                  "depName": "actions/github-script",
+[2026-09-23T08:33:53.051Z]                  "depType": "action",
+[2026-09-23T08:33:53.051Z]                  "fixedVersion": "v9.0.0",
+[2026-09-23T08:33:53.051Z]                  "packageName": "actions/github-script",
+[2026-09-23T08:33:53.051Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.051Z]                  "replaceString": "actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0",
+[2026-09-23T08:33:53.051Z]                  "sourceUrl": "https://github.com/actions/github-script",
+[2026-09-23T08:33:53.051Z]                  "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+[2026-09-23T08:33:53.051Z]                  "warnings": [],
+[2026-09-23T08:33:53.051Z]                  "updates": []
+[2026-09-23T08:33:53.051Z]                },
+[2026-09-23T08:33:53.051Z]                {
+[2026-09-23T08:33:53.051Z]                  "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+[2026-09-23T08:33:53.051Z]                  "commitMessageTopic": "{{{depName}}} action",
+[2026-09-23T08:33:53.051Z]                  "currentDigest": "3a2844b7e9c422d3c10d287c895573f7108da1b3",
+[2026-09-23T08:33:53.051Z]                  "currentValue": "v9.0.0",
+[2026-09-23T08:33:53.051Z]                  "currentVersion": "v9.0.0",
+[2026-09-23T08:33:53.051Z]                  "currentVersionAgeInDays": 166,
+[2026-09-23T08:33:53.051Z]                  "currentVersionTimestamp": "2026-04-09T22:44:58.000Z",
+[2026-09-23T08:33:53.051Z]                  "datasource": "github-tags",
+[2026-09-23T08:33:53.051Z]                  "depName": "actions/github-script",
+[2026-09-23T08:33:53.051Z]                  "depType": "action",
+[2026-09-23T08:33:53.051Z]                  "fixedVersion": "v9.0.0",
+[2026-09-23T08:33:53.051Z]                  "packageName": "actions/github-script",
+[2026-09-23T08:33:53.051Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.051Z]                  "replaceString": "actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0",
+[2026-09-23T08:33:53.051Z]                  "sourceUrl": "https://github.com/actions/github-script",
+[2026-09-23T08:33:53.051Z]                  "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+[2026-09-23T08:33:53.051Z]                  "warnings": [],
+[2026-09-23T08:33:53.051Z]                  "updates": []
+[2026-09-23T08:33:53.051Z]                },
+[2026-09-23T08:33:53.052Z]                {
+[2026-09-23T08:33:53.052Z]                  "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+[2026-09-23T08:33:53.052Z]                  "commitMessageTopic": "{{{depName}}} action",
+[2026-09-23T08:33:53.052Z]                  "currentDigest": "3a2844b7e9c422d3c10d287c895573f7108da1b3",
+[2026-09-23T08:33:53.052Z]                  "currentValue": "v9.0.0",
+[2026-09-23T08:33:53.052Z]                  "currentVersion": "v9.0.0",
+[2026-09-23T08:33:53.052Z]                  "currentVersionAgeInDays": 166,
+[2026-09-23T08:33:53.052Z]                  "currentVersionTimestamp": "2026-04-09T22:44:58.000Z",
+[2026-09-23T08:33:53.052Z]                  "datasource": "github-tags",
+[2026-09-23T08:33:53.052Z]                  "depName": "actions/github-script",
+[2026-09-23T08:33:53.052Z]                  "depType": "action",
+[2026-09-23T08:33:53.052Z]                  "fixedVersion": "v9.0.0",
+[2026-09-23T08:33:53.052Z]                  "packageName": "actions/github-script",
+[2026-09-23T08:33:53.052Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.052Z]                  "replaceString": "actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0",
+[2026-09-23T08:33:53.052Z]                  "sourceUrl": "https://github.com/actions/github-script",
+[2026-09-23T08:33:53.052Z]                  "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+[2026-09-23T08:33:53.052Z]                  "warnings": [],
+[2026-09-23T08:33:53.052Z]                  "updates": []
+[2026-09-23T08:33:53.052Z]                },
+[2026-09-23T08:33:53.052Z]                {
+[2026-09-23T08:33:53.052Z]                  "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+[2026-09-23T08:33:53.052Z]                  "commitMessageTopic": "{{{depName}}} action",
+[2026-09-23T08:33:53.052Z]                  "currentDigest": "4a55954c782fc1ea30b9056cd3e7a2b40ca8887d",
+[2026-09-23T08:33:53.052Z]                  "currentValue": "v7.2.0",
+[2026-09-23T08:33:53.052Z]                  "currentVersion": "v7.2.0",
+[2026-09-23T08:33:53.052Z]                  "currentVersionAgeInDays": 86,
+[2026-09-23T08:33:53.052Z]                  "currentVersionTimestamp": "2026-06-28T09:32:56.000Z",
+[2026-09-23T08:33:53.052Z]                  "datasource": "github-tags",
+[2026-09-23T08:33:53.052Z]                  "depName": "stefanzweifel/git-auto-commit-action",
+[2026-09-23T08:33:53.052Z]                  "depType": "action",
+[2026-09-23T08:33:53.052Z]                  "fixedVersion": "v7.2.0",
+[2026-09-23T08:33:53.052Z]                  "packageName": "stefanzweifel/git-auto-commit-action",
+[2026-09-23T08:33:53.052Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.052Z]                  "replaceString": "stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d # v7.2.0",
+[2026-09-23T08:33:53.052Z]                  "sourceUrl": "https://github.com/stefanzweifel/git-auto-commit-action",
+[2026-09-23T08:33:53.052Z]                  "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+[2026-09-23T08:33:53.052Z]                  "warnings": [],
+[2026-09-23T08:33:53.052Z]                  "updates": []
+[2026-09-23T08:33:53.052Z]                },
+[2026-09-23T08:33:53.052Z]                {
+[2026-09-23T08:33:53.052Z]                  "autoReplaceStringTemplate": "{{depName}}/save@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+[2026-09-23T08:33:53.052Z]                  "commitMessageTopic": "{{{depName}}} action",
+[2026-09-23T08:33:53.052Z]                  "currentDigest": "55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
+[2026-09-23T08:33:53.052Z]                  "currentValue": "v6.1.0",
+[2026-09-23T08:33:53.052Z]                  "currentVersion": "v6.1.0",
+[2026-09-23T08:33:53.052Z]                  "currentVersionAgeInDays": 88,
+[2026-09-23T08:33:53.052Z]                  "currentVersionTimestamp": "2026-06-26T19:17:06.000Z",
+[2026-09-23T08:33:53.052Z]                  "datasource": "github-tags",
+[2026-09-23T08:33:53.052Z]                  "depName": "actions/cache",
+[2026-09-23T08:33:53.052Z]                  "depType": "action",
+[2026-09-23T08:33:53.052Z]                  "fixedVersion": "v6.1.0",
+[2026-09-23T08:33:53.052Z]                  "packageName": "actions/cache",
+[2026-09-23T08:33:53.052Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.052Z]                  "replaceString": "actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0",
+[2026-09-23T08:33:53.052Z]                  "sourceUrl": "https://github.com/actions/cache",
+[2026-09-23T08:33:53.052Z]                  "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+[2026-09-23T08:33:53.052Z]                  "warnings": [],
+[2026-09-23T08:33:53.052Z]                  "updates": []
+[2026-09-23T08:33:53.052Z]                },
+[2026-09-23T08:33:53.052Z]                {
+[2026-09-23T08:33:53.052Z]                  "autoReplaceStringTemplate": "{{depName}}-{{newValue}}",
+[2026-09-23T08:33:53.052Z]                  "currentValue": "latest",
+[2026-09-23T08:33:53.052Z]                  "datasource": "github-runners",
+[2026-09-23T08:33:53.052Z]                  "depName": "ubuntu",
+[2026-09-23T08:33:53.052Z]                  "depType": "github-runner",
+[2026-09-23T08:33:53.052Z]                  "packageName": "ubuntu",
+[2026-09-23T08:33:53.052Z]                  "replaceString": "ubuntu-latest",
+[2026-09-23T08:33:53.052Z]                  "skipReason": "invalid-version",
+[2026-09-23T08:33:53.052Z]                  "updates": []
+[2026-09-23T08:33:53.052Z]                },
+[2026-09-23T08:33:53.052Z]                {
+[2026-09-23T08:33:53.052Z]                  "autoReplaceStringTemplate": "{{depName}}-{{newValue}}",
+[2026-09-23T08:33:53.052Z]                  "currentValue": "latest",
+[2026-09-23T08:33:53.052Z]                  "datasource": "github-runners",
+[2026-09-23T08:33:53.052Z]                  "depName": "ubuntu",
+[2026-09-23T08:33:53.052Z]                  "depType": "github-runner",
+[2026-09-23T08:33:53.052Z]                  "packageName": "ubuntu",
+[2026-09-23T08:33:53.052Z]                  "replaceString": "ubuntu-latest",
+[2026-09-23T08:33:53.052Z]                  "skipReason": "invalid-version",
+[2026-09-23T08:33:53.052Z]                  "updates": []
+[2026-09-23T08:33:53.052Z]                }
+[2026-09-23T08:33:53.052Z]              ],
+[2026-09-23T08:33:53.052Z]              "packageFile": ".github/workflows/renovate.yaml"
+[2026-09-23T08:33:53.052Z]            },
+[2026-09-23T08:33:53.052Z]            {
+[2026-09-23T08:33:53.052Z]              "deps": [
+[2026-09-23T08:33:53.052Z]                {
+[2026-09-23T08:33:53.052Z]                  "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+[2026-09-23T08:33:53.052Z]                  "commitMessageTopic": "{{{depName}}} action",
+[2026-09-23T08:33:53.052Z]                  "currentDigest": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+[2026-09-23T08:33:53.052Z]                  "currentValue": "v7.0.1",
+[2026-09-23T08:33:53.052Z]                  "currentVersion": "v7.0.1",
+[2026-09-23T08:33:53.052Z]                  "currentVersionAgeInDays": 64,
+[2026-09-23T08:33:53.052Z]                  "currentVersionTimestamp": "2026-07-20T15:10:05.000Z",
+[2026-09-23T08:33:53.052Z]                  "datasource": "github-tags",
+[2026-09-23T08:33:53.052Z]                  "depName": "actions/checkout",
+[2026-09-23T08:33:53.052Z]                  "depType": "action",
+[2026-09-23T08:33:53.052Z]                  "fixedVersion": "v7.0.1",
+[2026-09-23T08:33:53.052Z]                  "packageName": "actions/checkout",
+[2026-09-23T08:33:53.052Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.052Z]                  "replaceString": "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1",
+[2026-09-23T08:33:53.052Z]                  "sourceUrl": "https://github.com/actions/checkout",
+[2026-09-23T08:33:53.052Z]                  "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+[2026-09-23T08:33:53.052Z]                  "warnings": [],
+[2026-09-23T08:33:53.052Z]                  "updates": []
+[2026-09-23T08:33:53.052Z]                },
+[2026-09-23T08:33:53.052Z]                {
+[2026-09-23T08:33:53.052Z]                  "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+[2026-09-23T08:33:53.052Z]                  "commitMessageTopic": "{{{depName}}} action",
+[2026-09-23T08:33:53.052Z]                  "currentDigest": "c2a87611a18de5b3828c5652fe268e992400cb5c",
+[2026-09-23T08:33:53.052Z]                  "currentValue": "v4.3.0",
+[2026-09-23T08:33:53.052Z]                  "currentVersion": "v4.3.0",
+[2026-09-23T08:33:53.052Z]                  "currentVersionAgeInDays": 28,
+[2026-09-23T08:33:53.052Z]                  "currentVersionTimestamp": "2026-08-25T10:08:22.000Z",
+[2026-09-23T08:33:53.052Z]                  "datasource": "github-tags",
+[2026-09-23T08:33:53.052Z]                  "depName": "jdx/mise-action",
+[2026-09-23T08:33:53.052Z]                  "depType": "action",
+[2026-09-23T08:33:53.052Z]                  "fixedVersion": "v4.3.0",
+[2026-09-23T08:33:53.052Z]                  "isAbandoned": false,
+[2026-09-23T08:33:53.052Z]                  "mostRecentTimestamp": "2026-08-25T10:08:22.000Z",
+[2026-09-23T08:33:53.052Z]                  "packageName": "jdx/mise-action",
+[2026-09-23T08:33:53.053Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.053Z]                  "replaceString": "jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0",
+[2026-09-23T08:33:53.053Z]                  "sourceUrl": "https://github.com/jdx/mise-action",
+[2026-09-23T08:33:53.053Z]                  "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+[2026-09-23T08:33:53.053Z]                  "warnings": [],
+[2026-09-23T08:33:53.053Z]                  "updates": []
+[2026-09-23T08:33:53.053Z]                },
+[2026-09-23T08:33:53.053Z]                {
+[2026-09-23T08:33:53.053Z]                  "autoReplaceStringTemplate": "{{depName}}-{{newValue}}",
+[2026-09-23T08:33:53.053Z]                  "currentValue": "latest",
+[2026-09-23T08:33:53.053Z]                  "datasource": "github-runners",
+[2026-09-23T08:33:53.053Z]                  "depName": "ubuntu",
+[2026-09-23T08:33:53.053Z]                  "depType": "github-runner",
+[2026-09-23T08:33:53.053Z]                  "packageName": "ubuntu",
+[2026-09-23T08:33:53.053Z]                  "replaceString": "ubuntu-latest",
+[2026-09-23T08:33:53.053Z]                  "skipReason": "invalid-version",
+[2026-09-23T08:33:53.053Z]                  "updates": []
+[2026-09-23T08:33:53.053Z]                }
+[2026-09-23T08:33:53.053Z]              ],
+[2026-09-23T08:33:53.053Z]              "packageFile": ".github/workflows/test.yml"
+[2026-09-23T08:33:53.053Z]            },
+[2026-09-23T08:33:53.053Z]            {
+[2026-09-23T08:33:53.053Z]              "deps": [
+[2026-09-23T08:33:53.053Z]                {
+[2026-09-23T08:33:53.053Z]                  "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+[2026-09-23T08:33:53.053Z]                  "commitMessageTopic": "{{{depName}}} action",
+[2026-09-23T08:33:53.053Z]                  "currentDigest": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+[2026-09-23T08:33:53.053Z]                  "currentValue": "v7.0.1",
+[2026-09-23T08:33:53.053Z]                  "currentVersion": "v7.0.1",
+[2026-09-23T08:33:53.053Z]                  "currentVersionAgeInDays": 64,
+[2026-09-23T08:33:53.053Z]                  "currentVersionTimestamp": "2026-07-20T15:10:05.000Z",
+[2026-09-23T08:33:53.053Z]                  "datasource": "github-tags",
+[2026-09-23T08:33:53.053Z]                  "depName": "actions/checkout",
+[2026-09-23T08:33:53.053Z]                  "depType": "action",
+[2026-09-23T08:33:53.053Z]                  "fixedVersion": "v7.0.1",
+[2026-09-23T08:33:53.053Z]                  "packageName": "actions/checkout",
+[2026-09-23T08:33:53.053Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.053Z]                  "replaceString": "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1",
+[2026-09-23T08:33:53.053Z]                  "sourceUrl": "https://github.com/actions/checkout",
+[2026-09-23T08:33:53.053Z]                  "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+[2026-09-23T08:33:53.053Z]                  "warnings": [],
+[2026-09-23T08:33:53.053Z]                  "updates": []
+[2026-09-23T08:33:53.053Z]                },
+[2026-09-23T08:33:53.053Z]                {
+[2026-09-23T08:33:53.053Z]                  "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+[2026-09-23T08:33:53.053Z]                  "commitMessageTopic": "{{{depName}}} action",
+[2026-09-23T08:33:53.053Z]                  "currentDigest": "ed142fd0673e97e23eac54620cfb913e5ce36c25",
+[2026-09-23T08:33:53.053Z]                  "currentValue": "v0.36.0",
+[2026-09-23T08:33:53.053Z]                  "currentVersion": "v0.36.0",
+[2026-09-23T08:33:53.053Z]                  "currentVersionAgeInDays": 153,
+[2026-09-23T08:33:53.053Z]                  "currentVersionTimestamp": "2026-04-22T09:29:59.000Z",
+[2026-09-23T08:33:53.053Z]                  "datasource": "github-tags",
+[2026-09-23T08:33:53.053Z]                  "depName": "aquasecurity/trivy-action",
+[2026-09-23T08:33:53.053Z]                  "depType": "action",
+[2026-09-23T08:33:53.053Z]                  "fixedVersion": "v0.36.0",
+[2026-09-23T08:33:53.053Z]                  "isAbandoned": false,
+[2026-09-23T08:33:53.053Z]                  "mostRecentTimestamp": "2026-04-22T09:29:59.000Z",
+[2026-09-23T08:33:53.053Z]                  "packageName": "aquasecurity/trivy-action",
+[2026-09-23T08:33:53.053Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.053Z]                  "replaceString": "aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0",
+[2026-09-23T08:33:53.053Z]                  "sourceUrl": "https://github.com/aquasecurity/trivy-action",
+[2026-09-23T08:33:53.053Z]                  "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+[2026-09-23T08:33:53.053Z]                  "warnings": [],
+[2026-09-23T08:33:53.053Z]                  "updates": []
+[2026-09-23T08:33:53.053Z]                },
+[2026-09-23T08:33:53.053Z]                {
+[2026-09-23T08:33:53.053Z]                  "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+[2026-09-23T08:33:53.053Z]                  "commitMessageTopic": "{{{depName}}} action",
+[2026-09-23T08:33:53.053Z]                  "currentDigest": "ed142fd0673e97e23eac54620cfb913e5ce36c25",
+[2026-09-23T08:33:53.053Z]                  "currentValue": "v0.36.0",
+[2026-09-23T08:33:53.053Z]                  "currentVersion": "v0.36.0",
+[2026-09-23T08:33:53.053Z]                  "currentVersionAgeInDays": 153,
+[2026-09-23T08:33:53.053Z]                  "currentVersionTimestamp": "2026-04-22T09:29:59.000Z",
+[2026-09-23T08:33:53.053Z]                  "datasource": "github-tags",
+[2026-09-23T08:33:53.053Z]                  "depName": "aquasecurity/trivy-action",
+[2026-09-23T08:33:53.053Z]                  "depType": "action",
+[2026-09-23T08:33:53.053Z]                  "fixedVersion": "v0.36.0",
+[2026-09-23T08:33:53.053Z]                  "isAbandoned": false,
+[2026-09-23T08:33:53.053Z]                  "mostRecentTimestamp": "2026-04-22T09:29:59.000Z",
+[2026-09-23T08:33:53.053Z]                  "packageName": "aquasecurity/trivy-action",
+[2026-09-23T08:33:53.053Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.053Z]                  "replaceString": "aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0",
+[2026-09-23T08:33:53.053Z]                  "sourceUrl": "https://github.com/aquasecurity/trivy-action",
+[2026-09-23T08:33:53.053Z]                  "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+[2026-09-23T08:33:53.053Z]                  "warnings": [],
+[2026-09-23T08:33:53.053Z]                  "updates": []
+[2026-09-23T08:33:53.053Z]                },
+[2026-09-23T08:33:53.053Z]                {
+[2026-09-23T08:33:53.053Z]                  "autoReplaceStringTemplate": "{{depName}}/upload-sarif@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+[2026-09-23T08:33:53.053Z]                  "commitMessageTopic": "{{{depName}}} action",
+[2026-09-23T08:33:53.053Z]                  "currentDigest": "cdf488f595d80d6e07e03d4674febd5ab45fa938",
+[2026-09-23T08:33:53.053Z]                  "currentValue": "v4.37.9",
+[2026-09-23T08:33:53.053Z]                  "currentVersion": "v4.37.9",
+[2026-09-23T08:33:53.053Z]                  "currentVersionAgeInDays": 27,
+[2026-09-23T08:33:53.053Z]                  "currentVersionTimestamp": "2026-08-26T14:41:23.000Z",
+[2026-09-23T08:33:53.053Z]                  "datasource": "github-tags",
+[2026-09-23T08:33:53.053Z]                  "depName": "github/codeql-action",
+[2026-09-23T08:33:53.053Z]                  "depType": "action",
+[2026-09-23T08:33:53.053Z]                  "fixedVersion": "v4.37.9",
+[2026-09-23T08:33:53.053Z]                  "isSingleVersion": true,
+[2026-09-23T08:33:53.053Z]                  "packageName": "github/codeql-action",
+[2026-09-23T08:33:53.053Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.053Z]                  "replaceString": "github/codeql-action/upload-sarif@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9",
+[2026-09-23T08:33:53.053Z]                  "sourceUrl": "https://github.com/github/codeql-action",
+[2026-09-23T08:33:53.053Z]                  "versioning": "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+[2026-09-23T08:33:53.053Z]                  "warnings": [],
+[2026-09-23T08:33:53.053Z]                  "updates": [
+[2026-09-23T08:33:53.053Z]                    {
+[2026-09-23T08:33:53.053Z]                      "bucket": "non-major",
+[2026-09-23T08:33:53.053Z]                      "newVersion": "v4.38.1",
+[2026-09-23T08:33:53.053Z]                      "newValue": "v4.38.1",
+[2026-09-23T08:33:53.053Z]                      "newDigest": "1c5b675653bb5c22dbe9b12b556ec555138e09fd",
+[2026-09-23T08:33:53.053Z]                      "releaseTimestamp": "2026-09-18T13:11:14.000Z",
+[2026-09-23T08:33:53.053Z]                      "newVersionAgeInDays": 4,
+[2026-09-23T08:33:53.053Z]                      "newMajor": 4,
+[2026-09-23T08:33:53.053Z]                      "newMinor": 38,
+[2026-09-23T08:33:53.053Z]                      "newPatch": 1,
+[2026-09-23T08:33:53.053Z]                      "updateType": "minor",
+[2026-09-23T08:33:53.053Z]                      "isBreaking": false,
+[2026-09-23T08:33:53.053Z]                      "libYears": 0.0628421803652968,
+[2026-09-23T08:33:53.053Z]                      "branchName": "renovate/github-codeql-action-4.x"
+[2026-09-23T08:33:53.053Z]                    }
+[2026-09-23T08:33:53.053Z]                  ]
+[2026-09-23T08:33:53.054Z]                },
+[2026-09-23T08:33:53.054Z]                {
+[2026-09-23T08:33:53.054Z]                  "autoReplaceStringTemplate": "{{depName}}-{{newValue}}",
+[2026-09-23T08:33:53.054Z]                  "currentValue": "latest",
+[2026-09-23T08:33:53.054Z]                  "datasource": "github-runners",
+[2026-09-23T08:33:53.054Z]                  "depName": "ubuntu",
+[2026-09-23T08:33:53.054Z]                  "depType": "github-runner",
+[2026-09-23T08:33:53.054Z]                  "packageName": "ubuntu",
+[2026-09-23T08:33:53.054Z]                  "replaceString": "ubuntu-latest",
+[2026-09-23T08:33:53.054Z]                  "skipReason": "invalid-version",
+[2026-09-23T08:33:53.054Z]                  "updates": []
+[2026-09-23T08:33:53.054Z]                },
+[2026-09-23T08:33:53.054Z]                {
+[2026-09-23T08:33:53.054Z]                  "datasource": "github-releases",
+[2026-09-23T08:33:53.054Z]                  "depName": "aquasecurity/trivy",
+[2026-09-23T08:33:53.054Z]                  "depType": "uses-with",
+[2026-09-23T08:33:53.054Z]                  "packageName": "aquasecurity/trivy",
+[2026-09-23T08:33:53.054Z]                  "skipReason": "unspecified-version",
+[2026-09-23T08:33:53.054Z]                  "skipStage": "extract",
+[2026-09-23T08:33:53.054Z]                  "updates": []
+[2026-09-23T08:33:53.054Z]                },
+[2026-09-23T08:33:53.054Z]                {
+[2026-09-23T08:33:53.054Z]                  "datasource": "github-releases",
+[2026-09-23T08:33:53.054Z]                  "depName": "aquasecurity/trivy",
+[2026-09-23T08:33:53.054Z]                  "depType": "uses-with",
+[2026-09-23T08:33:53.054Z]                  "packageName": "aquasecurity/trivy",
+[2026-09-23T08:33:53.054Z]                  "skipReason": "unspecified-version",
+[2026-09-23T08:33:53.054Z]                  "skipStage": "extract",
+[2026-09-23T08:33:53.054Z]                  "updates": []
+[2026-09-23T08:33:53.054Z]                }
+[2026-09-23T08:33:53.054Z]              ],
+[2026-09-23T08:33:53.054Z]              "packageFile": ".github/workflows/trivy.yml"
+[2026-09-23T08:33:53.054Z]            }
+[2026-09-23T08:33:53.054Z]          ],
+[2026-09-23T08:33:53.054Z]          "mise": [
+[2026-09-23T08:33:53.054Z]            {
+[2026-09-23T08:33:53.054Z]              "deps": [
+[2026-09-23T08:33:53.054Z]                {
+[2026-09-23T08:33:53.054Z]                  "currentValue": "0.2.89",
+[2026-09-23T08:33:53.054Z]                  "currentVersion": "0.2.89",
+[2026-09-23T08:33:53.054Z]                  "currentVersionAgeInDays": 114,
+[2026-09-23T08:33:53.054Z]                  "currentVersionTimestamp": "2026-06-01T03:22:22.000Z",
+[2026-09-23T08:33:53.054Z]                  "datasource": "github-releases",
+[2026-09-23T08:33:53.054Z]                  "depName": "act",
+[2026-09-23T08:33:53.054Z]                  "depType": "tools",
+[2026-09-23T08:33:53.054Z]                  "extractVersion": "^v(?<version>\\S+)",
+[2026-09-23T08:33:53.054Z]                  "fixedVersion": "0.2.89",
+[2026-09-23T08:33:53.054Z]                  "isAbandoned": false,
+[2026-09-23T08:33:53.054Z]                  "lockedVersion": "0.2.89",
+[2026-09-23T08:33:53.054Z]                  "mostRecentTimestamp": "2026-06-01T03:22:22.000Z",
+[2026-09-23T08:33:53.054Z]                  "packageName": "nektos/act",
+[2026-09-23T08:33:53.054Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.054Z]                  "sourceUrl": "https://github.com/nektos/act",
+[2026-09-23T08:33:53.054Z]                  "versioning": "semver-coerced",
+[2026-09-23T08:33:53.054Z]                  "warnings": [],
+[2026-09-23T08:33:53.054Z]                  "updates": []
+[2026-09-23T08:33:53.054Z]                },
+[2026-09-23T08:33:53.054Z]                {
+[2026-09-23T08:33:53.054Z]                  "currentValue": "25.9.0",
+[2026-09-23T08:33:53.054Z]                  "currentVersion": "25.9.0",
+[2026-09-23T08:33:53.054Z]                  "currentVersionAgeInDays": 176,
+[2026-09-23T08:33:53.054Z]                  "currentVersionTimestamp": "2026-03-31T00:00:00.000Z",
+[2026-09-23T08:33:53.054Z]                  "datasource": "node-version",
+[2026-09-23T08:33:53.054Z]                  "depName": "node",
+[2026-09-23T08:33:53.054Z]                  "depType": "tools",
+[2026-09-23T08:33:53.054Z]                  "fixedVersion": "25.9.0",
+[2026-09-23T08:33:53.054Z]                  "homepage": "https://nodejs.org",
+[2026-09-23T08:33:53.054Z]                  "isAbandoned": false,
+[2026-09-23T08:33:53.054Z]                  "lockedVersion": "25.9.0",
+[2026-09-23T08:33:53.054Z]                  "mostRecentTimestamp": "2026-09-21T00:00:00.000Z",
+[2026-09-23T08:33:53.054Z]                  "packageName": "node",
+[2026-09-23T08:33:53.054Z]                  "registryUrl": "https://nodejs.org/dist",
+[2026-09-23T08:33:53.054Z]                  "sourceUrl": "https://github.com/nodejs/node",
+[2026-09-23T08:33:53.054Z]                  "versioning": "node",
+[2026-09-23T08:33:53.054Z]                  "warnings": [],
+[2026-09-23T08:33:53.054Z]                  "updates": []
+[2026-09-23T08:33:53.054Z]                },
+[2026-09-23T08:33:53.054Z]                {
+[2026-09-23T08:33:53.054Z]                  "currentValue": "4.129.0",
+[2026-09-23T08:33:53.054Z]                  "currentVersion": "4.129.0",
+[2026-09-23T08:33:53.054Z]                  "currentVersionAgeInDays": 19,
+[2026-09-23T08:33:53.054Z]                  "currentVersionTimestamp": "2026-09-03T17:50:56.290Z",
+[2026-09-23T08:33:53.054Z]                  "datasource": "npm",
+[2026-09-23T08:33:53.054Z]                  "depName": "wrangler",
+[2026-09-23T08:33:53.054Z]                  "depType": "tools",
+[2026-09-23T08:33:53.054Z]                  "fixedVersion": "4.129.0",
+[2026-09-23T08:33:53.054Z]                  "isAbandoned": false,
+[2026-09-23T08:33:53.054Z]                  "isSingleVersion": true,
+[2026-09-23T08:33:53.054Z]                  "lockedVersion": "4.129.0",
+[2026-09-23T08:33:53.054Z]                  "mostRecentTimestamp": "2026-09-22T16:36:06.760Z",
+[2026-09-23T08:33:53.054Z]                  "packageName": "wrangler",
+[2026-09-23T08:33:53.054Z]                  "registryUrl": "https://registry.npmjs.org",
+[2026-09-23T08:33:53.054Z]                  "sourceDirectory": "packages/wrangler",
+[2026-09-23T08:33:53.054Z]                  "sourceUrl": "https://github.com/cloudflare/workers-sdk",
+[2026-09-23T08:33:53.054Z]                  "versioning": "npm",
+[2026-09-23T08:33:53.054Z]                  "warnings": [],
+[2026-09-23T08:33:53.054Z]                  "updates": [
+[2026-09-23T08:33:53.054Z]                    {
+[2026-09-23T08:33:53.054Z]                      "bucket": "non-major",
+[2026-09-23T08:33:53.054Z]                      "newVersion": "4.135.0",
+[2026-09-23T08:33:53.054Z]                      "newValue": "4.135.0",
+[2026-09-23T08:33:53.054Z]                      "hasAttestation": true,
+[2026-09-23T08:33:53.054Z]                      "downloadUrl": "https://registry.npmjs.org/wrangler/-/wrangler-4.135.0.tgz",
+[2026-09-23T08:33:53.054Z]                      "newDigest": "sha512-WrNBQSfIG6YcILJcodYr5ty8vgkzGsV8YX+kfd+uZ5/Bd8cUW0GnUIRKAVfn5kYKqh1m/BPcji9h1d7mE8euFw==",
+[2026-09-23T08:33:53.054Z]                      "releaseTimestamp": "2026-09-18T13:16:21.943Z",
+[2026-09-23T08:33:53.054Z]                      "newVersionAgeInDays": 4,
+[2026-09-23T08:33:53.054Z]                      "newMajor": 4,
+[2026-09-23T08:33:53.054Z]                      "newMinor": 135,
+[2026-09-23T08:33:53.054Z]                      "newPatch": 0,
+[2026-09-23T08:33:53.054Z]                      "updateType": "minor",
+[2026-09-23T08:33:53.054Z]                      "isBreaking": false,
+[2026-09-23T08:33:53.054Z]                      "pendingVersions": ["4.136.0", "4.136.1", "4.136.2", "4.136.3"],
+[2026-09-23T08:33:53.054Z]                      "libYears": 0.04057349229452055,
+[2026-09-23T08:33:53.054Z]                      "branchName": "renovate/wrangler-4.x"
+[2026-09-23T08:33:53.054Z]                    }
+[2026-09-23T08:33:53.054Z]                  ]
+[2026-09-23T08:33:53.054Z]                }
+[2026-09-23T08:33:53.054Z]              ],
+[2026-09-23T08:33:53.055Z]              "lockFiles": ["mise.lock"],
+[2026-09-23T08:33:53.055Z]              "packageFile": "mise.toml"
+[2026-09-23T08:33:53.055Z]            }
+[2026-09-23T08:33:53.055Z]          ],
+[2026-09-23T08:33:53.055Z]          "npm": [
+[2026-09-23T08:33:53.055Z]            {
+[2026-09-23T08:33:53.055Z]              "deps": [
+[2026-09-23T08:33:53.055Z]                {
+[2026-09-23T08:33:53.055Z]                  "currentValue": "1.7.2",
+[2026-09-23T08:33:53.055Z]                  "currentVersion": "1.7.2",
+[2026-09-23T08:33:53.055Z]                  "currentVersionAgeInDays": 205,
+[2026-09-23T08:33:53.055Z]                  "currentVersionTimestamp": "2026-03-01T16:03:38.941Z",
+[2026-09-23T08:33:53.055Z]                  "datasource": "npm",
+[2026-09-23T08:33:53.055Z]                  "depName": "dedent",
+[2026-09-23T08:33:53.055Z]                  "depType": "devDependencies",
+[2026-09-23T08:33:53.055Z]                  "fixedVersion": "1.7.2",
+[2026-09-23T08:33:53.055Z]                  "isAbandoned": false,
+[2026-09-23T08:33:53.055Z]                  "lockedVersion": "1.7.2",
+[2026-09-23T08:33:53.055Z]                  "mostRecentTimestamp": "2026-03-01T16:03:38.941Z",
+[2026-09-23T08:33:53.055Z]                  "packageName": "dedent",
+[2026-09-23T08:33:53.055Z]                  "prettyDepType": "devDependency",
+[2026-09-23T08:33:53.055Z]                  "registryUrl": "https://registry.npmjs.org",
+[2026-09-23T08:33:53.055Z]                  "sourceUrl": "https://github.com/dmnd/dedent",
+[2026-09-23T08:33:53.055Z]                  "versioning": "npm",
+[2026-09-23T08:33:53.055Z]                  "warnings": [],
+[2026-09-23T08:33:53.055Z]                  "updates": []
+[2026-09-23T08:33:53.055Z]                },
+[2026-09-23T08:33:53.055Z]                {
+[2026-09-23T08:33:53.055Z]                  "currentValue": "2.2.3",
+[2026-09-23T08:33:53.055Z]                  "currentVersion": "2.2.3",
+[2026-09-23T08:33:53.055Z]                  "currentVersionAgeInDays": 1361,
+[2026-09-23T08:33:53.055Z]                  "currentVersionTimestamp": "2022-12-31T17:11:32.047Z",
+[2026-09-23T08:33:53.055Z]                  "datasource": "npm",
+[2026-09-23T08:33:53.055Z]                  "depName": "json5",
+[2026-09-23T08:33:53.055Z]                  "depType": "devDependencies",
+[2026-09-23T08:33:53.055Z]                  "fixedVersion": "2.2.3",
+[2026-09-23T08:33:53.055Z]                  "homepage": "http://json5.org/",
+[2026-09-23T08:33:53.055Z]                  "isAbandoned": true,
+[2026-09-23T08:33:53.055Z]                  "lockedVersion": "2.2.3",
+[2026-09-23T08:33:53.055Z]                  "mostRecentTimestamp": "2022-12-31T17:11:32.047Z",
+[2026-09-23T08:33:53.055Z]                  "packageName": "json5",
+[2026-09-23T08:33:53.055Z]                  "prettyDepType": "devDependency",
+[2026-09-23T08:33:53.055Z]                  "registryUrl": "https://registry.npmjs.org",
+[2026-09-23T08:33:53.055Z]                  "sourceUrl": "https://github.com/json5/json5",
+[2026-09-23T08:33:53.055Z]                  "versioning": "npm",
+[2026-09-23T08:33:53.055Z]                  "warnings": [],
+[2026-09-23T08:33:53.055Z]                  "updates": []
+[2026-09-23T08:33:53.055Z]                },
+[2026-09-23T08:33:53.055Z]                {
+[2026-09-23T08:33:53.055Z]                  "currentValue": "44.96.0",
+[2026-09-23T08:33:53.055Z]                  "currentVersion": "44.96.0",
+[2026-09-23T08:33:53.055Z]                  "currentVersionAgeInDays": 6,
+[2026-09-23T08:33:53.055Z]                  "currentVersionTimestamp": "2026-09-17T08:30:14.339Z",
+[2026-09-23T08:33:53.055Z]                  "datasource": "npm",
+[2026-09-23T08:33:53.055Z]                  "depName": "renovate",
+[2026-09-23T08:33:53.055Z]                  "depType": "devDependencies",
+[2026-09-23T08:33:53.055Z]                  "fixedVersion": "44.96.0",
+[2026-09-23T08:33:53.055Z]                  "homepage": "https://renovatebot.com",
+[2026-09-23T08:33:53.055Z]                  "isAbandoned": false,
+[2026-09-23T08:33:53.055Z]                  "isSingleVersion": true,
+[2026-09-23T08:33:53.055Z]                  "lockedVersion": "44.96.0",
+[2026-09-23T08:33:53.055Z]                  "mostRecentTimestamp": "2026-09-23T01:56:52.014Z",
+[2026-09-23T08:33:53.055Z]                  "packageName": "renovate",
+[2026-09-23T08:33:53.055Z]                  "prettyDepType": "devDependency",
+[2026-09-23T08:33:53.055Z]                  "registryUrl": "https://registry.npmjs.org",
+[2026-09-23T08:33:53.055Z]                  "sourceUrl": "https://github.com/renovatebot/renovate",
+[2026-09-23T08:33:53.055Z]                  "versioning": "npm",
+[2026-09-23T08:33:53.055Z]                  "warnings": [],
+[2026-09-23T08:33:53.055Z]                  "updates": [
+[2026-09-23T08:33:53.055Z]                    {
+[2026-09-23T08:33:53.055Z]                      "bucket": "non-major",
+[2026-09-23T08:33:53.055Z]                      "newVersion": "44.103.6",
+[2026-09-23T08:33:53.055Z]                      "newValue": "44.103.6",
+[2026-09-23T08:33:53.055Z]                      "hasAttestation": true,
+[2026-09-23T08:33:53.055Z]                      "downloadUrl": "https://registry.npmjs.org/renovate/-/renovate-44.103.6.tgz",
+[2026-09-23T08:33:53.055Z]                      "newDigest": "sha512-SXBNuz8sKcTxnjIZruO5ukZ7gqkQcHt78WwuoWdKOmz84XHqv4aVRnx0FqM/gXwv+XWSAaXatkM5xjhb2Qb2WA==",
+[2026-09-23T08:33:53.055Z]                      "releaseTimestamp": "2026-09-20T02:51:55.355Z",
+[2026-09-23T08:33:53.055Z]                      "newVersionAgeInDays": 3,
+[2026-09-23T08:33:53.055Z]                      "newMajor": 44,
+[2026-09-23T08:33:53.055Z]                      "newMinor": 103,
+[2026-09-23T08:33:53.055Z]                      "newPatch": 6,
+[2026-09-23T08:33:53.055Z]                      "updateType": "minor",
+[2026-09-23T08:33:53.055Z]                      "isBreaking": false,
+[2026-09-23T08:33:53.055Z]                      "pendingVersions": [
+[2026-09-23T08:33:53.055Z]                        "44.103.7",
+[2026-09-23T08:33:53.055Z]                        "44.104.0",
+[2026-09-23T08:33:53.055Z]                        "44.104.1",
+[2026-09-23T08:33:53.055Z]                        "44.104.2",
+[2026-09-23T08:33:53.055Z]                        "44.105.0",
+[2026-09-23T08:33:53.055Z]                        "44.105.1",
+[2026-09-23T08:33:53.055Z]                        "44.105.2",
+[2026-09-23T08:33:53.055Z]                        "44.105.3",
+[2026-09-23T08:33:53.055Z]                        "44.105.4",
+[2026-09-23T08:33:53.055Z]                        "44.106.0",
+[2026-09-23T08:33:53.056Z]                        "44.107.0",
+[2026-09-23T08:33:53.056Z]                        "44.107.1",
+[2026-09-23T08:33:53.056Z]                        "44.107.2",
+[2026-09-23T08:33:53.056Z]                        "44.107.3",
+[2026-09-23T08:33:53.056Z]                        "44.108.0",
+[2026-09-23T08:33:53.056Z]                        "44.108.1",
+[2026-09-23T08:33:53.056Z]                        "44.108.2"
+[2026-09-23T08:33:53.056Z]                      ],
+[2026-09-23T08:33:53.056Z]                      "libYears": 0.007575501522070015,
+[2026-09-23T08:33:53.056Z]                      "branchName": "renovate/renovate"
+[2026-09-23T08:33:53.056Z]                    }
+[2026-09-23T08:33:53.056Z]                  ]
+[2026-09-23T08:33:53.056Z]                },
+[2026-09-23T08:33:53.056Z]                {
+[2026-09-23T08:33:53.056Z]                  "commitMessageTopic": "Node.js",
+[2026-09-23T08:33:53.056Z]                  "currentValue": ">=22.12.0",
+[2026-09-23T08:33:53.056Z]                  "currentVersion": "v26.10.0",
+[2026-09-23T08:33:53.056Z]                  "currentVersionAgeInDays": 2,
+[2026-09-23T08:33:53.056Z]                  "currentVersionTimestamp": "2026-09-21T00:00:00.000Z",
+[2026-09-23T08:33:53.056Z]                  "datasource": "node-version",
+[2026-09-23T08:33:53.056Z]                  "depName": "node",
+[2026-09-23T08:33:53.056Z]                  "depType": "engines",
+[2026-09-23T08:33:53.056Z]                  "homepage": "https://nodejs.org",
+[2026-09-23T08:33:53.056Z]                  "isAbandoned": false,
+[2026-09-23T08:33:53.056Z]                  "mostRecentTimestamp": "2026-09-21T00:00:00.000Z",
+[2026-09-23T08:33:53.056Z]                  "packageName": "node",
+[2026-09-23T08:33:53.056Z]                  "prettyDepType": "engine",
+[2026-09-23T08:33:53.056Z]                  "registryUrl": "https://nodejs.org/dist",
+[2026-09-23T08:33:53.056Z]                  "sourceUrl": "https://github.com/nodejs/node",
+[2026-09-23T08:33:53.056Z]                  "versioning": "node",
+[2026-09-23T08:33:53.056Z]                  "warnings": [],
+[2026-09-23T08:33:53.056Z]                  "updates": []
+[2026-09-23T08:33:53.056Z]                }
+[2026-09-23T08:33:53.056Z]              ],
+[2026-09-23T08:33:53.056Z]              "extractedConstraints": {"node": ">=22.12.0", "npm": ">=7"},
+[2026-09-23T08:33:53.056Z]              "lockFiles": ["package-lock.json"],
+[2026-09-23T08:33:53.056Z]              "managerData": {
+[2026-09-23T08:33:53.056Z]                "hasPackageManager": false,
+[2026-09-23T08:33:53.056Z]                "npmLock": "package-lock.json",
+[2026-09-23T08:33:53.056Z]                "npmrcFileName": null,
+[2026-09-23T08:33:53.056Z]                "yarnZeroInstall": false
+[2026-09-23T08:33:53.056Z]              },
+[2026-09-23T08:33:53.056Z]              "packageFile": "package.json",
+[2026-09-23T08:33:53.056Z]              "skipInstalls": true
+[2026-09-23T08:33:53.056Z]            },
+[2026-09-23T08:33:53.056Z]            {
+[2026-09-23T08:33:53.056Z]              "deps": [
+[2026-09-23T08:33:53.056Z]                {
+[2026-09-23T08:33:53.056Z]                  "currentValue": "^8.2.0",
+[2026-09-23T08:33:53.056Z]                  "currentVersion": "8.3.1",
+[2026-09-23T08:33:53.056Z]                  "currentVersionAgeInDays": 21,
+[2026-09-23T08:33:53.056Z]                  "currentVersionTimestamp": "2026-09-01T20:19:53.514Z",
+[2026-09-23T08:33:53.056Z]                  "datasource": "npm",
+[2026-09-23T08:33:53.056Z]                  "depName": "@octokit/auth-app",
+[2026-09-23T08:33:53.056Z]                  "depType": "dependencies",
+[2026-09-23T08:33:53.056Z]                  "fixedVersion": "8.3.1",
+[2026-09-23T08:33:53.056Z]                  "isAbandoned": false,
+[2026-09-23T08:33:53.056Z]                  "lockedVersion": "8.3.1",
+[2026-09-23T08:33:53.056Z]                  "mostRecentTimestamp": "2026-09-01T20:19:53.514Z",
+[2026-09-23T08:33:53.056Z]                  "packageName": "@octokit/auth-app",
+[2026-09-23T08:33:53.056Z]                  "prettyDepType": "dependency",
+[2026-09-23T08:33:53.056Z]                  "registryUrl": "https://registry.npmjs.org",
+[2026-09-23T08:33:53.056Z]                  "sourceUrl": "https://github.com/octokit/auth-app.js",
+[2026-09-23T08:33:53.056Z]                  "versioning": "npm",
+[2026-09-23T08:33:53.056Z]                  "warnings": [],
+[2026-09-23T08:33:53.056Z]                  "updates": []
+[2026-09-23T08:33:53.056Z]                },
+[2026-09-23T08:33:53.056Z]                {
+[2026-09-23T08:33:53.056Z]                  "currentValue": "^7.0.6",
+[2026-09-23T08:33:53.056Z]                  "currentVersion": "7.0.8",
+[2026-09-23T08:33:53.056Z]                  "currentVersionAgeInDays": 23,
+[2026-09-23T08:33:53.056Z]                  "currentVersionTimestamp": "2026-08-30T21:28:55.666Z",
+[2026-09-23T08:33:53.056Z]                  "datasource": "npm",
+[2026-09-23T08:33:53.056Z]                  "depName": "@octokit/core",
+[2026-09-23T08:33:53.056Z]                  "depType": "dependencies",
+[2026-09-23T08:33:53.056Z]                  "fixedVersion": "7.0.8",
+[2026-09-23T08:33:53.056Z]                  "isAbandoned": false,
+[2026-09-23T08:33:53.056Z]                  "lockedVersion": "7.0.8",
+[2026-09-23T08:33:53.056Z]                  "mostRecentTimestamp": "2026-08-30T21:28:55.666Z",
+[2026-09-23T08:33:53.056Z]                  "packageName": "@octokit/core",
+[2026-09-23T08:33:53.056Z]                  "prettyDepType": "dependency",
+[2026-09-23T08:33:53.056Z]                  "registryUrl": "https://registry.npmjs.org",
+[2026-09-23T08:33:53.056Z]                  "sourceUrl": "https://github.com/octokit/core.js",
+[2026-09-23T08:33:53.056Z]                  "versioning": "npm",
+[2026-09-23T08:33:53.056Z]                  "warnings": [],
+[2026-09-23T08:33:53.057Z]                  "updates": []
+[2026-09-23T08:33:53.057Z]                },
+[2026-09-23T08:33:53.057Z]                {
+[2026-09-23T08:33:53.057Z]                  "currentValue": "^6.0.0",
+[2026-09-23T08:33:53.057Z]                  "currentVersion": "6.0.0",
+[2026-09-23T08:33:53.057Z]                  "currentVersionAgeInDays": 490,
+[2026-09-23T08:33:53.057Z]                  "currentVersionTimestamp": "2025-05-20T15:41:37.592Z",
+[2026-09-23T08:33:53.057Z]                  "datasource": "npm",
+[2026-09-23T08:33:53.057Z]                  "depName": "@octokit/webhooks-methods",
+[2026-09-23T08:33:53.057Z]                  "depType": "dependencies",
+[2026-09-23T08:33:53.057Z]                  "fixedVersion": "6.0.0",
+[2026-09-23T08:33:53.057Z]                  "isAbandoned": true,
+[2026-09-23T08:33:53.057Z]                  "lockedVersion": "6.0.0",
+[2026-09-23T08:33:53.057Z]                  "mostRecentTimestamp": "2025-05-20T15:41:37.592Z",
+[2026-09-23T08:33:53.057Z]                  "packageName": "@octokit/webhooks-methods",
+[2026-09-23T08:33:53.057Z]                  "prettyDepType": "dependency",
+[2026-09-23T08:33:53.057Z]                  "registryUrl": "https://registry.npmjs.org",
+[2026-09-23T08:33:53.057Z]                  "sourceUrl": "https://github.com/octokit/webhooks-methods.js",
+[2026-09-23T08:33:53.057Z]                  "versioning": "npm",
+[2026-09-23T08:33:53.057Z]                  "warnings": [],
+[2026-09-23T08:33:53.057Z]                  "updates": []
+[2026-09-23T08:33:53.057Z]                },
+[2026-09-23T08:33:53.057Z]                {
+[2026-09-23T08:33:53.057Z]                  "currentValue": "4.129.0",
+[2026-09-23T08:33:53.057Z]                  "currentVersion": "4.129.0",
+[2026-09-23T08:33:53.057Z]                  "currentVersionAgeInDays": 19,
+[2026-09-23T08:33:53.057Z]                  "currentVersionTimestamp": "2026-09-03T17:50:56.290Z",
+[2026-09-23T08:33:53.057Z]                  "datasource": "npm",
+[2026-09-23T08:33:53.057Z]                  "depName": "wrangler",
+[2026-09-23T08:33:53.057Z]                  "depType": "devDependencies",
+[2026-09-23T08:33:53.057Z]                  "fixedVersion": "4.129.0",
+[2026-09-23T08:33:53.057Z]                  "isAbandoned": false,
+[2026-09-23T08:33:53.057Z]                  "isSingleVersion": true,
+[2026-09-23T08:33:53.057Z]                  "lockedVersion": "4.129.0",
+[2026-09-23T08:33:53.057Z]                  "mostRecentTimestamp": "2026-09-22T16:36:06.760Z",
+[2026-09-23T08:33:53.057Z]                  "packageName": "wrangler",
+[2026-09-23T08:33:53.057Z]                  "prettyDepType": "devDependency",
+[2026-09-23T08:33:53.057Z]                  "registryUrl": "https://registry.npmjs.org",
+[2026-09-23T08:33:53.057Z]                  "sourceDirectory": "packages/wrangler",
+[2026-09-23T08:33:53.057Z]                  "sourceUrl": "https://github.com/cloudflare/workers-sdk",
+[2026-09-23T08:33:53.057Z]                  "versioning": "npm",
+[2026-09-23T08:33:53.057Z]                  "warnings": [],
+[2026-09-23T08:33:53.057Z]                  "updates": [
+[2026-09-23T08:33:53.057Z]                    {
+[2026-09-23T08:33:53.057Z]                      "bucket": "non-major",
+[2026-09-23T08:33:53.057Z]                      "newVersion": "4.135.0",
+[2026-09-23T08:33:53.057Z]                      "newValue": "4.135.0",
+[2026-09-23T08:33:53.057Z]                      "hasAttestation": true,
+[2026-09-23T08:33:53.057Z]                      "downloadUrl": "https://registry.npmjs.org/wrangler/-/wrangler-4.135.0.tgz",
+[2026-09-23T08:33:53.057Z]                      "newDigest": "sha512-WrNBQSfIG6YcILJcodYr5ty8vgkzGsV8YX+kfd+uZ5/Bd8cUW0GnUIRKAVfn5kYKqh1m/BPcji9h1d7mE8euFw==",
+[2026-09-23T08:33:53.057Z]                      "releaseTimestamp": "2026-09-18T13:16:21.943Z",
+[2026-09-23T08:33:53.057Z]                      "newVersionAgeInDays": 4,
+[2026-09-23T08:33:53.057Z]                      "newMajor": 4,
+[2026-09-23T08:33:53.057Z]                      "newMinor": 135,
+[2026-09-23T08:33:53.057Z]                      "newPatch": 0,
+[2026-09-23T08:33:53.057Z]                      "updateType": "minor",
+[2026-09-23T08:33:53.057Z]                      "isBreaking": false,
+[2026-09-23T08:33:53.057Z]                      "pendingVersions": ["4.136.0", "4.136.1", "4.136.2", "4.136.3"],
+[2026-09-23T08:33:53.057Z]                      "libYears": 0.04057349229452055,
+[2026-09-23T08:33:53.057Z]                      "branchName": "renovate/wrangler-4.x"
+[2026-09-23T08:33:53.057Z]                    }
+[2026-09-23T08:33:53.057Z]                  ]
+[2026-09-23T08:33:53.057Z]                }
+[2026-09-23T08:33:53.057Z]              ],
+[2026-09-23T08:33:53.057Z]              "extractedConstraints": {"npm": ">=7"},
+[2026-09-23T08:33:53.057Z]              "lockFiles": ["webhook/package-lock.json"],
+[2026-09-23T08:33:53.057Z]              "managerData": {
+[2026-09-23T08:33:53.057Z]                "hasPackageManager": false,
+[2026-09-23T08:33:53.057Z]                "npmLock": "webhook/package-lock.json",
+[2026-09-23T08:33:53.057Z]                "npmrcFileName": null,
+[2026-09-23T08:33:53.057Z]                "packageJsonName": "renovate-webhook",
+[2026-09-23T08:33:53.057Z]                "yarnZeroInstall": false
+[2026-09-23T08:33:53.057Z]              },
+[2026-09-23T08:33:53.057Z]              "packageFile": "webhook/package.json",
+[2026-09-23T08:33:53.057Z]              "packageFileVersion": "1.0.0",
+[2026-09-23T08:33:53.057Z]              "skipInstalls": true
+[2026-09-23T08:33:53.057Z]            }
+[2026-09-23T08:33:53.057Z]          ],
+[2026-09-23T08:33:53.057Z]          "regex": [
+[2026-09-23T08:33:53.057Z]            {
+[2026-09-23T08:33:53.057Z]              "deps": [
+[2026-09-23T08:33:53.057Z]                {
+[2026-09-23T08:33:53.057Z]                  "currentDigest": "sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b",
+[2026-09-23T08:33:53.057Z]                  "currentValue": "44.103.6",
+[2026-09-23T08:33:53.057Z]                  "currentVersion": "44.103.6",
+[2026-09-23T08:33:53.057Z]                  "datasource": "docker",
+[2026-09-23T08:33:53.057Z]                  "depName": "ghcr.io/renovatebot/renovate",
+[2026-09-23T08:33:53.057Z]                  "fixedVersion": "44.103.6",
+[2026-09-23T08:33:53.058Z]                  "homepage": "https://renovatebot.com",
+[2026-09-23T08:33:53.058Z]                  "isSingleVersion": true,
+[2026-09-23T08:33:53.058Z]                  "lookupName": "renovatebot/renovate",
+[2026-09-23T08:33:53.058Z]                  "packageName": "ghcr.io/renovatebot/renovate",
+[2026-09-23T08:33:53.058Z]                  "registryUrl": "https://ghcr.io",
+[2026-09-23T08:33:53.058Z]                  "replaceString": "# renovate: datasource=docker depName=ghcr.io/renovatebot/renovate versioning=semver\n          RENOVATE_IMAGE=\"ghcr.io/renovatebot/renovate:44.103.6@sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b",
+[2026-09-23T08:33:53.058Z]                  "sourceUrl": "https://github.com/renovatebot/renovate",
+[2026-09-23T08:33:53.058Z]                  "versioning": "semver",
+[2026-09-23T08:33:53.058Z]                  "warnings": [],
+[2026-09-23T08:33:53.058Z]                  "updates": [
+[2026-09-23T08:33:53.058Z]                    {
+[2026-09-23T08:33:53.058Z]                      "bucket": "non-major",
+[2026-09-23T08:33:53.058Z]                      "newVersion": "44.108.2",
+[2026-09-23T08:33:53.058Z]                      "newValue": "44.108.2",
+[2026-09-23T08:33:53.058Z]                      "newMajor": 44,
+[2026-09-23T08:33:53.058Z]                      "newMinor": 108,
+[2026-09-23T08:33:53.058Z]                      "newPatch": 2,
+[2026-09-23T08:33:53.058Z]                      "updateType": "minor",
+[2026-09-23T08:33:53.058Z]                      "isBreaking": false,
+[2026-09-23T08:33:53.058Z]                      "newDigest": "sha256:9a02c0e89a1337fed22b40b01a0c9b212e947eff37e8a1bd0d3696bfe5a0b344",
+[2026-09-23T08:33:53.058Z]                      "branchName": "renovate/renovate"
+[2026-09-23T08:33:53.058Z]                    }
+[2026-09-23T08:33:53.058Z]                  ]
+[2026-09-23T08:33:53.058Z]                }
+[2026-09-23T08:33:53.058Z]              ],
+[2026-09-23T08:33:53.058Z]              "matchStrings": [
+[2026-09-23T08:33:53.058Z]                "(?:#|//) renovate: datasource=(?<datasource>.*?)(?: depName=(?<depName>.+?))?(?: packageName=(?<packageName>.+?))?(?: versioning=(?<versioning>.+?))?(?: extractVersion=(?<extractVersion>.+?))?(?: registryUrl=(?<registryUrl>.+?))?\\n\\s*[^=:\\n]+[=:]\\s*[\"']?[^:]+:(?<currentValue>[^\\s@\"']+)@(?<currentDigest>[^\\s\"']+)"
+[2026-09-23T08:33:53.058Z]              ],
+[2026-09-23T08:33:53.058Z]              "packageFile": ".github/workflows/renovate.yaml",
+[2026-09-23T08:33:53.058Z]              "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}"
+[2026-09-23T08:33:53.058Z]            },
+[2026-09-23T08:33:53.058Z]            {
+[2026-09-23T08:33:53.058Z]              "deps": [
+[2026-09-23T08:33:53.058Z]                {
+[2026-09-23T08:33:53.058Z]                  "currentDigest": "sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b",
+[2026-09-23T08:33:53.058Z]                  "currentValue": "44.103.6",
+[2026-09-23T08:33:53.058Z]                  "currentVersion": "44.103.6",
+[2026-09-23T08:33:53.058Z]                  "datasource": "docker",
+[2026-09-23T08:33:53.058Z]                  "depName": "ghcr.io/renovatebot/renovate",
+[2026-09-23T08:33:53.058Z]                  "fixedVersion": "44.103.6",
+[2026-09-23T08:33:53.058Z]                  "homepage": "https://renovatebot.com",
+[2026-09-23T08:33:53.058Z]                  "isSingleVersion": true,
+[2026-09-23T08:33:53.058Z]                  "lookupName": "renovatebot/renovate",
+[2026-09-23T08:33:53.058Z]                  "packageName": "ghcr.io/renovatebot/renovate",
+[2026-09-23T08:33:53.058Z]                  "registryUrl": "https://ghcr.io",
+[2026-09-23T08:33:53.058Z]                  "replaceString": "# renovate: datasource=docker depName=ghcr.io/renovatebot/renovate versioning=semver\nRENOVATE_IMAGE=\"ghcr.io/renovatebot/renovate:44.103.6@sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b",
+[2026-09-23T08:33:53.058Z]                  "sourceUrl": "https://github.com/renovatebot/renovate",
+[2026-09-23T08:33:53.058Z]                  "versioning": "semver",
+[2026-09-23T08:33:53.058Z]                  "warnings": [],
+[2026-09-23T08:33:53.058Z]                  "updates": [
+[2026-09-23T08:33:53.058Z]                    {
+[2026-09-23T08:33:53.058Z]                      "bucket": "non-major",
+[2026-09-23T08:33:53.058Z]                      "newVersion": "44.108.2",
+[2026-09-23T08:33:53.058Z]                      "newValue": "44.108.2",
+[2026-09-23T08:33:53.058Z]                      "newMajor": 44,
+[2026-09-23T08:33:53.058Z]                      "newMinor": 108,
+[2026-09-23T08:33:53.058Z]                      "newPatch": 2,
+[2026-09-23T08:33:53.058Z]                      "updateType": "minor",
+[2026-09-23T08:33:53.058Z]                      "isBreaking": false,
+[2026-09-23T08:33:53.058Z]                      "newDigest": "sha256:9a02c0e89a1337fed22b40b01a0c9b212e947eff37e8a1bd0d3696bfe5a0b344",
+[2026-09-23T08:33:53.058Z]                      "branchName": "renovate/renovate"
+[2026-09-23T08:33:53.058Z]                    }
+[2026-09-23T08:33:53.058Z]                  ]
+[2026-09-23T08:33:53.058Z]                }
+[2026-09-23T08:33:53.058Z]              ],
+[2026-09-23T08:33:53.058Z]              "matchStrings": [
+[2026-09-23T08:33:53.058Z]                "(?:#|//) renovate: datasource=(?<datasource>.*?)(?: depName=(?<depName>.+?))?(?: packageName=(?<packageName>.+?))?(?: versioning=(?<versioning>.+?))?(?: extractVersion=(?<extractVersion>.+?))?(?: registryUrl=(?<registryUrl>.+?))?\\n\\s*[^=:\\n]+[=:]\\s*[\"']?[^:]+:(?<currentValue>[^\\s@\"']+)@(?<currentDigest>[^\\s\"']+)"
+[2026-09-23T08:33:53.058Z]              ],
+[2026-09-23T08:33:53.058Z]              "packageFile": "README.md",
+[2026-09-23T08:33:53.058Z]              "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}"
+[2026-09-23T08:33:53.058Z]            },
+[2026-09-23T08:33:53.058Z]            {
+[2026-09-23T08:33:53.058Z]              "deps": [
+[2026-09-23T08:33:53.058Z]                {
+[2026-09-23T08:33:53.058Z]                  "currentDigest": "sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b",
+[2026-09-23T08:33:53.058Z]                  "currentValue": "44.103.6",
+[2026-09-23T08:33:53.058Z]                  "currentVersion": "44.103.6",
+[2026-09-23T08:33:53.058Z]                  "datasource": "docker",
+[2026-09-23T08:33:53.058Z]                  "depName": "ghcr.io/renovatebot/renovate",
+[2026-09-23T08:33:53.058Z]                  "fixedVersion": "44.103.6",
+[2026-09-23T08:33:53.058Z]                  "homepage": "https://renovatebot.com",
+[2026-09-23T08:33:53.058Z]                  "isSingleVersion": true,
+[2026-09-23T08:33:53.058Z]                  "lookupName": "renovatebot/renovate",
+[2026-09-23T08:33:53.058Z]                  "packageName": "ghcr.io/renovatebot/renovate",
+[2026-09-23T08:33:53.058Z]                  "registryUrl": "https://ghcr.io",
+[2026-09-23T08:33:53.058Z]                  "replaceString": "# renovate: datasource=docker depName=ghcr.io/renovatebot/renovate\n        //   IMAGE=\"ghcr.io/renovatebot/renovate:44.103.6@sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b",
+[2026-09-23T08:33:53.058Z]                  "sourceUrl": "https://github.com/renovatebot/renovate",
+[2026-09-23T08:33:53.058Z]                  "versioning": "semver-coerced",
+[2026-09-23T08:33:53.058Z]                  "warnings": [],
+[2026-09-23T08:33:53.058Z]                  "updates": [
+[2026-09-23T08:33:53.058Z]                    {
+[2026-09-23T08:33:53.058Z]                      "bucket": "non-major",
+[2026-09-23T08:33:53.058Z]                      "newVersion": "44.108.2",
+[2026-09-23T08:33:53.058Z]                      "newValue": "44.108.2",
+[2026-09-23T08:33:53.058Z]                      "newMajor": 44,
+[2026-09-23T08:33:53.058Z]                      "newMinor": 108,
+[2026-09-23T08:33:53.058Z]                      "newPatch": 2,
+[2026-09-23T08:33:53.058Z]                      "updateType": "minor",
+[2026-09-23T08:33:53.058Z]                      "isBreaking": false,
+[2026-09-23T08:33:53.058Z]                      "newDigest": "sha256:9a02c0e89a1337fed22b40b01a0c9b212e947eff37e8a1bd0d3696bfe5a0b344",
+[2026-09-23T08:33:53.058Z]                      "branchName": "renovate/renovate"
+[2026-09-23T08:33:53.058Z]                    }
+[2026-09-23T08:33:53.058Z]                  ]
+[2026-09-23T08:33:53.058Z]                },
+[2026-09-23T08:33:53.058Z]                {
+[2026-09-23T08:33:53.058Z]                  "currentDigest": "sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b",
+[2026-09-23T08:33:53.058Z]                  "currentValue": "44.103.6",
+[2026-09-23T08:33:53.059Z]                  "currentVersion": "44.103.6",
+[2026-09-23T08:33:53.059Z]                  "datasource": "docker",
+[2026-09-23T08:33:53.059Z]                  "depName": "ghcr.io/renovatebot/renovate",
+[2026-09-23T08:33:53.059Z]                  "fixedVersion": "44.103.6",
+[2026-09-23T08:33:53.059Z]                  "homepage": "https://renovatebot.com",
+[2026-09-23T08:33:53.059Z]                  "isSingleVersion": true,
+[2026-09-23T08:33:53.059Z]                  "lookupName": "renovatebot/renovate",
+[2026-09-23T08:33:53.059Z]                  "packageName": "ghcr.io/renovatebot/renovate",
+[2026-09-23T08:33:53.059Z]                  "registryUrl": "https://ghcr.io",
+[2026-09-23T08:33:53.059Z]                  "replaceString": "# renovate: datasource=docker depName=ghcr.io/renovatebot/renovate\n        //   image: ghcr.io/renovatebot/renovate:44.103.6@sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b",
+[2026-09-23T08:33:53.059Z]                  "sourceUrl": "https://github.com/renovatebot/renovate",
+[2026-09-23T08:33:53.059Z]                  "versioning": "semver-coerced",
+[2026-09-23T08:33:53.059Z]                  "warnings": [],
+[2026-09-23T08:33:53.059Z]                  "updates": [
+[2026-09-23T08:33:53.059Z]                    {
+[2026-09-23T08:33:53.059Z]                      "bucket": "non-major",
+[2026-09-23T08:33:53.059Z]                      "newVersion": "44.108.2",
+[2026-09-23T08:33:53.059Z]                      "newValue": "44.108.2",
+[2026-09-23T08:33:53.059Z]                      "newMajor": 44,
+[2026-09-23T08:33:53.059Z]                      "newMinor": 108,
+[2026-09-23T08:33:53.059Z]                      "newPatch": 2,
+[2026-09-23T08:33:53.059Z]                      "updateType": "minor",
+[2026-09-23T08:33:53.059Z]                      "isBreaking": false,
+[2026-09-23T08:33:53.059Z]                      "newDigest": "sha256:9a02c0e89a1337fed22b40b01a0c9b212e947eff37e8a1bd0d3696bfe5a0b344",
+[2026-09-23T08:33:53.059Z]                      "branchName": "renovate/renovate"
+[2026-09-23T08:33:53.059Z]                    }
+[2026-09-23T08:33:53.059Z]                  ]
+[2026-09-23T08:33:53.059Z]                }
+[2026-09-23T08:33:53.059Z]              ],
+[2026-09-23T08:33:53.059Z]              "matchStrings": [
+[2026-09-23T08:33:53.059Z]                "(?:#|//) renovate: datasource=(?<datasource>.*?)(?: depName=(?<depName>.+?))?(?: packageName=(?<packageName>.+?))?(?: versioning=(?<versioning>.+?))?(?: extractVersion=(?<extractVersion>.+?))?(?: registryUrl=(?<registryUrl>.+?))?\\n\\s*[^=:\\n]+[=:]\\s*[\"']?[^:]+:(?<currentValue>[^\\s@\"']+)@(?<currentDigest>[^\\s\"']+)"
+[2026-09-23T08:33:53.059Z]              ],
+[2026-09-23T08:33:53.059Z]              "packageFile": "default.json",
+[2026-09-23T08:33:53.059Z]              "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}"
+[2026-09-23T08:33:53.059Z]            },
+[2026-09-23T08:33:53.059Z]            {
+[2026-09-23T08:33:53.059Z]              "deps": [
+[2026-09-23T08:33:53.059Z]                {
+[2026-09-23T08:33:53.059Z]                  "currentValue": "44.103.6",
+[2026-09-23T08:33:53.059Z]                  "currentVersion": "44.103.6",
+[2026-09-23T08:33:53.059Z]                  "datasource": "docker",
+[2026-09-23T08:33:53.059Z]                  "depName": "ghcr.io/renovatebot/renovate",
+[2026-09-23T08:33:53.059Z]                  "fixedVersion": "44.103.6",
+[2026-09-23T08:33:53.059Z]                  "homepage": "https://renovatebot.com",
+[2026-09-23T08:33:53.059Z]                  "isSingleVersion": true,
+[2026-09-23T08:33:53.059Z]                  "lookupName": "renovatebot/renovate",
+[2026-09-23T08:33:53.059Z]                  "packageName": "ghcr.io/renovatebot/renovate",
+[2026-09-23T08:33:53.059Z]                  "registryUrl": "https://ghcr.io",
+[2026-09-23T08:33:53.059Z]                  "replaceString": "# renovate: datasource=docker depName=ghcr.io/renovatebot/renovate\n        //   image: ghcr.io/renovatebot/renovate:44.103.6\n",
+[2026-09-23T08:33:53.059Z]                  "sourceUrl": "https://github.com/renovatebot/renovate",
+[2026-09-23T08:33:53.059Z]                  "versioning": "semver-coerced",
+[2026-09-23T08:33:53.059Z]                  "warnings": [],
+[2026-09-23T08:33:53.059Z]                  "updates": [
+[2026-09-23T08:33:53.059Z]                    {
+[2026-09-23T08:33:53.059Z]                      "bucket": "non-major",
+[2026-09-23T08:33:53.059Z]                      "newVersion": "44.108.2",
+[2026-09-23T08:33:53.059Z]                      "newValue": "44.108.2",
+[2026-09-23T08:33:53.059Z]                      "newMajor": 44,
+[2026-09-23T08:33:53.059Z]                      "newMinor": 108,
+[2026-09-23T08:33:53.059Z]                      "newPatch": 2,
+[2026-09-23T08:33:53.059Z]                      "updateType": "minor",
+[2026-09-23T08:33:53.059Z]                      "isBreaking": false,
+[2026-09-23T08:33:53.059Z]                      "newDigest": "sha256:9a02c0e89a1337fed22b40b01a0c9b212e947eff37e8a1bd0d3696bfe5a0b344",
+[2026-09-23T08:33:53.059Z]                      "branchName": "renovate/renovate"
+[2026-09-23T08:33:53.059Z]                    },
+[2026-09-23T08:33:53.059Z]                    {
+[2026-09-23T08:33:53.059Z]                      "isPinDigest": true,
+[2026-09-23T08:33:53.059Z]                      "updateType": "pinDigest",
+[2026-09-23T08:33:53.059Z]                      "newValue": "44.103.6",
+[2026-09-23T08:33:53.059Z]                      "newDigest": "sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b",
+[2026-09-23T08:33:53.059Z]                      "branchName": "renovate/renovate"
+[2026-09-23T08:33:53.059Z]                    }
+[2026-09-23T08:33:53.059Z]                  ]
+[2026-09-23T08:33:53.059Z]                },
+[2026-09-23T08:33:53.059Z]                {
+[2026-09-23T08:33:53.059Z]                  "currentValue": "#|//)",
+[2026-09-23T08:33:53.059Z]                  "datasource": "npm",
+[2026-09-23T08:33:53.059Z]                  "depName": "renovate",
+[2026-09-23T08:33:53.059Z]                  "packageName": "renovate",
+[2026-09-23T08:33:53.059Z]                  "replaceString": "# renovate: datasource=npm depName=renovate versioning=npm\n        //   RENOVATE_NPM_VERSION=44.96.0\n        \"(?:#|//) ",
+[2026-09-23T08:33:53.059Z]                  "skipReason": "invalid-value",
+[2026-09-23T08:33:53.059Z]                  "versioning": "npm",
+[2026-09-23T08:33:53.059Z]                  "warnings": [],
+[2026-09-23T08:33:53.059Z]                  "updates": []
+[2026-09-23T08:33:53.060Z]                }
+[2026-09-23T08:33:53.060Z]              ],
+[2026-09-23T08:33:53.060Z]              "matchStrings": [
+[2026-09-23T08:33:53.060Z]                "(?:#|//) renovate: datasource=(?<datasource>.*?)(?: depName=(?<depName>.+?))?(?: packageName=(?<packageName>.+?))?(?: versioning=(?<versioning>.+?))?(?: extractVersion=(?<extractVersion>.+?))?(?: registryUrl=(?<registryUrl>.+?))?\\n\\s*[^=:\\n]+[=:]\\s*[\"']?[^:]+:(?<currentValue>[^\\s@\"']+)(?:[\"'\\s]|$)"
+[2026-09-23T08:33:53.060Z]              ],
+[2026-09-23T08:33:53.060Z]              "packageFile": "default.json",
+[2026-09-23T08:33:53.060Z]              "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}"
+[2026-09-23T08:33:53.060Z]            },
+[2026-09-23T08:33:53.060Z]            {
+[2026-09-23T08:33:53.060Z]              "deps": [
+[2026-09-23T08:33:53.060Z]                {
+[2026-09-23T08:33:53.060Z]                  "currentValue": "v2.100.0",
+[2026-09-23T08:33:53.060Z]                  "currentVersion": "v2.100.0",
+[2026-09-23T08:33:53.060Z]                  "currentVersionAgeInDays": 19,
+[2026-09-23T08:33:53.060Z]                  "currentVersionTimestamp": "2026-09-03T15:43:20.000Z",
+[2026-09-23T08:33:53.060Z]                  "datasource": "github-releases",
+[2026-09-23T08:33:53.060Z]                  "depName": "cli/cli",
+[2026-09-23T08:33:53.060Z]                  "fixedVersion": "v2.100.0",
+[2026-09-23T08:33:53.060Z]                  "isAbandoned": false,
+[2026-09-23T08:33:53.060Z]                  "isSingleVersion": true,
+[2026-09-23T08:33:53.060Z]                  "mostRecentTimestamp": "2026-09-15T14:24:34.000Z",
+[2026-09-23T08:33:53.060Z]                  "packageName": "cli/cli",
+[2026-09-23T08:33:53.060Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.060Z]                  "replaceString": "# renovate: datasource=github-releases depName=cli/cli\nCLI_VERSION=\"v2.100.0\"",
+[2026-09-23T08:33:53.060Z]                  "sourceUrl": "https://github.com/cli/cli",
+[2026-09-23T08:33:53.060Z]                  "versioning": "semver-coerced",
+[2026-09-23T08:33:53.060Z]                  "warnings": [],
+[2026-09-23T08:33:53.060Z]                  "updates": [
+[2026-09-23T08:33:53.060Z]                    {
+[2026-09-23T08:33:53.060Z]                      "bucket": "non-major",
+[2026-09-23T08:33:53.060Z]                      "newVersion": "v2.101.0",
+[2026-09-23T08:33:53.060Z]                      "newValue": "v2.101.0",
+[2026-09-23T08:33:53.060Z]                      "releaseTimestamp": "2026-09-15T14:24:34.000Z",
+[2026-09-23T08:33:53.060Z]                      "newVersionAgeInDays": 7,
+[2026-09-23T08:33:53.060Z]                      "newMajor": 2,
+[2026-09-23T08:33:53.060Z]                      "newMinor": 101,
+[2026-09-23T08:33:53.060Z]                      "newPatch": 0,
+[2026-09-23T08:33:53.060Z]                      "updateType": "minor",
+[2026-09-23T08:33:53.060Z]                      "isBreaking": false,
+[2026-09-23T08:33:53.060Z]                      "libYears": 0.032726851851851854,
+[2026-09-23T08:33:53.060Z]                      "branchName": "renovate/cli-cli-2.x"
+[2026-09-23T08:33:53.060Z]                    }
+[2026-09-23T08:33:53.060Z]                  ]
+[2026-09-23T08:33:53.060Z]                }
+[2026-09-23T08:33:53.060Z]              ],
+[2026-09-23T08:33:53.060Z]              "matchStrings": [
+[2026-09-23T08:33:53.060Z]                "(?:#|//) renovate: datasource=(?<datasource>.*?)(?: depName=(?<depName>.+?))?(?: packageName=(?<packageName>.+?))?(?: versioning=(?<versioning>.+?))?(?: extractVersion=(?<extractVersion>.+?))?(?: registryUrl=(?<registryUrl>.+?))?\\n\\s*[^=:\\n]+[=:]\\s*[\"']?(?<currentValue>[^\\s@\"'#:]+)(?:[\"'\\s]|$)"
+[2026-09-23T08:33:53.060Z]              ],
+[2026-09-23T08:33:53.060Z]              "packageFile": "README.md",
+[2026-09-23T08:33:53.060Z]              "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}"
+[2026-09-23T08:33:53.060Z]            },
+[2026-09-23T08:33:53.060Z]            {
+[2026-09-23T08:33:53.060Z]              "deps": [
+[2026-09-23T08:33:53.060Z]                {
+[2026-09-23T08:33:53.060Z]                  "currentValue": "44.103.6",
+[2026-09-23T08:33:53.060Z]                  "currentVersion": "44.103.6",
+[2026-09-23T08:33:53.060Z]                  "currentVersionAgeInDays": 3,
+[2026-09-23T08:33:53.060Z]                  "currentVersionTimestamp": "2026-09-20T02:46:32.000Z",
+[2026-09-23T08:33:53.060Z]                  "datasource": "github-releases",
+[2026-09-23T08:33:53.060Z]                  "depName": "renovatebot/renovate",
+[2026-09-23T08:33:53.060Z]                  "fixedVersion": "44.103.6",
+[2026-09-23T08:33:53.060Z]                  "isAbandoned": false,
+[2026-09-23T08:33:53.060Z]                  "isSingleVersion": true,
+[2026-09-23T08:33:53.060Z]                  "mostRecentTimestamp": "2026-09-23T01:48:48.000Z",
+[2026-09-23T08:33:53.060Z]                  "packageName": "renovatebot/renovate",
+[2026-09-23T08:33:53.060Z]                  "registryUrl": "https://github.com",
+[2026-09-23T08:33:53.060Z]                  "replaceString": "# renovate: datasource=github-releases depName=renovatebot/renovate\n        //   RENOVATE_VERSION=\"44.103.6\"",
+[2026-09-23T08:33:53.060Z]                  "sourceUrl": "https://github.com/renovatebot/renovate",
+[2026-09-23T08:33:53.060Z]                  "versioning": "semver-coerced",
+[2026-09-23T08:33:53.060Z]                  "warnings": [],
+[2026-09-23T08:33:53.060Z]                  "updates": [
+[2026-09-23T08:33:53.060Z]                    {
+[2026-09-23T08:33:53.060Z]                      "bucket": "non-major",
+[2026-09-23T08:33:53.060Z]                      "newVersion": "44.108.2",
+[2026-09-23T08:33:53.060Z]                      "newValue": "44.108.2",
+[2026-09-23T08:33:53.060Z]                      "releaseTimestamp": "2026-09-23T01:48:48.000Z",
+[2026-09-23T08:33:53.060Z]                      "newVersionAgeInDays": 0,
+[2026-09-23T08:33:53.060Z]                      "newMajor": 44,
+[2026-09-23T08:33:53.060Z]                      "newMinor": 108,
+[2026-09-23T08:33:53.060Z]                      "newPatch": 2,
+[2026-09-23T08:33:53.060Z]                      "updateType": "minor",
+[2026-09-23T08:33:53.060Z]                      "isBreaking": false,
+[2026-09-23T08:33:53.060Z]                      "libYears": 0.00810933536276002,
+[2026-09-23T08:33:53.060Z]                      "branchName": "renovate/renovate"
+[2026-09-23T08:33:53.060Z]                    }
+[2026-09-23T08:33:53.060Z]                  ]
+[2026-09-23T08:33:53.060Z]                },
+[2026-09-23T08:33:53.060Z]                {
+[2026-09-23T08:33:53.060Z]                  "currentValue": "44.96.0",
+[2026-09-23T08:33:53.060Z]                  "currentVersion": "44.96.0",
+[2026-09-23T08:33:53.060Z]                  "currentVersionAgeInDays": 6,
+[2026-09-23T08:33:53.060Z]                  "currentVersionTimestamp": "2026-09-17T08:30:14.339Z",
+[2026-09-23T08:33:53.060Z]                  "datasource": "npm",
+[2026-09-23T08:33:53.060Z]                  "depName": "renovate",
+[2026-09-23T08:33:53.060Z]                  "fixedVersion": "44.96.0",
+[2026-09-23T08:33:53.060Z]                  "homepage": "https://renovatebot.com",
+[2026-09-23T08:33:53.060Z]                  "isAbandoned": false,
+[2026-09-23T08:33:53.060Z]                  "isSingleVersion": true,
+[2026-09-23T08:33:53.060Z]                  "mostRecentTimestamp": "2026-09-23T01:56:52.014Z",
+[2026-09-23T08:33:53.060Z]                  "packageName": "renovate",
+[2026-09-23T08:33:53.060Z]                  "registryUrl": "https://registry.npmjs.org",
+[2026-09-23T08:33:53.060Z]                  "replaceString": "# renovate: datasource=npm depName=renovate versioning=npm\n        //   RENOVATE_NPM_VERSION=44.96.0\n",
+[2026-09-23T08:33:53.060Z]                  "sourceUrl": "https://github.com/renovatebot/renovate",
+[2026-09-23T08:33:53.060Z]                  "versioning": "npm",
+[2026-09-23T08:33:53.060Z]                  "warnings": [],
+[2026-09-23T08:33:53.060Z]                  "updates": [
+[2026-09-23T08:33:53.060Z]                    {
+[2026-09-23T08:33:53.060Z]                      "bucket": "non-major",
+[2026-09-23T08:33:53.060Z]                      "newVersion": "44.103.6",
+[2026-09-23T08:33:53.060Z]                      "newValue": "44.103.6",
+[2026-09-23T08:33:53.060Z]                      "hasAttestation": true,
+[2026-09-23T08:33:53.060Z]                      "downloadUrl": "https://registry.npmjs.org/renovate/-/renovate-44.103.6.tgz",
+[2026-09-23T08:33:53.060Z]                      "newDigest": "sha512-SXBNuz8sKcTxnjIZruO5ukZ7gqkQcHt78WwuoWdKOmz84XHqv4aVRnx0FqM/gXwv+XWSAaXatkM5xjhb2Qb2WA==",
+[2026-09-23T08:33:53.060Z]                      "releaseTimestamp": "2026-09-20T02:51:55.355Z",
+[2026-09-23T08:33:53.060Z]                      "newVersionAgeInDays": 3,
+[2026-09-23T08:33:53.060Z]                      "newMajor": 44,
+[2026-09-23T08:33:53.060Z]                      "newMinor": 103,
+[2026-09-23T08:33:53.060Z]                      "newPatch": 6,
+[2026-09-23T08:33:53.060Z]                      "updateType": "minor",
+[2026-09-23T08:33:53.060Z]                      "isBreaking": false,
+[2026-09-23T08:33:53.060Z]                      "pendingVersions": [
+[2026-09-23T08:33:53.060Z]                        "44.103.7",
+[2026-09-23T08:33:53.060Z]                        "44.104.0",
+[2026-09-23T08:33:53.060Z]                        "44.104.1",
+[2026-09-23T08:33:53.061Z]                        "44.104.2",
+[2026-09-23T08:33:53.061Z]                        "44.105.0",
+[2026-09-23T08:33:53.061Z]                        "44.105.1",
+[2026-09-23T08:33:53.061Z]                        "44.105.2",
+[2026-09-23T08:33:53.061Z]                        "44.105.3",
+[2026-09-23T08:33:53.061Z]                        "44.105.4",
+[2026-09-23T08:33:53.061Z]                        "44.106.0",
+[2026-09-23T08:33:53.061Z]                        "44.107.0",
+[2026-09-23T08:33:53.061Z]                        "44.107.1",
+[2026-09-23T08:33:53.061Z]                        "44.107.2",
+[2026-09-23T08:33:53.061Z]                        "44.107.3",
+[2026-09-23T08:33:53.061Z]                        "44.108.0",
+[2026-09-23T08:33:53.061Z]                        "44.108.1",
+[2026-09-23T08:33:53.061Z]                        "44.108.2"
+[2026-09-23T08:33:53.061Z]                      ],
+[2026-09-23T08:33:53.061Z]                      "libYears": 0.007575501522070015,
+[2026-09-23T08:33:53.061Z]                      "branchName": "renovate/renovate"
+[2026-09-23T08:33:53.061Z]                    }
+[2026-09-23T08:33:53.061Z]                  ]
+[2026-09-23T08:33:53.061Z]                }
+[2026-09-23T08:33:53.061Z]              ],
+[2026-09-23T08:33:53.061Z]              "matchStrings": [
+[2026-09-23T08:33:53.061Z]                "(?:#|//) renovate: datasource=(?<datasource>.*?)(?: depName=(?<depName>.+?))?(?: packageName=(?<packageName>.+?))?(?: versioning=(?<versioning>.+?))?(?: extractVersion=(?<extractVersion>.+?))?(?: registryUrl=(?<registryUrl>.+?))?\\n\\s*[^=:\\n]+[=:]\\s*[\"']?(?<currentValue>[^\\s@\"'#:]+)(?:[\"'\\s]|$)"
+[2026-09-23T08:33:53.061Z]              ],
+[2026-09-23T08:33:53.061Z]              "packageFile": "default.json",
+[2026-09-23T08:33:53.061Z]              "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}"
+[2026-09-23T08:33:53.062Z]            }
+[2026-09-23T08:33:53.062Z]          ],
+[2026-09-23T08:33:53.062Z]          "renovate-config": [
+[2026-09-23T08:33:53.062Z]            {
+[2026-09-23T08:33:53.062Z]              "deps": [
+[2026-09-23T08:33:53.062Z]                {
+[2026-09-23T08:33:53.062Z]                  "depName": "idelsink/renovate-runner",
+[2026-09-23T08:33:53.062Z]                  "packageName": "idelsink/renovate-runner",
+[2026-09-23T08:33:53.062Z]                  "skipReason": "unspecified-version",
+[2026-09-23T08:33:53.062Z]                  "updates": []
+[2026-09-23T08:33:53.062Z]                }
+[2026-09-23T08:33:53.062Z]              ],
+[2026-09-23T08:33:53.062Z]              "packageFile": "renovate.json"
+[2026-09-23T08:33:53.062Z]            }
+[2026-09-23T08:33:53.062Z]          ]
+[2026-09-23T08:33:53.062Z]        }
+[2026-09-23T08:33:53.062Z] DEBUG: detectSemanticCommits() (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: semanticCommits: returning "enabled" from cache (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: processRepo() (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: Processing 5 branches: renovate/cli-cli-2.x, renovate/github-codeql-action-4.x, renovate/lock-file-maintenance, renovate/renovate, renovate/wrangler-4.x (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: getBranchPr(renovate/cli-cli-2.x) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: findPr(renovate/cli-cli-2.x, undefined, open) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: getBranchPr(renovate/wrangler-4.x) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: findPr(renovate/wrangler-4.x, undefined, open) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: getBranchPr(renovate/github-codeql-action-4.x) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: findPr(renovate/github-codeql-action-4.x, undefined, open) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: getBranchPr(renovate/renovate) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: findPr(renovate/renovate, undefined, open) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: getBranchPr(renovate/lock-file-maintenance) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: findPr(renovate/lock-file-maintenance, undefined, open) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: 0 PRs are currently open (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: ConcurrentPRs count = 0 (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: 0 PRs are currently open (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: VulnerabilityConcurrentPRs count = 0 (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: 0 already existing branches found. (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: Branches count = 0 (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: 0 already existing branches found. (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: VulnerabilityBranches count = 0 (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: Calculating PRs created so far in this hour currentHourStart=2026-09-23T08:00:00.000Z (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: 0 PRs have been created so far in this hour. (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: HourlyPRs count = 0 (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: Calculating commits so far in this hour currentHourStart=2026-09-23T08:00:00.000Z, for 5 branches (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: getAllBranchUpdateDates (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: syncGit(): Initializing git repository into /tmp/renovate/repos/github/idelsink/renovate-runner (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.062Z] DEBUG: Performing blobless clone (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.478Z] DEBUG: git clone completed (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.478Z]        "durationMs": 420
+[2026-09-23T08:33:53.504Z] DEBUG: latest repository commit (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.504Z]        "latestCommit": {
+[2026-09-23T08:33:53.504Z]          "hash": "0002aa8ecfc0e3c6698f5a3cee6f8613bacfeeb8",
+[2026-09-23T08:33:53.504Z]          "date": "2026-09-20T19:43:16+02:00",
+[2026-09-23T08:33:53.504Z]          "message": "chore(deps): update renovate (#171)",
+[2026-09-23T08:33:53.504Z]          "refs": "HEAD -> main, origin/main, origin/HEAD",
+[2026-09-23T08:33:53.504Z]          "body": "Co-authored-by: renovate-iws[bot] <260228940+renovate-iws[bot]@users.noreply.github.com>",
+[2026-09-23T08:33:53.504Z]          "author_name": "renovate-iws[bot]",
+[2026-09-23T08:33:53.504Z]          "author_email": "260228940+renovate-iws[bot]@users.noreply.github.com"
+[2026-09-23T08:33:53.504Z]        }
+[2026-09-23T08:33:53.517Z] DEBUG: Current branch SHA: 0002aa8ecfc0e3c6698f5a3cee6f8613bacfeeb8 (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.531Z] DEBUG: 0 commits so far in this hour. (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.531Z] DEBUG: HourlyCommits count = 0 (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.532Z] DEBUG: syncBranchState() (repository=idelsink/renovate-runner, branch=renovate/cli-cli-2.x)
+[2026-09-23T08:33:53.534Z] DEBUG: getBranchPr(renovate/cli-cli-2.x) (repository=idelsink/renovate-runner, branch=renovate/cli-cli-2.x)
+[2026-09-23T08:33:53.535Z] DEBUG: findPr(renovate/cli-cli-2.x, undefined, open) (repository=idelsink/renovate-runner, branch=renovate/cli-cli-2.x)
+[2026-09-23T08:33:53.535Z] DEBUG: branchExists=false (repository=idelsink/renovate-runner, branch=renovate/cli-cli-2.x)
+[2026-09-23T08:33:53.535Z] DEBUG: dependencyDashboardCheck=undefined (repository=idelsink/renovate-runner, branch=renovate/cli-cli-2.x)
+[2026-09-23T08:33:53.546Z] DEBUG: Check for closed PR because recreating closed PRs is disabled. (repository=idelsink/renovate-runner, branch=renovate/cli-cli-2.x)
+[2026-09-23T08:33:53.546Z] DEBUG: findPr(renovate/cli-cli-2.x, chore(deps): update dependency cli/cli to v2.101.0, !open) (repository=idelsink/renovate-runner, branch=renovate/cli-cli-2.x)
+[2026-09-23T08:33:53.546Z] DEBUG: prAlreadyExisted=false (repository=idelsink/renovate-runner, branch=renovate/cli-cli-2.x)
+[2026-09-23T08:33:53.546Z] DEBUG: Open PR Count: 0, Existing Branch Count: 0, Hourly PR Count: 0, Hourly Commit Count: 0 (repository=idelsink/renovate-runner, branch=renovate/cli-cli-2.x)
+[2026-09-23T08:33:53.547Z] DEBUG: prHourlyLimit of the upgrades present in this branch (repository=idelsink/renovate-runner, branch=renovate/cli-cli-2.x)
+[2026-09-23T08:33:53.547Z]        "limits": [{"depName": "cli/cli", "prHourlyLimit": 2}]
+[2026-09-23T08:33:53.547Z] DEBUG: Calculated lowest prHourlyLimit among the upgrades present in this branch is 2. (repository=idelsink/renovate-runner, branch=renovate/cli-cli-2.x)
+[2026-09-23T08:33:53.547Z] DEBUG: branchConcurrentLimit of the upgrades present in this branch (repository=idelsink/renovate-runner, branch=renovate/cli-cli-2.x)
+[2026-09-23T08:33:53.547Z]        "limits": [{"depName": "cli/cli", "branchConcurrentLimit": null}]
+[2026-09-23T08:33:53.547Z] DEBUG: Calculated lowest branchConcurrentLimit among the upgrades present in this branch is 5. (repository=idelsink/renovate-runner, branch=renovate/cli-cli-2.x)
+[2026-09-23T08:33:53.547Z] DEBUG: commitHourlyLimit of the upgrades present in this branch (repository=idelsink/renovate-runner, branch=renovate/cli-cli-2.x)
+[2026-09-23T08:33:53.547Z]        "limits": [{"depName": "cli/cli", "commitHourlyLimit": 0}]
+[2026-09-23T08:33:53.547Z] DEBUG: commitHourlyLimit of this branch is unlimited, because at least one of the upgrade has it's commitHourlyLimit set to "No limit" ie. 0 or null (repository=idelsink/renovate-runner, branch=renovate/cli-cli-2.x)
+[2026-09-23T08:33:53.548Z] DEBUG: Checking schedule(schedule=before 6am on Monday, tz=null, now=2026-09-23T08:33:53.547Z) (repository=idelsink/renovate-runner, branch=renovate/cli-cli-2.x)
+[2026-09-23T08:33:53.551Z] DEBUG: Checking 1 schedule(s) (repository=idelsink/renovate-runner, branch=renovate/cli-cli-2.x)
+[2026-09-23T08:33:53.552Z] DEBUG: Checking schedule "before 6am on Monday" (repository=idelsink/renovate-runner, branch=renovate/cli-cli-2.x)
+[2026-09-23T08:33:53.552Z]        "parsedSchedule": {"schedules": [{"t_b": [21600], "d": [2]}], "exceptions": [], "error": -1}
+[2026-09-23T08:33:53.553Z] DEBUG: Package not scheduled (repository=idelsink/renovate-runner, branch=renovate/cli-cli-2.x)
+[2026-09-23T08:33:53.553Z] DEBUG: Skipping branch creation as not within schedule (repository=idelsink/renovate-runner, branch=renovate/cli-cli-2.x)
+[2026-09-23T08:33:53.554Z] DEBUG: syncBranchState() (repository=idelsink/renovate-runner, branch=renovate/wrangler-4.x)
+[2026-09-23T08:33:53.554Z] DEBUG: getBranchPr(renovate/wrangler-4.x) (repository=idelsink/renovate-runner, branch=renovate/wrangler-4.x)
+[2026-09-23T08:33:53.554Z] DEBUG: findPr(renovate/wrangler-4.x, undefined, open) (repository=idelsink/renovate-runner, branch=renovate/wrangler-4.x)
+[2026-09-23T08:33:53.555Z] DEBUG: branchExists=false (repository=idelsink/renovate-runner, branch=renovate/wrangler-4.x)
+[2026-09-23T08:33:53.555Z] DEBUG: dependencyDashboardCheck=undefined (repository=idelsink/renovate-runner, branch=renovate/wrangler-4.x)
+[2026-09-23T08:33:53.555Z] DEBUG: Check for closed PR because recreating closed PRs is disabled. (repository=idelsink/renovate-runner, branch=renovate/wrangler-4.x)
+[2026-09-23T08:33:53.556Z] DEBUG: findPr(renovate/wrangler-4.x, chore(deps): update dependency wrangler to v4.135.0, !open) (repository=idelsink/renovate-runner, branch=renovate/wrangler-4.x)
+[2026-09-23T08:33:53.556Z] DEBUG: prAlreadyExisted=false (repository=idelsink/renovate-runner, branch=renovate/wrangler-4.x)
+[2026-09-23T08:33:53.556Z] DEBUG: Open PR Count: 0, Existing Branch Count: 0, Hourly PR Count: 0, Hourly Commit Count: 0 (repository=idelsink/renovate-runner, branch=renovate/wrangler-4.x)
+[2026-09-23T08:33:53.557Z] DEBUG: prHourlyLimit of the upgrades present in this branch (repository=idelsink/renovate-runner, branch=renovate/wrangler-4.x)
+[2026-09-23T08:33:53.557Z]        "limits": [{"depName": "wrangler", "prHourlyLimit": 2}]
+[2026-09-23T08:33:53.557Z] DEBUG: Calculated lowest prHourlyLimit among the upgrades present in this branch is 2. (repository=idelsink/renovate-runner, branch=renovate/wrangler-4.x)
+[2026-09-23T08:33:53.557Z] DEBUG: branchConcurrentLimit of the upgrades present in this branch (repository=idelsink/renovate-runner, branch=renovate/wrangler-4.x)
+[2026-09-23T08:33:53.557Z]        "limits": [{"depName": "wrangler", "branchConcurrentLimit": null}]
+[2026-09-23T08:33:53.557Z] DEBUG: Calculated lowest branchConcurrentLimit among the upgrades present in this branch is 5. (repository=idelsink/renovate-runner, branch=renovate/wrangler-4.x)
+[2026-09-23T08:33:53.558Z] DEBUG: commitHourlyLimit of the upgrades present in this branch (repository=idelsink/renovate-runner, branch=renovate/wrangler-4.x)
+[2026-09-23T08:33:53.558Z]        "limits": [{"depName": "wrangler", "commitHourlyLimit": 0}]
+[2026-09-23T08:33:53.558Z] DEBUG: commitHourlyLimit of this branch is unlimited, because at least one of the upgrade has it's commitHourlyLimit set to "No limit" ie. 0 or null (repository=idelsink/renovate-runner, branch=renovate/wrangler-4.x)
+[2026-09-23T08:33:53.558Z] DEBUG: Checking schedule(schedule=before 6am on Monday, tz=null, now=2026-09-23T08:33:53.558Z) (repository=idelsink/renovate-runner, branch=renovate/wrangler-4.x)
+[2026-09-23T08:33:53.559Z] DEBUG: Checking 1 schedule(s) (repository=idelsink/renovate-runner, branch=renovate/wrangler-4.x)
+[2026-09-23T08:33:53.560Z] DEBUG: Checking schedule "before 6am on Monday" (repository=idelsink/renovate-runner, branch=renovate/wrangler-4.x)
+[2026-09-23T08:33:53.560Z]        "parsedSchedule": {"schedules": [{"t_b": [21600], "d": [2]}], "exceptions": [], "error": -1}
+[2026-09-23T08:33:53.560Z] DEBUG: Package not scheduled (repository=idelsink/renovate-runner, branch=renovate/wrangler-4.x)
+[2026-09-23T08:33:53.560Z] DEBUG: Skipping branch creation as not within schedule (repository=idelsink/renovate-runner, branch=renovate/wrangler-4.x)
+[2026-09-23T08:33:53.561Z] DEBUG: syncBranchState() (repository=idelsink/renovate-runner, branch=renovate/github-codeql-action-4.x)
+[2026-09-23T08:33:53.561Z] DEBUG: getBranchPr(renovate/github-codeql-action-4.x) (repository=idelsink/renovate-runner, branch=renovate/github-codeql-action-4.x)
+[2026-09-23T08:33:53.561Z] DEBUG: findPr(renovate/github-codeql-action-4.x, undefined, open) (repository=idelsink/renovate-runner, branch=renovate/github-codeql-action-4.x)
+[2026-09-23T08:33:53.562Z] DEBUG: branchExists=false (repository=idelsink/renovate-runner, branch=renovate/github-codeql-action-4.x)
+[2026-09-23T08:33:53.562Z] DEBUG: dependencyDashboardCheck=undefined (repository=idelsink/renovate-runner, branch=renovate/github-codeql-action-4.x)
+[2026-09-23T08:33:53.562Z] DEBUG: Check for closed PR because recreating closed PRs is disabled. (repository=idelsink/renovate-runner, branch=renovate/github-codeql-action-4.x)
+[2026-09-23T08:33:53.563Z] DEBUG: findPr(renovate/github-codeql-action-4.x, chore(deps): update github/codeql-action action to v4.38.1, !open) (repository=idelsink/renovate-runner, branch=renovate/github-codeql-action-4.x)
+[2026-09-23T08:33:53.563Z] DEBUG: prAlreadyExisted=false (repository=idelsink/renovate-runner, branch=renovate/github-codeql-action-4.x)
+[2026-09-23T08:33:53.563Z] DEBUG: Open PR Count: 0, Existing Branch Count: 0, Hourly PR Count: 0, Hourly Commit Count: 0 (repository=idelsink/renovate-runner, branch=renovate/github-codeql-action-4.x)
+[2026-09-23T08:33:53.563Z] DEBUG: prHourlyLimit of the upgrades present in this branch (repository=idelsink/renovate-runner, branch=renovate/github-codeql-action-4.x)
+[2026-09-23T08:33:53.564Z]        "limits": [{"depName": "github/codeql-action", "prHourlyLimit": 2}]
+[2026-09-23T08:33:53.564Z] DEBUG: Calculated lowest prHourlyLimit among the upgrades present in this branch is 2. (repository=idelsink/renovate-runner, branch=renovate/github-codeql-action-4.x)
+[2026-09-23T08:33:53.564Z] DEBUG: branchConcurrentLimit of the upgrades present in this branch (repository=idelsink/renovate-runner, branch=renovate/github-codeql-action-4.x)
+[2026-09-23T08:33:53.564Z]        "limits": [{"depName": "github/codeql-action", "branchConcurrentLimit": null}]
+[2026-09-23T08:33:53.564Z] DEBUG: Calculated lowest branchConcurrentLimit among the upgrades present in this branch is 5. (repository=idelsink/renovate-runner, branch=renovate/github-codeql-action-4.x)
+[2026-09-23T08:33:53.565Z] DEBUG: commitHourlyLimit of the upgrades present in this branch (repository=idelsink/renovate-runner, branch=renovate/github-codeql-action-4.x)
+[2026-09-23T08:33:53.565Z]        "limits": [{"depName": "github/codeql-action", "commitHourlyLimit": 0}]
+[2026-09-23T08:33:53.565Z] DEBUG: commitHourlyLimit of this branch is unlimited, because at least one of the upgrade has it's commitHourlyLimit set to "No limit" ie. 0 or null (repository=idelsink/renovate-runner, branch=renovate/github-codeql-action-4.x)
+[2026-09-23T08:33:53.565Z] DEBUG: Checking schedule(schedule=before 6am on Monday, tz=null, now=2026-09-23T08:33:53.565Z) (repository=idelsink/renovate-runner, branch=renovate/github-codeql-action-4.x)
+[2026-09-23T08:33:53.566Z] DEBUG: Checking 1 schedule(s) (repository=idelsink/renovate-runner, branch=renovate/github-codeql-action-4.x)
+[2026-09-23T08:33:53.566Z] DEBUG: Checking schedule "before 6am on Monday" (repository=idelsink/renovate-runner, branch=renovate/github-codeql-action-4.x)
+[2026-09-23T08:33:53.566Z]        "parsedSchedule": {"schedules": [{"t_b": [21600], "d": [2]}], "exceptions": [], "error": -1}
+[2026-09-23T08:33:53.566Z] DEBUG: Package not scheduled (repository=idelsink/renovate-runner, branch=renovate/github-codeql-action-4.x)
+[2026-09-23T08:33:53.567Z] DEBUG: Skipping branch creation as not within schedule (repository=idelsink/renovate-runner, branch=renovate/github-codeql-action-4.x)
+[2026-09-23T08:33:53.567Z] DEBUG: syncBranchState() (repository=idelsink/renovate-runner, branch=renovate/renovate)
+[2026-09-23T08:33:53.568Z] DEBUG: getBranchPr(renovate/renovate) (repository=idelsink/renovate-runner, branch=renovate/renovate)
+[2026-09-23T08:33:53.568Z] DEBUG: findPr(renovate/renovate, undefined, open) (repository=idelsink/renovate-runner, branch=renovate/renovate)
+[2026-09-23T08:33:53.568Z] DEBUG: branchExists=false (repository=idelsink/renovate-runner, branch=renovate/renovate)
+[2026-09-23T08:33:53.568Z] DEBUG: dependencyDashboardCheck=undefined (repository=idelsink/renovate-runner, branch=renovate/renovate)
+[2026-09-23T08:33:53.569Z] DEBUG: recreateClosed is true. No need to check for closed PR. (repository=idelsink/renovate-runner, branch=renovate/renovate)
+[2026-09-23T08:33:53.569Z] DEBUG: Open PR Count: 0, Existing Branch Count: 0, Hourly PR Count: 0, Hourly Commit Count: 0 (repository=idelsink/renovate-runner, branch=renovate/renovate)
+[2026-09-23T08:33:53.569Z] DEBUG: prHourlyLimit of the upgrades present in this branch (repository=idelsink/renovate-runner, branch=renovate/renovate)
+[2026-09-23T08:33:53.569Z]        "limits": [
+[2026-09-23T08:33:53.569Z]          {"depName": "ghcr.io/renovatebot/renovate", "prHourlyLimit": 2},
+[2026-09-23T08:33:53.569Z]          {"depName": "renovate", "prHourlyLimit": 2},
+[2026-09-23T08:33:53.569Z]          {"depName": "renovatebot/renovate", "prHourlyLimit": 2}
+[2026-09-23T08:33:53.569Z]        ]
+[2026-09-23T08:33:53.570Z] DEBUG: Calculated lowest prHourlyLimit among the upgrades present in this branch is 2. (repository=idelsink/renovate-runner, branch=renovate/renovate)
+[2026-09-23T08:33:53.570Z] DEBUG: branchConcurrentLimit of the upgrades present in this branch (repository=idelsink/renovate-runner, branch=renovate/renovate)
+[2026-09-23T08:33:53.570Z]        "limits": [
+[2026-09-23T08:33:53.570Z]          {"depName": "ghcr.io/renovatebot/renovate", "branchConcurrentLimit": null},
+[2026-09-23T08:33:53.570Z]          {"depName": "renovate", "branchConcurrentLimit": null},
+[2026-09-23T08:33:53.570Z]          {"depName": "renovatebot/renovate", "branchConcurrentLimit": null}
+[2026-09-23T08:33:53.570Z]        ]
+[2026-09-23T08:33:53.570Z] DEBUG: Calculated lowest branchConcurrentLimit among the upgrades present in this branch is 5. (repository=idelsink/renovate-runner, branch=renovate/renovate)
+[2026-09-23T08:33:53.571Z] DEBUG: commitHourlyLimit of the upgrades present in this branch (repository=idelsink/renovate-runner, branch=renovate/renovate)
+[2026-09-23T08:33:53.571Z]        "limits": [
+[2026-09-23T08:33:53.571Z]          {"depName": "ghcr.io/renovatebot/renovate", "commitHourlyLimit": 0},
+[2026-09-23T08:33:53.571Z]          {"depName": "renovate", "commitHourlyLimit": 0},
+[2026-09-23T08:33:53.571Z]          {"depName": "renovatebot/renovate", "commitHourlyLimit": 0}
+[2026-09-23T08:33:53.571Z]        ]
+[2026-09-23T08:33:53.571Z] DEBUG: commitHourlyLimit of this branch is unlimited, because at least one of the upgrade has it's commitHourlyLimit set to "No limit" ie. 0 or null (repository=idelsink/renovate-runner, branch=renovate/renovate)
+[2026-09-23T08:33:53.571Z] DEBUG: Checking schedule(schedule=before 6am on Monday, tz=null, now=2026-09-23T08:33:53.571Z) (repository=idelsink/renovate-runner, branch=renovate/renovate)
+[2026-09-23T08:33:53.572Z] DEBUG: Checking 1 schedule(s) (repository=idelsink/renovate-runner, branch=renovate/renovate)
+[2026-09-23T08:33:53.572Z] DEBUG: Checking schedule "before 6am on Monday" (repository=idelsink/renovate-runner, branch=renovate/renovate)
+[2026-09-23T08:33:53.572Z]        "parsedSchedule": {"schedules": [{"t_b": [21600], "d": [2]}], "exceptions": [], "error": -1}
+[2026-09-23T08:33:53.573Z] DEBUG: Package not scheduled (repository=idelsink/renovate-runner, branch=renovate/renovate)
+[2026-09-23T08:33:53.573Z] DEBUG: Skipping branch creation as not within schedule (repository=idelsink/renovate-runner, branch=renovate/renovate)
+[2026-09-23T08:33:53.573Z] DEBUG: syncBranchState() (repository=idelsink/renovate-runner, branch=renovate/lock-file-maintenance)
+[2026-09-23T08:33:53.574Z] DEBUG: getBranchPr(renovate/lock-file-maintenance) (repository=idelsink/renovate-runner, branch=renovate/lock-file-maintenance)
+[2026-09-23T08:33:53.574Z] DEBUG: findPr(renovate/lock-file-maintenance, undefined, open) (repository=idelsink/renovate-runner, branch=renovate/lock-file-maintenance)
+[2026-09-23T08:33:53.574Z] DEBUG: branchExists=false (repository=idelsink/renovate-runner, branch=renovate/lock-file-maintenance)
+[2026-09-23T08:33:53.574Z] DEBUG: dependencyDashboardCheck=undefined (repository=idelsink/renovate-runner, branch=renovate/lock-file-maintenance)
+[2026-09-23T08:33:53.575Z] DEBUG: recreateClosed is true. No need to check for closed PR. (repository=idelsink/renovate-runner, branch=renovate/lock-file-maintenance)
+[2026-09-23T08:33:53.575Z] DEBUG: Open PR Count: 0, Existing Branch Count: 0, Hourly PR Count: 0, Hourly Commit Count: 0 (repository=idelsink/renovate-runner, branch=renovate/lock-file-maintenance)
+[2026-09-23T08:33:53.575Z] DEBUG: prHourlyLimit of the upgrades present in this branch (repository=idelsink/renovate-runner, branch=renovate/lock-file-maintenance)
+[2026-09-23T08:33:53.575Z]        "limits": [{"prHourlyLimit": 2}]
+[2026-09-23T08:33:53.576Z] DEBUG: Calculated lowest prHourlyLimit among the upgrades present in this branch is 2. (repository=idelsink/renovate-runner, branch=renovate/lock-file-maintenance)
+[2026-09-23T08:33:53.577Z] DEBUG: branchConcurrentLimit of the upgrades present in this branch (repository=idelsink/renovate-runner, branch=renovate/lock-file-maintenance)
+[2026-09-23T08:33:53.577Z]        "limits": [{"branchConcurrentLimit": null}]
+[2026-09-23T08:33:53.577Z] DEBUG: Calculated lowest branchConcurrentLimit among the upgrades present in this branch is 5. (repository=idelsink/renovate-runner, branch=renovate/lock-file-maintenance)
+[2026-09-23T08:33:53.577Z] DEBUG: commitHourlyLimit of the upgrades present in this branch (repository=idelsink/renovate-runner, branch=renovate/lock-file-maintenance)
+[2026-09-23T08:33:53.577Z]        "limits": [{"commitHourlyLimit": 0}]
+[2026-09-23T08:33:53.577Z] DEBUG: commitHourlyLimit of this branch is unlimited, because at least one of the upgrade has it's commitHourlyLimit set to "No limit" ie. 0 or null (repository=idelsink/renovate-runner, branch=renovate/lock-file-maintenance)
+[2026-09-23T08:33:53.577Z] DEBUG: Checking schedule(schedule=* 0-3 * * 1, tz=null, now=2026-09-23T08:33:53.577Z) (repository=idelsink/renovate-runner, branch=renovate/lock-file-maintenance)
+[2026-09-23T08:33:53.578Z] DEBUG: Checking 1 schedule(s) (repository=idelsink/renovate-runner, branch=renovate/lock-file-maintenance)
+[2026-09-23T08:33:53.581Z] DEBUG: Human-readable summary for cron:: Every minute, between 12:00 AM and 03:59 AM, only on Monday (repository=idelsink/renovate-runner, branch=renovate/lock-file-maintenance)
+[2026-09-23T08:33:53.582Z] DEBUG: Package not scheduled (repository=idelsink/renovate-runner, branch=renovate/lock-file-maintenance)
+[2026-09-23T08:33:53.583Z] DEBUG: Skipping branch creation as not within schedule (repository=idelsink/renovate-runner, branch=renovate/lock-file-maintenance)
+[2026-09-23T08:33:53.691Z] DEBUG: http cache: Using cached response: https://api.github.com/repos/idelsink/renovate-runner/contents/renovate.json from 2026-09-23T08:33:03.281Z (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.693Z] DEBUG: Config does not need migration (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.694Z] DEBUG: ensureDependencyDashboard() (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.694Z] DEBUG: Ensuring Dependency Dashboard (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.694Z] DEBUG: Checking packageFiles for deprecated or replacement packages (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.904Z] DEBUG: http cache: Using cached response: https://api.github.com/repos/idelsink/renovate-runner/issues/2 from 2026-09-23T08:33:04.784Z (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:53.905Z] DEBUG: Issues cache: Updating issue 2 in cache (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:54.095Z] DEBUG: http cache: Using cached response: https://api.github.com/repos/idelsink/renovate-runner/issues/2 from 2026-09-23T08:33:53.904Z (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:54.095Z] DEBUG: Issues cache: Updating issue 2 in cache (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:54.139Z] DEBUG: ensureIssue(Dependency Dashboard) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:54.323Z] DEBUG: http cache: Using cached response: https://api.github.com/repos/idelsink/renovate-runner/issues/2 from 2026-09-23T08:33:54.095Z (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:54.323Z] DEBUG: Issues cache: Updating issue 2 in cache (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:54.323Z] DEBUG: Patching issue (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:54.957Z] DEBUG: Issues cache: Updating issue 2 in cache (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:54.957Z] DEBUG: Issue updated (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:54.957Z] DEBUG: checkReconfigureBranch() (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:54.958Z] DEBUG: No reconfigure branch found (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:54.958Z]        "reconfigureBranch": "renovate/reconfigure"
+[2026-09-23T08:33:54.958Z] DEBUG: Removing any stale branches (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:54.958Z] DEBUG: config.repoIsOnboarded=true (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:54.959Z] DEBUG: No renovate branches found (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:54.987Z] DEBUG: PackageFiles.clear() - Package files deleted (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:54.987Z] DEBUG: Repo is activated (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:54.995Z] DEBUG: Branch summary (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:54.995Z]        "cacheModified": true,
+[2026-09-23T08:33:54.995Z]        "baseBranches": [{"branchName": "main", "sha": "0002aa8ecfc0e3c6698f5a3cee6f8613bacfeeb8"}],
+[2026-09-23T08:33:54.995Z]        "branches": [],
+[2026-09-23T08:33:54.995Z]        "defaultBranch": "main",
+[2026-09-23T08:33:54.995Z]        "inactiveBranches": [
+[2026-09-23T08:33:54.995Z]          "renovate/cli-cli-2.x",
+[2026-09-23T08:33:54.995Z]          "renovate/wrangler-4.x",
+[2026-09-23T08:33:54.995Z]          "renovate/github-codeql-action-4.x",
+[2026-09-23T08:33:54.995Z]          "renovate/renovate",
+[2026-09-23T08:33:54.995Z]          "renovate/lock-file-maintenance"
+[2026-09-23T08:33:54.995Z]        ]
+[2026-09-23T08:33:54.999Z] DEBUG: branches info extended (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:54.999Z]        "branchesInformation": [
+[2026-09-23T08:33:54.999Z]          {
+[2026-09-23T08:33:54.999Z]            "branchName": "renovate/cli-cli-2.x",
+[2026-09-23T08:33:54.999Z]            "prNo": null,
+[2026-09-23T08:33:54.999Z]            "prTitle": "chore(deps): update dependency cli/cli to v2.101.0",
+[2026-09-23T08:33:54.999Z]            "result": "not-scheduled",
+[2026-09-23T08:33:54.999Z]            "upgrades": [
+[2026-09-23T08:33:54.999Z]              {
+[2026-09-23T08:33:54.999Z]                "datasource": "github-releases",
+[2026-09-23T08:33:54.999Z]                "depName": "cli/cli",
+[2026-09-23T08:33:54.999Z]                "displayPending": "",
+[2026-09-23T08:33:54.999Z]                "fixedVersion": "v2.100.0",
+[2026-09-23T08:33:54.999Z]                "currentVersion": "v2.100.0",
+[2026-09-23T08:33:54.999Z]                "currentValue": "v2.100.0",
+[2026-09-23T08:33:54.999Z]                "newValue": "v2.101.0",
+[2026-09-23T08:33:54.999Z]                "newVersion": "v2.101.0",
+[2026-09-23T08:33:54.999Z]                "packageFile": "README.md",
+[2026-09-23T08:33:54.999Z]                "updateType": "minor",
+[2026-09-23T08:33:54.999Z]                "packageName": "cli/cli"
+[2026-09-23T08:33:54.999Z]              }
+[2026-09-23T08:33:54.999Z]            ]
+[2026-09-23T08:33:54.999Z]          },
+[2026-09-23T08:33:55.000Z]          {
+[2026-09-23T08:33:55.000Z]            "branchName": "renovate/wrangler-4.x",
+[2026-09-23T08:33:55.000Z]            "prNo": null,
+[2026-09-23T08:33:55.000Z]            "prTitle": "chore(deps): update dependency wrangler to v4.135.0",
+[2026-09-23T08:33:55.000Z]            "result": "not-scheduled",
+[2026-09-23T08:33:55.000Z]            "upgrades": [
+[2026-09-23T08:33:55.000Z]              {
+[2026-09-23T08:33:55.000Z]                "datasource": "npm",
+[2026-09-23T08:33:55.000Z]                "depName": "wrangler",
+[2026-09-23T08:33:55.000Z]                "displayPending": "`4.136.3` (+3)",
+[2026-09-23T08:33:55.000Z]                "fixedVersion": "4.129.0",
+[2026-09-23T08:33:55.000Z]                "currentVersion": "4.129.0",
+[2026-09-23T08:33:55.000Z]                "currentValue": "4.129.0",
+[2026-09-23T08:33:55.000Z]                "newValue": "4.135.0",
+[2026-09-23T08:33:55.000Z]                "newVersion": "4.135.0",
+[2026-09-23T08:33:55.000Z]                "newDigest": "sha512-WrNBQSfIG6YcILJcodYr5ty8vgkzGsV8YX+kfd+uZ5/Bd8cUW0GnUIRKAVfn5kYKqh1m/BPcji9h1d7mE8euFw==",
+[2026-09-23T08:33:55.000Z]                "packageFile": "webhook/package.json",
+[2026-09-23T08:33:55.000Z]                "updateType": "minor",
+[2026-09-23T08:33:55.000Z]                "packageName": "wrangler"
+[2026-09-23T08:33:55.000Z]              },
+[2026-09-23T08:33:55.000Z]              {
+[2026-09-23T08:33:55.000Z]                "datasource": "npm",
+[2026-09-23T08:33:55.000Z]                "depName": "wrangler",
+[2026-09-23T08:33:55.000Z]                "displayPending": "`4.136.3` (+3)",
+[2026-09-23T08:33:55.000Z]                "fixedVersion": "4.129.0",
+[2026-09-23T08:33:55.000Z]                "currentVersion": "4.129.0",
+[2026-09-23T08:33:55.000Z]                "currentValue": "4.129.0",
+[2026-09-23T08:33:55.000Z]                "newValue": "4.135.0",
+[2026-09-23T08:33:55.000Z]                "newVersion": "4.135.0",
+[2026-09-23T08:33:55.000Z]                "newDigest": "sha512-WrNBQSfIG6YcILJcodYr5ty8vgkzGsV8YX+kfd+uZ5/Bd8cUW0GnUIRKAVfn5kYKqh1m/BPcji9h1d7mE8euFw==",
+[2026-09-23T08:33:55.000Z]                "packageFile": "mise.toml",
+[2026-09-23T08:33:55.000Z]                "updateType": "minor",
+[2026-09-23T08:33:55.000Z]                "packageName": "wrangler"
+[2026-09-23T08:33:55.000Z]              }
+[2026-09-23T08:33:55.000Z]            ]
+[2026-09-23T08:33:55.000Z]          },
+[2026-09-23T08:33:55.000Z]          {
+[2026-09-23T08:33:55.000Z]            "branchName": "renovate/github-codeql-action-4.x",
+[2026-09-23T08:33:55.000Z]            "prNo": null,
+[2026-09-23T08:33:55.000Z]            "prTitle": "chore(deps): update github/codeql-action action to v4.38.1",
+[2026-09-23T08:33:55.000Z]            "result": "not-scheduled",
+[2026-09-23T08:33:55.000Z]            "upgrades": [
+[2026-09-23T08:33:55.000Z]              {
+[2026-09-23T08:33:55.000Z]                "datasource": "github-tags",
+[2026-09-23T08:33:55.000Z]                "depName": "github/codeql-action",
+[2026-09-23T08:33:55.000Z]                "displayPending": "",
+[2026-09-23T08:33:55.000Z]                "fixedVersion": "v4.37.9",
+[2026-09-23T08:33:55.000Z]                "currentVersion": "v4.37.9",
+[2026-09-23T08:33:55.000Z]                "currentValue": "v4.37.9",
+[2026-09-23T08:33:55.000Z]                "currentDigest": "cdf488f595d80d6e07e03d4674febd5ab45fa938",
+[2026-09-23T08:33:55.000Z]                "newValue": "v4.38.1",
+[2026-09-23T08:33:55.000Z]                "newVersion": "v4.38.1",
+[2026-09-23T08:33:55.000Z]                "newDigest": "1c5b675653bb5c22dbe9b12b556ec555138e09fd",
+[2026-09-23T08:33:55.000Z]                "packageFile": ".github/workflows/trivy.yml",
+[2026-09-23T08:33:55.000Z]                "updateType": "minor",
+[2026-09-23T08:33:55.000Z]                "packageName": "github/codeql-action"
+[2026-09-23T08:33:55.000Z]              }
+[2026-09-23T08:33:55.000Z]            ]
+[2026-09-23T08:33:55.000Z]          },
+[2026-09-23T08:33:55.000Z]          {
+[2026-09-23T08:33:55.000Z]            "branchName": "renovate/renovate",
+[2026-09-23T08:33:55.000Z]            "prNo": null,
+[2026-09-23T08:33:55.000Z]            "prTitle": "chore(deps): update renovate",
+[2026-09-23T08:33:55.000Z]            "result": "not-scheduled",
+[2026-09-23T08:33:55.000Z]            "upgrades": [
+[2026-09-23T08:33:55.000Z]              {
+[2026-09-23T08:33:55.000Z]                "datasource": "docker",
+[2026-09-23T08:33:55.000Z]                "depName": "ghcr.io/renovatebot/renovate",
+[2026-09-23T08:33:55.000Z]                "displayPending": "",
+[2026-09-23T08:33:55.000Z]                "fixedVersion": "44.103.6",
+[2026-09-23T08:33:55.000Z]                "currentVersion": "44.103.6",
+[2026-09-23T08:33:55.000Z]                "currentValue": "44.103.6",
+[2026-09-23T08:33:55.000Z]                "newValue": "44.108.2",
+[2026-09-23T08:33:55.000Z]                "newVersion": "44.108.2",
+[2026-09-23T08:33:55.000Z]                "newDigest": "sha256:9a02c0e89a1337fed22b40b01a0c9b212e947eff37e8a1bd0d3696bfe5a0b344",
+[2026-09-23T08:33:55.001Z]                "packageFile": "default.json",
+[2026-09-23T08:33:55.001Z]                "updateType": "minor",
+[2026-09-23T08:33:55.001Z]                "packageName": "ghcr.io/renovatebot/renovate"
+[2026-09-23T08:33:55.001Z]              },
+[2026-09-23T08:33:55.001Z]              {
+[2026-09-23T08:33:55.001Z]                "datasource": "docker",
+[2026-09-23T08:33:55.001Z]                "depName": "ghcr.io/renovatebot/renovate",
+[2026-09-23T08:33:55.001Z]                "displayPending": "",
+[2026-09-23T08:33:55.001Z]                "fixedVersion": "44.103.6",
+[2026-09-23T08:33:55.001Z]                "currentVersion": "44.103.6",
+[2026-09-23T08:33:55.001Z]                "currentValue": "44.103.6",
+[2026-09-23T08:33:55.001Z]                "currentDigest": "sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b",
+[2026-09-23T08:33:55.001Z]                "newValue": "44.108.2",
+[2026-09-23T08:33:55.001Z]                "newVersion": "44.108.2",
+[2026-09-23T08:33:55.001Z]                "newDigest": "sha256:9a02c0e89a1337fed22b40b01a0c9b212e947eff37e8a1bd0d3696bfe5a0b344",
+[2026-09-23T08:33:55.001Z]                "packageFile": "default.json",
+[2026-09-23T08:33:55.001Z]                "updateType": "minor",
+[2026-09-23T08:33:55.001Z]                "packageName": "ghcr.io/renovatebot/renovate"
+[2026-09-23T08:33:55.001Z]              },
+[2026-09-23T08:33:55.001Z]              {
+[2026-09-23T08:33:55.001Z]                "datasource": "docker",
+[2026-09-23T08:33:55.001Z]                "depName": "ghcr.io/renovatebot/renovate",
+[2026-09-23T08:33:55.001Z]                "displayPending": "",
+[2026-09-23T08:33:55.001Z]                "fixedVersion": "44.103.6",
+[2026-09-23T08:33:55.001Z]                "currentVersion": "44.103.6",
+[2026-09-23T08:33:55.001Z]                "currentValue": "44.103.6",
+[2026-09-23T08:33:55.001Z]                "currentDigest": "sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b",
+[2026-09-23T08:33:55.001Z]                "newValue": "44.108.2",
+[2026-09-23T08:33:55.001Z]                "newVersion": "44.108.2",
+[2026-09-23T08:33:55.001Z]                "newDigest": "sha256:9a02c0e89a1337fed22b40b01a0c9b212e947eff37e8a1bd0d3696bfe5a0b344",
+[2026-09-23T08:33:55.001Z]                "packageFile": "default.json",
+[2026-09-23T08:33:55.001Z]                "updateType": "minor",
+[2026-09-23T08:33:55.001Z]                "packageName": "ghcr.io/renovatebot/renovate"
+[2026-09-23T08:33:55.001Z]              },
+[2026-09-23T08:33:55.001Z]              {
+[2026-09-23T08:33:55.001Z]                "datasource": "docker",
+[2026-09-23T08:33:55.001Z]                "depName": "ghcr.io/renovatebot/renovate",
+[2026-09-23T08:33:55.001Z]                "displayPending": "",
+[2026-09-23T08:33:55.001Z]                "fixedVersion": "44.103.6",
+[2026-09-23T08:33:55.001Z]                "currentVersion": "44.103.6",
+[2026-09-23T08:33:55.001Z]                "currentValue": "44.103.6",
+[2026-09-23T08:33:55.001Z]                "currentDigest": "sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b",
+[2026-09-23T08:33:55.001Z]                "newValue": "44.108.2",
+[2026-09-23T08:33:55.001Z]                "newVersion": "44.108.2",
+[2026-09-23T08:33:55.001Z]                "newDigest": "sha256:9a02c0e89a1337fed22b40b01a0c9b212e947eff37e8a1bd0d3696bfe5a0b344",
+[2026-09-23T08:33:55.001Z]                "packageFile": "README.md",
+[2026-09-23T08:33:55.001Z]                "updateType": "minor",
+[2026-09-23T08:33:55.001Z]                "packageName": "ghcr.io/renovatebot/renovate"
+[2026-09-23T08:33:55.001Z]              },
+[2026-09-23T08:33:55.001Z]              {
+[2026-09-23T08:33:55.001Z]                "datasource": "docker",
+[2026-09-23T08:33:55.001Z]                "depName": "ghcr.io/renovatebot/renovate",
+[2026-09-23T08:33:55.001Z]                "displayPending": "",
+[2026-09-23T08:33:55.001Z]                "fixedVersion": "44.103.6",
+[2026-09-23T08:33:55.001Z]                "currentVersion": "44.103.6",
+[2026-09-23T08:33:55.001Z]                "currentValue": "44.103.6",
+[2026-09-23T08:33:55.001Z]                "currentDigest": "sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b",
+[2026-09-23T08:33:55.001Z]                "newValue": "44.108.2",
+[2026-09-23T08:33:55.001Z]                "newVersion": "44.108.2",
+[2026-09-23T08:33:55.001Z]                "newDigest": "sha256:9a02c0e89a1337fed22b40b01a0c9b212e947eff37e8a1bd0d3696bfe5a0b344",
+[2026-09-23T08:33:55.001Z]                "packageFile": ".github/workflows/renovate.yaml",
+[2026-09-23T08:33:55.001Z]                "updateType": "minor",
+[2026-09-23T08:33:55.001Z]                "packageName": "ghcr.io/renovatebot/renovate"
+[2026-09-23T08:33:55.001Z]              },
+[2026-09-23T08:33:55.001Z]              {
+[2026-09-23T08:33:55.001Z]                "datasource": "npm",
+[2026-09-23T08:33:55.001Z]                "depName": "renovate",
+[2026-09-23T08:33:55.001Z]                "displayPending": "`44.108.2` (+16)",
+[2026-09-23T08:33:55.001Z]                "fixedVersion": "44.96.0",
+[2026-09-23T08:33:55.001Z]                "currentVersion": "44.96.0",
+[2026-09-23T08:33:55.001Z]                "currentValue": "44.96.0",
+[2026-09-23T08:33:55.001Z]                "newValue": "44.103.6",
+[2026-09-23T08:33:55.001Z]                "newVersion": "44.103.6",
+[2026-09-23T08:33:55.001Z]                "newDigest": "sha512-SXBNuz8sKcTxnjIZruO5ukZ7gqkQcHt78WwuoWdKOmz84XHqv4aVRnx0FqM/gXwv+XWSAaXatkM5xjhb2Qb2WA==",
+[2026-09-23T08:33:55.001Z]                "packageFile": "default.json",
+[2026-09-23T08:33:55.001Z]                "updateType": "minor",
+[2026-09-23T08:33:55.001Z]                "packageName": "renovate"
+[2026-09-23T08:33:55.001Z]              },
+[2026-09-23T08:33:55.001Z]              {
+[2026-09-23T08:33:55.001Z]                "datasource": "npm",
+[2026-09-23T08:33:55.001Z]                "depName": "renovate",
+[2026-09-23T08:33:55.001Z]                "displayPending": "`44.108.2` (+16)",
+[2026-09-23T08:33:55.001Z]                "fixedVersion": "44.96.0",
+[2026-09-23T08:33:55.001Z]                "currentVersion": "44.96.0",
+[2026-09-23T08:33:55.002Z]                "currentValue": "44.96.0",
+[2026-09-23T08:33:55.002Z]                "newValue": "44.103.6",
+[2026-09-23T08:33:55.002Z]                "newVersion": "44.103.6",
+[2026-09-23T08:33:55.002Z]                "newDigest": "sha512-SXBNuz8sKcTxnjIZruO5ukZ7gqkQcHt78WwuoWdKOmz84XHqv4aVRnx0FqM/gXwv+XWSAaXatkM5xjhb2Qb2WA==",
+[2026-09-23T08:33:55.002Z]                "packageFile": "package.json",
+[2026-09-23T08:33:55.002Z]                "updateType": "minor",
+[2026-09-23T08:33:55.002Z]                "packageName": "renovate"
+[2026-09-23T08:33:55.002Z]              },
+[2026-09-23T08:33:55.002Z]              {
+[2026-09-23T08:33:55.002Z]                "datasource": "github-releases",
+[2026-09-23T08:33:55.002Z]                "depName": "renovatebot/renovate",
+[2026-09-23T08:33:55.002Z]                "displayPending": "",
+[2026-09-23T08:33:55.002Z]                "fixedVersion": "44.103.6",
+[2026-09-23T08:33:55.002Z]                "currentVersion": "44.103.6",
+[2026-09-23T08:33:55.002Z]                "currentValue": "44.103.6",
+[2026-09-23T08:33:55.002Z]                "newValue": "44.108.2",
+[2026-09-23T08:33:55.002Z]                "newVersion": "44.108.2",
+[2026-09-23T08:33:55.002Z]                "packageFile": "default.json",
+[2026-09-23T08:33:55.002Z]                "updateType": "minor",
+[2026-09-23T08:33:55.002Z]                "packageName": "renovatebot/renovate"
+[2026-09-23T08:33:55.002Z]              }
+[2026-09-23T08:33:55.002Z]            ]
+[2026-09-23T08:33:55.002Z]          },
+[2026-09-23T08:33:55.002Z]          {
+[2026-09-23T08:33:55.002Z]            "branchName": "renovate/lock-file-maintenance",
+[2026-09-23T08:33:55.002Z]            "prNo": null,
+[2026-09-23T08:33:55.002Z]            "prTitle": "chore(deps): lock file maintenance",
+[2026-09-23T08:33:55.002Z]            "result": "not-scheduled",
+[2026-09-23T08:33:55.002Z]            "upgrades": [
+[2026-09-23T08:33:55.002Z]              {
+[2026-09-23T08:33:55.002Z]                "displayPending": "",
+[2026-09-23T08:33:55.002Z]                "packageFile": "webhook/package.json",
+[2026-09-23T08:33:55.002Z]                "updateType": "lockFileMaintenance"
+[2026-09-23T08:33:55.002Z]              },
+[2026-09-23T08:33:55.002Z]              {
+[2026-09-23T08:33:55.002Z]                "displayPending": "",
+[2026-09-23T08:33:55.002Z]                "packageFile": "package.json",
+[2026-09-23T08:33:55.002Z]                "updateType": "lockFileMaintenance"
+[2026-09-23T08:33:55.002Z]              },
+[2026-09-23T08:33:55.002Z]              {
+[2026-09-23T08:33:55.002Z]                "displayPending": "",
+[2026-09-23T08:33:55.002Z]                "packageFile": "mise.toml",
+[2026-09-23T08:33:55.002Z]                "updateType": "lockFileMaintenance"
+[2026-09-23T08:33:55.002Z]              }
+[2026-09-23T08:33:55.002Z]            ]
+[2026-09-23T08:33:55.002Z]          }
+[2026-09-23T08:33:55.002Z]        ]
+[2026-09-23T08:33:55.002Z] DEBUG: Updates summary (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:55.002Z]        "updateSummary": [
+[2026-09-23T08:33:55.002Z]          {
+[2026-09-23T08:33:55.002Z]            "baseBranch": "main",
+[2026-09-23T08:33:55.002Z]            "total": 15,
+[2026-09-23T08:33:55.002Z]            "vulnerabilityAlert": 0,
+[2026-09-23T08:33:55.002Z]            "updates": {"minor": 12, "lockFileMaintenance": 3},
+[2026-09-23T08:33:55.002Z]            "managers": {
+[2026-09-23T08:33:55.002Z]              "regex": {"total": 8, "vulnerabilityAlert": 0, "updates": {"minor": 8}},
+[2026-09-23T08:33:55.002Z]              "npm": {
+[2026-09-23T08:33:55.002Z]                "total": 4,
+[2026-09-23T08:33:55.002Z]                "vulnerabilityAlert": 0,
+[2026-09-23T08:33:55.002Z]                "updates": {"minor": 2, "lockFileMaintenance": 2}
+[2026-09-23T08:33:55.002Z]              },
+[2026-09-23T08:33:55.002Z]              "mise": {
+[2026-09-23T08:33:55.002Z]                "total": 2,
+[2026-09-23T08:33:55.002Z]                "vulnerabilityAlert": 0,
+[2026-09-23T08:33:55.002Z]                "updates": {"minor": 1, "lockFileMaintenance": 1}
+[2026-09-23T08:33:55.002Z]              },
+[2026-09-23T08:33:55.002Z]              "github-actions": {
+[2026-09-23T08:33:55.002Z]                "total": 1,
+[2026-09-23T08:33:55.002Z]                "vulnerabilityAlert": 0,
+[2026-09-23T08:33:55.002Z]                "updates": {"minor": 1}
+[2026-09-23T08:33:55.002Z]              }
+[2026-09-23T08:33:55.002Z]            }
+[2026-09-23T08:33:55.002Z]          }
+[2026-09-23T08:33:55.002Z]        ]
+[2026-09-23T08:33:55.003Z] DEBUG: Renovate repository PR statistics (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:55.003Z]        "stats": {"total": 163, "open": 0, "closed": 4, "merged": 159}
+[2026-09-23T08:33:55.003Z] DEBUG: Repository result: done, status: activated, enabled: true, onboarded: true (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:55.006Z] DEBUG: Repository timing splits (milliseconds) (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:55.006Z]        "splits": {"init": 2211, "onboarding": 1, "extract": 381, "lookup": 48148, "update": 536},
+[2026-09-23T08:33:55.007Z]        "total": 52700
+[2026-09-23T08:33:55.007Z] DEBUG: Package cache statistics (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:55.007Z]        "get": {"count": 54, "avgMs": 14, "medianMs": 4, "maxMs": 117, "totalMs": 743},
+[2026-09-23T08:33:55.007Z]        "set": {"count": 53, "avgMs": 113, "medianMs": 27, "maxMs": 2779, "totalMs": 5996}
+[2026-09-23T08:33:55.008Z] DEBUG: Datasource cache statistics (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:55.008Z]        "node-version": {"https://nodejs.org/dist": {"hit": 0, "miss": 1, "set": 1, "skip": 0}},
+[2026-09-23T08:33:55.008Z]        "npm": {"https://registry.npmjs.org": {"hit": 0, "miss": 0, "set": 0, "skip": 7}},
+[2026-09-23T08:33:55.008Z]        "github-releases": {"https://github.com": {"hit": 0, "miss": 0, "set": 0, "skip": 3}},
+[2026-09-23T08:33:55.008Z]        "github-tags": {"https://github.com": {"hit": 0, "miss": 0, "set": 0, "skip": 8}},
+[2026-09-23T08:33:55.008Z]        "docker": {"https://index.docker.io": {"hit": 0, "miss": 0, "set": 0, "skip": 1}}
+[2026-09-23T08:33:55.010Z] DEBUG: HTTP statistics (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:55.010Z]        "hosts": {
+[2026-09-23T08:33:55.010Z]          "api.github.com": {
+[2026-09-23T08:33:55.010Z]            "count": 141,
+[2026-09-23T08:33:55.010Z]            "reqAvgMs": 475,
+[2026-09-23T08:33:55.010Z]            "reqMedianMs": 351,
+[2026-09-23T08:33:55.010Z]            "reqMaxMs": 2496,
+[2026-09-23T08:33:55.010Z]            "queueAvgMs": 0,
+[2026-09-23T08:33:55.010Z]            "queueMedianMs": 0,
+[2026-09-23T08:33:55.010Z]            "queueMaxMs": 1
+[2026-09-23T08:33:55.010Z]          },
+[2026-09-23T08:33:55.010Z]          "ghcr.io": {
+[2026-09-23T08:33:55.010Z]            "count": 44,
+[2026-09-23T08:33:55.010Z]            "reqAvgMs": 168,
+[2026-09-23T08:33:55.010Z]            "reqMedianMs": 41,
+[2026-09-23T08:33:55.010Z]            "reqMaxMs": 1959,
+[2026-09-23T08:33:55.010Z]            "queueAvgMs": 0,
+[2026-09-23T08:33:55.010Z]            "queueMedianMs": 0,
+[2026-09-23T08:33:55.010Z]            "queueMaxMs": 2
+[2026-09-23T08:33:55.010Z]          },
+[2026-09-23T08:33:55.010Z]          "nodejs.org": {
+[2026-09-23T08:33:55.010Z]            "count": 1,
+[2026-09-23T08:33:55.010Z]            "reqAvgMs": 76,
+[2026-09-23T08:33:55.010Z]            "reqMedianMs": 76,
+[2026-09-23T08:33:55.010Z]            "reqMaxMs": 76,
+[2026-09-23T08:33:55.010Z]            "queueAvgMs": 0,
+[2026-09-23T08:33:55.010Z]            "queueMedianMs": 0,
+[2026-09-23T08:33:55.010Z]            "queueMaxMs": 0
+[2026-09-23T08:33:55.010Z]          },
+[2026-09-23T08:33:55.010Z]          "registry.npmjs.org": {
+[2026-09-23T08:33:55.010Z]            "count": 7,
+[2026-09-23T08:33:55.010Z]            "reqAvgMs": 748,
+[2026-09-23T08:33:55.010Z]            "reqMedianMs": 85,
+[2026-09-23T08:33:55.010Z]            "reqMaxMs": 3621,
+[2026-09-23T08:33:55.010Z]            "queueAvgMs": 0,
+[2026-09-23T08:33:55.010Z]            "queueMedianMs": 0,
+[2026-09-23T08:33:55.010Z]            "queueMaxMs": 1
+[2026-09-23T08:33:55.010Z]          }
+[2026-09-23T08:33:55.010Z]        },
+[2026-09-23T08:33:55.010Z]        "requests": 193
+[2026-09-23T08:33:55.011Z] DEBUG: HTTP cache statistics (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:55.011Z]        "https://api.github.com": {
+[2026-09-23T08:33:55.011Z]          "/repos/idelsink/renovate-runner/contents/default.json": {
+[2026-09-23T08:33:55.011Z]            "hit": 1,
+[2026-09-23T08:33:55.011Z]            "miss": 0
+[2026-09-23T08:33:55.011Z]          },
+[2026-09-23T08:33:55.011Z]          "/repos/idelsink/renovate-runner/contents/renovate.json": {
+[2026-09-23T08:33:55.011Z]            "hit": 3,
+[2026-09-23T08:33:55.011Z]            "miss": 0
+[2026-09-23T08:33:55.011Z]          },
+[2026-09-23T08:33:55.011Z]          "/repos/idelsink/renovate-runner/issues/2": {"hit": 3, "miss": 1},
+[2026-09-23T08:33:55.011Z]          "/repos/idelsink/renovate-runner/pulls": {"hit": 0, "miss": 1}
+[2026-09-23T08:33:55.011Z]        },
+[2026-09-23T08:33:55.011Z]        "https://ghcr.io": {
+[2026-09-23T08:33:55.011Z]          "/token": {"hit": 0, "miss": 1},
+[2026-09-23T08:33:55.011Z]          "/v2/renovatebot/renovate/manifests/44.103.6": {"hit": 0, "miss": 2},
+[2026-09-23T08:33:55.011Z]          "/v2/renovatebot/renovate/manifests/44.108.2": {"hit": 0, "miss": 1},
+[2026-09-23T08:33:55.011Z]          "/v2/renovatebot/renovate/manifests/latest": {"hit": 0, "miss": 1},
+[2026-09-23T08:33:55.011Z]          "/v2/renovatebot/renovate/manifests/sha256:3b74ef3dff9ae19754b49bcccfa2af6e696fd0f5a94bef15bf5571e19cfcae17": {
+[2026-09-23T08:33:55.011Z]            "hit": 0,
+[2026-09-23T08:33:55.011Z]            "miss": 1
+[2026-09-23T08:33:55.011Z]          },
+[2026-09-23T08:33:55.011Z]          "/v2/renovatebot/renovate/manifests/sha256:9c07736ffc4f85e26310db577696cad7dd9ca3d359bea6d0eadbb3d399caa38b": {
+[2026-09-23T08:33:55.011Z]            "hit": 0,
+[2026-09-23T08:33:55.011Z]            "miss": 1
+[2026-09-23T08:33:55.011Z]          }
+[2026-09-23T08:33:55.011Z]        },
+[2026-09-23T08:33:55.011Z]        "https://registry.npmjs.org": {
+[2026-09-23T08:33:55.011Z]          "/@octokit%2Fauth-app": {"hit": 0, "miss": 1},
+[2026-09-23T08:33:55.011Z]          "/@octokit%2Fcore": {"hit": 0, "miss": 1},
+[2026-09-23T08:33:55.011Z]          "/@octokit%2Fwebhooks-methods": {"hit": 0, "miss": 1},
+[2026-09-23T08:33:55.011Z]          "/dedent": {"hit": 0, "miss": 1},
+[2026-09-23T08:33:55.011Z]          "/json5": {"hit": 0, "miss": 1},
+[2026-09-23T08:33:55.011Z]          "/renovate": {"hit": 0, "miss": 1},
+[2026-09-23T08:33:55.011Z]          "/wrangler": {"hit": 0, "miss": 1}
+[2026-09-23T08:33:55.011Z]        }
+[2026-09-23T08:33:55.011Z] DEBUG: Lookup statistics (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:55.011Z]        "npm": {"count": 9, "avgMs": 2934, "medianMs": 521, "maxMs": 9808, "totalMs": 26409},
+[2026-09-23T08:33:55.011Z]        "node-version": {"count": 2, "avgMs": 462, "medianMs": 462, "maxMs": 462, "totalMs": 923},
+[2026-09-23T08:33:55.011Z]        "github-releases": {"count": 3, "avgMs": 16037, "medianMs": 2227, "maxMs": 45295, "totalMs": 48112},
+[2026-09-23T08:33:55.011Z]        "github-tags": {"count": 23, "avgMs": 1317, "medianMs": 953, "maxMs": 11344, "totalMs": 30291},
+[2026-09-23T08:33:55.011Z]        "docker": {"count": 5, "avgMs": 9442, "medianMs": 9835, "maxMs": 9839, "totalMs": 47211}
+[2026-09-23T08:33:55.013Z] DEBUG: getReleases statistics summary (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:55.013Z]        "stats": {
+[2026-09-23T08:33:55.013Z]          "count": 20,
+[2026-09-23T08:33:55.013Z]          "avgMs": 4328,
+[2026-09-23T08:33:55.013Z]          "medianMs": 1119.950538,
+[2026-09-23T08:33:55.013Z]          "maxMs": 45035.121348,
+[2026-09-23T08:33:55.013Z]          "totalMs": 86561.907502
+[2026-09-23T08:33:55.013Z]        },
+[2026-09-23T08:33:55.013Z]        "datasources": {
+[2026-09-23T08:33:55.013Z]          "npm": {
+[2026-09-23T08:33:55.013Z]            "stats": {
+[2026-09-23T08:33:55.013Z]              "count": 7,
+[2026-09-23T08:33:55.013Z]              "avgMs": 1863,
+[2026-09-23T08:33:55.013Z]              "medianMs": 474.834024,
+[2026-09-23T08:33:55.013Z]              "maxMs": 8586.191433,
+[2026-09-23T08:33:55.013Z]              "totalMs": 13039.170833
+[2026-09-23T08:33:55.013Z]            },
+[2026-09-23T08:33:55.013Z]            "registryUrls": {
+[2026-09-23T08:33:55.013Z]              "https://registry.npmjs.org": {
+[2026-09-23T08:33:55.013Z]                "stats": {
+[2026-09-23T08:33:55.013Z]                  "count": 7,
+[2026-09-23T08:33:55.013Z]                  "avgMs": 1863,
+[2026-09-23T08:33:55.013Z]                  "medianMs": 474.834024,
+[2026-09-23T08:33:55.013Z]                  "maxMs": 8586.191433,
+[2026-09-23T08:33:55.013Z]                  "totalMs": 13039.170833
+[2026-09-23T08:33:55.013Z]                }
+[2026-09-23T08:33:55.013Z]              }
+[2026-09-23T08:33:55.013Z]            }
+[2026-09-23T08:33:55.013Z]          },
+[2026-09-23T08:33:55.013Z]          "node-version": {
+[2026-09-23T08:33:55.013Z]            "stats": {
+[2026-09-23T08:33:55.013Z]              "count": 1,
+[2026-09-23T08:33:55.013Z]              "avgMs": 301,
+[2026-09-23T08:33:55.013Z]              "medianMs": 301.102643,
+[2026-09-23T08:33:55.013Z]              "maxMs": 301.102643,
+[2026-09-23T08:33:55.013Z]              "totalMs": 301.102643
+[2026-09-23T08:33:55.013Z]            },
+[2026-09-23T08:33:55.013Z]            "registryUrls": {
+[2026-09-23T08:33:55.013Z]              "https://nodejs.org/dist": {
+[2026-09-23T08:33:55.013Z]                "stats": {
+[2026-09-23T08:33:55.013Z]                  "count": 1,
+[2026-09-23T08:33:55.013Z]                  "avgMs": 301,
+[2026-09-23T08:33:55.013Z]                  "medianMs": 301.102643,
+[2026-09-23T08:33:55.013Z]                  "maxMs": 301.102643,
+[2026-09-23T08:33:55.013Z]                  "totalMs": 301.102643
+[2026-09-23T08:33:55.013Z]                }
+[2026-09-23T08:33:55.013Z]              }
+[2026-09-23T08:33:55.013Z]            }
+[2026-09-23T08:33:55.013Z]          },
+[2026-09-23T08:33:55.013Z]          "github-releases": {
+[2026-09-23T08:33:55.013Z]            "stats": {
+[2026-09-23T08:33:55.013Z]              "count": 3,
+[2026-09-23T08:33:55.013Z]              "avgMs": 15921,
+[2026-09-23T08:33:55.013Z]              "medianMs": 2149.7043830000002,
+[2026-09-23T08:33:55.013Z]              "maxMs": 45035.121348,
+[2026-09-23T08:33:55.013Z]              "totalMs": 47764.442934
+[2026-09-23T08:33:55.013Z]            },
+[2026-09-23T08:33:55.013Z]            "registryUrls": {
+[2026-09-23T08:33:55.013Z]              "https://github.com": {
+[2026-09-23T08:33:55.013Z]                "stats": {
+[2026-09-23T08:33:55.013Z]                  "count": 3,
+[2026-09-23T08:33:55.013Z]                  "avgMs": 15921,
+[2026-09-23T08:33:55.013Z]                  "medianMs": 2149.7043830000002,
+[2026-09-23T08:33:55.013Z]                  "maxMs": 45035.121348,
+[2026-09-23T08:33:55.013Z]                  "totalMs": 47764.442934
+[2026-09-23T08:33:55.013Z]                }
+[2026-09-23T08:33:55.013Z]              }
+[2026-09-23T08:33:55.013Z]            }
+[2026-09-23T08:33:55.013Z]          },
+[2026-09-23T08:33:55.013Z]          "github-tags": {
+[2026-09-23T08:33:55.013Z]            "stats": {
+[2026-09-23T08:33:55.013Z]              "count": 8,
+[2026-09-23T08:33:55.013Z]              "avgMs": 2504,
+[2026-09-23T08:33:55.013Z]              "medianMs": 1162.735845,
+[2026-09-23T08:33:55.013Z]              "maxMs": 11280.671909,
+[2026-09-23T08:33:55.013Z]              "totalMs": 20032.320792
+[2026-09-23T08:33:55.013Z]            },
+[2026-09-23T08:33:55.013Z]            "registryUrls": {
+[2026-09-23T08:33:55.013Z]              "https://github.com": {
+[2026-09-23T08:33:55.014Z]                "stats": {
+[2026-09-23T08:33:55.014Z]                  "count": 8,
+[2026-09-23T08:33:55.014Z]                  "avgMs": 2504,
+[2026-09-23T08:33:55.014Z]                  "medianMs": 1162.735845,
+[2026-09-23T08:33:55.014Z]                  "maxMs": 11280.671909,
+[2026-09-23T08:33:55.014Z]                  "totalMs": 20032.320792
+[2026-09-23T08:33:55.014Z]                }
+[2026-09-23T08:33:55.014Z]              }
+[2026-09-23T08:33:55.014Z]            }
+[2026-09-23T08:33:55.014Z]          },
+[2026-09-23T08:33:55.014Z]          "docker": {
+[2026-09-23T08:33:55.014Z]            "stats": {
+[2026-09-23T08:33:55.014Z]              "count": 1,
+[2026-09-23T08:33:55.014Z]              "avgMs": 5425,
+[2026-09-23T08:33:55.014Z]              "medianMs": 5424.8703,
+[2026-09-23T08:33:55.014Z]              "maxMs": 5424.8703,
+[2026-09-23T08:33:55.014Z]              "totalMs": 5424.8703
+[2026-09-23T08:33:55.014Z]            },
+[2026-09-23T08:33:55.014Z]            "registryUrls": {
+[2026-09-23T08:33:55.014Z]              "https://index.docker.io": {
+[2026-09-23T08:33:55.014Z]                "stats": {
+[2026-09-23T08:33:55.014Z]                  "count": 1,
+[2026-09-23T08:33:55.014Z]                  "avgMs": 5425,
+[2026-09-23T08:33:55.014Z]                  "medianMs": 5424.8703,
+[2026-09-23T08:33:55.014Z]                  "maxMs": 5424.8703,
+[2026-09-23T08:33:55.014Z]                  "totalMs": 5424.8703
+[2026-09-23T08:33:55.014Z]                }
+[2026-09-23T08:33:55.014Z]              }
+[2026-09-23T08:33:55.014Z]            }
+[2026-09-23T08:33:55.014Z]          }
+[2026-09-23T08:33:55.014Z]        }
+[2026-09-23T08:33:55.014Z] DEBUG: Cache fallback URLs (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:55.014Z]        "count": 0,
+[2026-09-23T08:33:55.014Z]        "hits": {}
+[2026-09-23T08:33:55.014Z] DEBUG: Abandoned package statistics (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:55.014Z]        "npm": {
+[2026-09-23T08:33:55.014Z]          "@octokit/webhooks-methods": "2025-05-20T15:41:37.592Z",
+[2026-09-23T08:33:55.014Z]          "json5": "2022-12-31T17:11:32.047Z"
+[2026-09-23T08:33:55.014Z]        }
+[2026-09-23T08:33:55.014Z] DEBUG: Git operations statistics (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:55.014Z]        "other": {
+[2026-09-23T08:33:55.014Z]          "count": 5,
+[2026-09-23T08:33:55.014Z]          "avgMs": 38,
+[2026-09-23T08:33:55.014Z]          "medianMs": 12.778496,
+[2026-09-23T08:33:55.014Z]          "maxMs": 140.023552,
+[2026-09-23T08:33:55.014Z]          "totalMs": 190
+[2026-09-23T08:33:55.014Z]        },
+[2026-09-23T08:33:55.014Z]        "clone": {
+[2026-09-23T08:33:55.014Z]          "count": 1,
+[2026-09-23T08:33:55.014Z]          "avgMs": 417,
+[2026-09-23T08:33:55.014Z]          "medianMs": 417.390592,
+[2026-09-23T08:33:55.014Z]          "maxMs": 417.390592,
+[2026-09-23T08:33:55.014Z]          "totalMs": 418
+[2026-09-23T08:33:55.014Z]        }
+[2026-09-23T08:33:55.014Z]  INFO: Repository finished (repository=idelsink/renovate-runner)
+[2026-09-23T08:33:55.014Z]        "cloned": true,
+[2026-09-23T08:33:55.014Z]        "durationMs": 52700,
+[2026-09-23T08:33:55.014Z]        "result": "done",
+[2026-09-23T08:33:55.014Z]        "status": "activated",
+[2026-09-23T08:33:55.014Z]        "enabled": true,
+[2026-09-23T08:33:55.014Z]        "onboarded": true,
+[2026-09-23T08:33:55.014Z]        "exitCode": 0
+[2026-09-23T08:33:55.015Z] DEBUG: Checking file package cache for expired items
+[2026-09-23T08:33:55.151Z] DEBUG: Cache GC: kept 41 content entries (2829262 bytes), removed 0 orphaned (0 bytes) in 122ms
+[2026-09-23T08:33:55.151Z] DEBUG: Deleted 0 of 53 file cached entries in 136ms
