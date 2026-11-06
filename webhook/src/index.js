@@ -2,9 +2,7 @@ import { verify } from "@octokit/webhooks-methods";
 import { createAppAuth } from "@octokit/auth-app";
 import { Octokit } from "@octokit/core";
 
-// Decide whether a validated issues/pull_request payload should trigger a Renovate run.
-// Pulled out of fetch() so the decision logic can be unit-tested without mocking the
-// GitHub API client or Cloudflare request/response objects.
+// Decides whether an issues/pull_request webhook delivery should trigger a Renovate run.
 export function shouldTrigger(event, payload, env) {
   if (event === "issues") {
     // Ignore edits by bots to avoid triggering loops
@@ -16,28 +14,23 @@ export function shouldTrigger(event, payload, env) {
     return title.startsWith("Dependency Dashboard");
   }
 
-  // event === "pull_request"
-  // Rebase/retry checkbox edits: only process PRs opened by the configured Renovate bot,
-  // and ignore edits made by bots to avoid triggering loops.
+  // Only PRs can change what Renovate must do
+  if (event !== "pull_request") return false;
+
+  // Rebase/retry checkbox on a Renovate PR; bot edits are ignored to avoid loops
   const rebaseRequested =
     payload.action === "edited" &&
     payload.sender?.type !== "Bot" &&
     payload.pull_request?.user?.login === env.RENOVATE_BOT_LOGIN;
 
   const mergedToDefault =
-    // pull_request event — only PRs matter to Renovate here
-    event === "pull_request" &&
-    // action closed — the single action that covers both merged and unmerged PRs
+    // One action covers both merged and unmerged PRs
     payload.action === "closed" &&
-    // merged === true — a closed-but-unmerged PR changed nothing on the default branch,
-    // so there is nothing for Renovate to react to (and it avoids re-triggering on
-    // Renovate's own autoclosed PRs)
+    // An unmerged PR changed nothing, and Renovate autocloses its own stale PRs
     payload.pull_request?.merged === true &&
-    // base.ref === default_branch — Renovate only tracks the default branch, so a merge
-    // into a feature branch is irrelevant
+    // Renovate only tracks the default branch
     payload.pull_request?.base?.ref === payload.repository?.default_branch;
-  // No bot-sender filter here: an automerge by the Renovate bot is exactly the case we
-  // want, and a merge cannot cause another merge, so there is no loop risk.
+  // No bot filter: an automerge by Renovate is the wanted case and cannot cause another merge
 
   return rebaseRequested || mergedToDefault;
 }
