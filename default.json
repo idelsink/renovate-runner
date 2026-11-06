@@ -5,6 +5,9 @@
   ],
   "schedule": ["before 6am on Monday"],
   "prConcurrentLimit": 5,
+  // npm can leave the lockfile inconsistent after a single install, which makes `npm ci` fail.
+  // https://docs.renovatebot.com/modules/manager/npm/#invalid-lock-file-npm-ci-fails
+  "postUpdateOptions": ["npmInstallTwice"],
   "customManagers": [
     // Custom regex `# renovate:` managers to capture all kind of packages
     // Following: https://docs.renovatebot.com/modules/manager/regex/#required-capture-groups
