@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-import { shouldTrigger } from '../webhook/src/index.js';
+import { shouldTrigger } from '../webhook/src/trigger.js';
 
 const env = { RENOVATE_BOT_LOGIN: 'renovate-iws[bot]' };
 
