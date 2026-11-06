@@ -2,7 +2,6 @@ name: Mise lockfile sync
 
 on:
   pull_request:
-    branches: [main]
     paths:
       - 'mise.toml'
       - '.mise.toml'
@@ -15,6 +14,7 @@ on:
       - '.config/mise.toml'
       - '.config/mise/config.toml'
       - '.config/mise/conf.d/*.toml'
+      - '.github/workflows/mise-lockfile-sync.yml'
 
 jobs:
   sync-lockfile:
