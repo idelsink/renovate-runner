@@ -2,6 +2,46 @@ import { verify } from "@octokit/webhooks-methods";
 import { createAppAuth } from "@octokit/auth-app";
 import { Octokit } from "@octokit/core";
 
+// Decide whether a validated issues/pull_request payload should trigger a Renovate run.
+// Pulled out of fetch() so the decision logic can be unit-tested without mocking the
+// GitHub API client or Cloudflare request/response objects.
+export function shouldTrigger(event, payload, env) {
+  if (event === "issues") {
+    // Ignore edits by bots to avoid triggering loops
+    if (payload.action !== "edited" || payload.sender?.type === "Bot") {
+      return false;
+    }
+    // Only the Dependency Dashboard issue triggers a run
+    const title = payload.issue?.title ?? "";
+    return title.startsWith("Dependency Dashboard");
+  }
+
+  // event === "pull_request"
+  // Rebase/retry checkbox edits: only process PRs opened by the configured Renovate bot,
+  // and ignore edits made by bots to avoid triggering loops.
+  const rebaseRequested =
+    payload.action === "edited" &&
+    payload.sender?.type !== "Bot" &&
+    payload.pull_request?.user?.login === env.RENOVATE_BOT_LOGIN;
+
+  const mergedToDefault =
+    // pull_request event — only PRs matter to Renovate here
+    event === "pull_request" &&
+    // action closed — the single action that covers both merged and unmerged PRs
+    payload.action === "closed" &&
+    // merged === true — a closed-but-unmerged PR changed nothing on the default branch,
+    // so there is nothing for Renovate to react to (and it avoids re-triggering on
+    // Renovate's own autoclosed PRs)
+    payload.pull_request?.merged === true &&
+    // base.ref === default_branch — Renovate only tracks the default branch, so a merge
+    // into a feature branch is irrelevant
+    payload.pull_request?.base?.ref === payload.repository?.default_branch;
+  // No bot-sender filter here: an automerge by the Renovate bot is exactly the case we
+  // want, and a merge cannot cause another merge, so there is no loop risk.
+
+  return rebaseRequested || mergedToDefault;
+}
+
 export default {
   async fetch(request, env) {
     if (request.method !== "POST") {
@@ -47,26 +87,8 @@ export default {
       return new Response(null, { status: 200 });
     }
 
-    if (payload.action !== "edited") {
+    if (!shouldTrigger(event, payload, env)) {
       return new Response(null, { status: 200 });
-    }
-
-    // Ignore edits by bots to avoid triggering loops
-    if (payload.sender?.type === "Bot") {
-      return new Response(null, { status: 200 });
-    }
-
-    if (event === "issues") {
-      // Only the Dependency Dashboard issue triggers a run
-      const title = payload.issue?.title ?? "";
-      if (!title.startsWith("Dependency Dashboard")) {
-        return new Response(null, { status: 200 });
-      }
-    } else {
-      // pull_request: only process PRs opened by the configured Renovate bot (rebase/retry checkboxes)
-      if (payload.pull_request?.user?.login !== env.RENOVATE_BOT_LOGIN) {
-        return new Response(null, { status: 200 });
-      }
     }
 
     const repositoryId = payload.repository?.id;
