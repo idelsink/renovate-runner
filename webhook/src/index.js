@@ -1,6 +1,7 @@
 import { verify } from "@octokit/webhooks-methods";
 import { createAppAuth } from "@octokit/auth-app";
 import { Octokit } from "@octokit/core";
+import { shouldTrigger } from "./trigger.js";
 
 export default {
   async fetch(request, env) {
@@ -47,26 +48,8 @@ export default {
       return new Response(null, { status: 200 });
     }
 
-    if (payload.action !== "edited") {
+    if (!shouldTrigger(event, payload, env)) {
       return new Response(null, { status: 200 });
-    }
-
-    // Ignore edits by bots to avoid triggering loops
-    if (payload.sender?.type === "Bot") {
-      return new Response(null, { status: 200 });
-    }
-
-    if (event === "issues") {
-      // Only the Dependency Dashboard issue triggers a run
-      const title = payload.issue?.title ?? "";
-      if (!title.startsWith("Dependency Dashboard")) {
-        return new Response(null, { status: 200 });
-      }
-    } else {
-      // pull_request: only process PRs opened by the configured Renovate bot (rebase/retry checkboxes)
-      if (payload.pull_request?.user?.login !== env.RENOVATE_BOT_LOGIN) {
-        return new Response(null, { status: 200 });
-      }
     }
 
     const repositoryId = payload.repository?.id;

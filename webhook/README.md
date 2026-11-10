@@ -15,6 +15,7 @@ Cloudflare Worker that receives GitHub webhook events and triggers a Renovate sc
 |-------|-----------|--------|
 | `issues.edited` | Issue title starts with `Dependency Dashboard`, sender is not a bot | Trigger Renovate |
 | `pull_request.edited` | PR was opened by the configured Renovate bot, sender is not a bot | Trigger Renovate |
+| `pull_request.closed` | PR merged into the repository default branch, any author/sender | Trigger Renovate |
 
 ## Setup
 
