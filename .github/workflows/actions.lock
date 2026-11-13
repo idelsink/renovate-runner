@@ -5,7 +5,7 @@ version: 'v0.0.3'
 workflows:
     '.github/workflows/mise-lockfile-sync.yml':
         - 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1'
-        - 'jdx/mise-action@b44d12e7d0d8ee7461bb893e1b1993500433185b'
+        - 'jdx/mise-action@d5574b52816a478f9d4e6529a3f6ff17a8a36785'
         - 'stefanzweifel/git-auto-commit-action@d0b01107b5db882071f96de5dd4b54961ea93f4c'
     '.github/workflows/renovate.yaml':
         - 'actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9'
@@ -15,7 +15,7 @@ workflows:
         - 'stefanzweifel/git-auto-commit-action@d0b01107b5db882071f96de5dd4b54961ea93f4c'
     '.github/workflows/test.yml':
         - 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1'
-        - 'jdx/mise-action@b44d12e7d0d8ee7461bb893e1b1993500433185b'
+        - 'jdx/mise-action@d5574b52816a478f9d4e6529a3f6ff17a8a36785'
     '.github/workflows/trivy.yml':
         - 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1'
         - 'aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25'
@@ -77,9 +77,9 @@ dependencies:
         commit: 'sha1-33d7b85da1a04171e211befe2c739303b9a4c066'
         owner_id: 9919
         repo_id: 259445878
-    'jdx/mise-action@b44d12e7d0d8ee7461bb893e1b1993500433185b':
-        ref: 'v5.2.7'
-        commit: 'sha1-b44d12e7d0d8ee7461bb893e1b1993500433185b'
+    'jdx/mise-action@d5574b52816a478f9d4e6529a3f6ff17a8a36785':
+        ref: 'v5.2.8'
+        commit: 'sha1-d5574b52816a478f9d4e6529a3f6ff17a8a36785'
         owner_id: 216188
         repo_id: 738284564
     'stefanzweifel/git-auto-commit-action@d0b01107b5db882071f96de5dd4b54961ea93f4c':
