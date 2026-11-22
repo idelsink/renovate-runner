@@ -72,7 +72,7 @@
         //   RENOVATE_VERSION="44.257.9"
         //
         //   # renovate: datasource=npm depName=renovate versioning=npm
-        //   RENOVATE_NPM_VERSION=44.253.0
+        //   RENOVATE_NPM_VERSION=44.255.0
         "(?:#|//) renovate: datasource=(?<datasource>.*?)(?: depName=(?<depName>.+?))?(?: packageName=(?<packageName>.+?))?(?: versioning=(?<versioning>.+?))?(?: extractVersion=(?<extractVersion>.+?))?(?: registryUrl=(?<registryUrl>.+?))?\\n\\s*[^=:\\n]+[=:]\\s*[\"']?(?<currentValue>[^\\s@\"'#:]+)(?:[\"'\\s]|$)",
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver-coerced{{/if}}"
